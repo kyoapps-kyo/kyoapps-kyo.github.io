@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: 'KYO BLOG'
-description: ''
-keywords: ''
+title: 'KYO'
+description: 'KYO'
+keywords: 'tech'
 url: 'https://kyoapps-kyo.github.io' # your host
 
 # nav 中文字符空格：&emsp;
@@ -9,36 +9,36 @@ nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
   首页: '/'
   标签: '/tags.html'
   时间线: '/timeline.html'
-  关于博主: '/about.html'
+  KYO: '/about.html'
   友情链接: '/friendLink.html'
 
 # 博主
 author: true
 name: 'kyo'
 NickName: 'kyo'
-webtitle: 'your awesome webtitle'
-bio: 'your awesome bio'
+webtitle: 'Stay hungry, stay foolish.'
+bio: '暂无'
 about: true
-aboutyou: 'your introduction'
-portraits: '/assets/profile.jpeg' # your portraits image file path
+aboutyou: '保持好奇，不断积累'
+portraits: '/assets/profile.jpg' # your portraits image file path
 
 # SNS
 SNS: true
 SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagram', 'weixin', 'Codepen']
-  mail: 'mailto:abc@gmail.com'
-  weixin: '' # 你的微信二维码存放的地址
-  qq: '' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='你的QQ号'&site=qq&menu=yes
-  github: ''
-  Codepen: ''
-  weibo: ''
+  mail: 'mailto:kyo@kyoapps.com'
+  weixin: '/assets/wxqrcode-kyotowy.jpeg' # 你的微信二维码存放的地址
+  # qq: '' # 你的qq二维码存放的地址 or http://wpa.qq.com/msgrd?v=3&uin='2106208317'&site=qq&menu=yes
+  github: 'https://github.com/kyoapps-kyo'
+  # Codepen: ''
+  weibo: 'https://weibo.com/7392086588/profile?topnav=1&wvr=6&is_all=1'
   instagram: ''
-  Twitter: ''
-  Dribbble: ''
-  Facebook: ''
-  Google: ''
+  # Twitter: ''
+  # Dribbble: ''
+  # Facebook: ''
+  # Google: ''
   zhihu: ''
-  juejin: ''
-  twitch: ''
+  # juejin: ''
+  # twitch: ''
 
 # 分页
 paginate: 2
@@ -46,7 +46,7 @@ paginatepath: ['page:num']
 
 # since
 footer:
-  since: 2018
+  since: 2021
 
 # Markdown
 markdown: kramdown
@@ -81,10 +81,10 @@ social-share-items: ['qq', 'wechat', 'weibo', 'twitter', 'facebook']
 
 # 百度统计 在baidu-url里填写自己相关的url代码
 baidu: true
-baidu-url: ''
+baidu-url: 'https://hm.baidu.com/hm.js?00eaba5de0a36c661fd413a3f8f1b936'
 # 谷歌分析 在google-ID里填写自己在谷歌分析获得的追踪ID
-google: false
-google-ID: ''
+google: true
+google-ID: 'G-CTJ8G9J19M'
 
 # 博客头信息备选颜色（该部分在站点中不充当站点变量，将其写在post的头信息中用来充当页面变量）
 color: rgb(154,133,255) rgb(255,90,90) rgb(255,210,32) rgb(98,170,255)
