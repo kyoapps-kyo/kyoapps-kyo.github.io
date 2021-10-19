@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "写博客的契机"
-subtitle: '为什么要写博客'
-date:   2021-10-21
-tags: 开场 写博客的契机
+title:  "为什么要写博客"
+subtitle: '写博客的契机'
+date:   2021-10-19
+tags: 为什么要写博客
 description: ''
 color: 'rgb(154,133,255)'
 cover: '/assets/imgs/2021-10-19-cat.webp'
 ---
 
-## 为什么要写博客
+![cat](/assets/imgs/2021-10-19-cat.webp)
 
 ### 契机（1）- 怎么又是这个，但就是想不起怎么解决。
 

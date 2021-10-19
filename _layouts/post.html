@@ -31,6 +31,9 @@
   {% endif %}
 
   <!-- 文章内容 -->
+  
+  <!-- 引入toc目录 -->
+{% include toc.html html=content %}
   {{ page.content }}
   <!-- 引入share模块 -->
   {% include share.html %}
