@@ -4,19 +4,7 @@
 
 ### Preview
 
-[在线预览 view demo →](http://xseven.me/)
-
-![1](/screenshot/1.png)
-
-![2](/screenshot/2.png)
-
-![3](/screenshot/3.png)
-
-想要查看手机端显示效果，扫描下方二维码浏览器打开即可
-
-![4](/screenshot/4.png)
-
-
+[在线预览 view demo →](http://blog.kyoapps.com)
 
 ### 主题特性
 
@@ -131,9 +119,7 @@ cover: ''
 
 关于cover：
 
-​	此处需填写某一张图片的 `url` ，`url` 值可以是线上的某张图片，也可以是博客目录下的图片。关键是要书写正确。这张图片用于在首页下博客列表里显示，如下图。
-
-![5](/screenshot/5.png)
+​	此处需填写某一张图片的 `url` ，`url` 值可以是线上的某张图片，也可以是博客目录下的图片。关键是要书写正确。这张图片用于在首页下博客列表里显示
 
 
 
@@ -151,9 +137,7 @@ aboutyou: 'your introduction'
 portraits: '/assets/profile.jpeg' # your portraits image file path
 ```
 
-​	该部分显示在 `关于博主` 页面，与 `社交媒体` 一同在下图显示。
-
-![6](/screenshot/6.png)
+​	该部分显示在 `关于博主` 页面，与 `社交媒体` 一同显示。
 
 关于author：
 
@@ -193,7 +177,6 @@ SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagr
 
 2018/09/28 更新：
 
-![7](/screenshot/sns-icon.png)
 
 - 更新社交图标为 线上地址 ，便于管理与修改。
 - 添加 **Codepen** 图标
@@ -213,9 +196,7 @@ description: description
 ---
 ```
 
-​	该部分位于 `index.html` 页面，修改 `title` 、`page-title` 、`home-title`  、`description`为个人想要的信息，默认配置的显示效果如下图。
-
-![7](/screenshot/7.png)
+​	该部分位于 `index.html` 页面，修改 `title` 、`page-title` 、`home-title`  、`description`为个人想要的信息
 
 
 
@@ -271,13 +252,6 @@ pygmentsTheme: 'default'
 ```
 ~~~
 
-2018/09/28 更新：
-
-![7](/screenshot/博客代码高亮例子.png)
-
-上图为 **代码高亮试例图** ，仅以 html 作为参考例子，其他代码参考 上图，或自行切换测试选择自己喜欢的代码高亮主题
-
-
 
 #### 友情链接
 
@@ -325,19 +299,6 @@ client_secret: ''  # 注册 OAuth Application 后获得的 client_secret
 
 ​	共有三款评论可供选择，使用 `true` 或者 `false` 开启或关闭某个评论系统。可开启多个甚至全开。当然，最佳体验，开一个即可。
 
-​	三款评论的样式如下图：
-
-dispus：
-
-![8](/screenshot/8.png)
-
-来必力：
-
-![9](/screenshot/9.png)
-
-Gitment评论：
-
-![10](/screenshot/10.png)
 
 ​	三款评论各有各的优势与坏处。出于显示样式与中国大陆网络环境考虑，主题默认开启 `来必力` 评论为最佳体验。当然需要填写好相关的 `livere_uid` 代码。
 

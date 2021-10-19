@@ -27,22 +27,24 @@ cover: '/assets/imgs/2021-10-19-cat.webp'
 
 想成为一个技术大佬，怎么能用别人的平台写自己的博客！没有自己的专属域名怎么能行？思来想去，还是自己做一个blog网站好，满足自己的需求，归纳很多自己的东西，把自己做过的东西总结在这里。
 
-### 博客内容
+### 标注
 
-#### 在这里我会分享下面这些内容
+#### 博客的内容
 
 - 编程语言 - PHP JAVASCRIPT  
 - 框架 - Laravel Bootstrap Vue.js
 - 数据库 - Redis Mysql
 - 摄影 - PS修图 视频剪辑
+- 其他
 
 #### 博客的技术支持
 
-- 博客存放支持[GitHubPages]
-- 编辑软件[Jekyll] - [Typora]
-- 主题[HardCandy-Jekyll]
+- 代码管理 - [GitHub Pages][GitHub-Pages]
+- 静态页面生成 - [Jekyll] 
+- Markdown编辑器 - [Typora]
+- 主题 - [HardCandy-Jekyll]
 
-[GitHubPages]: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
+[GitHub-Pages]: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
 [Jekyll]: https://www.jekyll.com.cn/docs/
 [Typora]: https://typora.io/
 [HardCandy-Jekyll]: https://github.com/kyoapps-kyo/HardCandy-Jekyll
