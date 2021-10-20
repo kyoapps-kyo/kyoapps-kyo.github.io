@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-20T06:35:04+09:00</updated><id>http://localhost:4000/</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">为什么要写博客</title><link href="http://localhost:4000/2021/10/19/why-write-blog.html" rel="alternate" type="text/html" title="为什么要写博客" /><published>2021-10-19T00:00:00+09:00</published><updated>2021-10-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/19/why-write-blog</id><content type="html" xml:base="http://localhost:4000/2021/10/19/why-write-blog.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021-10-19-cat.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-21T00:30:06+09:00</updated><id>http://localhost:4000/</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">博客使用的md插件之jekyll-toc</title><link href="http://localhost:4000/2021/10/20/start-blog.html" rel="alternate" type="text/html" title="博客使用的md插件之jekyll-toc" /><published>2021-10-20T00:00:00+09:00</published><updated>2021-10-20T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/20/start-blog</id><content type="html" xml:base="http://localhost:4000/2021/10/20/start-blog.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021-10-20-pic.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;插件介绍&quot;&gt;插件介绍&lt;/h3&gt;
+
+&lt;p&gt;插件地址：&lt;a href=&quot;https://github.com/kyoapps-kyo/jekyll-toc&quot;&gt;jekyll-toc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHub Pages 无法运行自定义 Jekyll 插件，因此在生成目录 (TOC) 时，您只能使用 JavaScript 解决方案或使用 kramdown 的 {:toc} 选项。&lt;/p&gt;
+
+&lt;p&gt;该插件可以“&lt;strong&gt;快速地&lt;/strong&gt;”生成符合当前网页布局的目录，下文将介绍如何使用它。&lt;/p&gt;
+
+&lt;h4 id=&quot;中文使用说明&quot;&gt;中文使用说明&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;从最新版本或 master 分支下载 &lt;u&gt;&quot; toc.html &quot;&lt;/u&gt; 文件&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;将该文件放入博客项目的&lt;u&gt;&quot; _includes &quot;&lt;/u&gt; 文件夹中。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;将如下代码加入项目&lt;u&gt;&quot; _layouts &quot;&lt;/u&gt;文件夹中的&lt;u&gt;&quot; post.html &quot;&lt;/u&gt;文件的&lt;strong&gt;” page.content “&lt;/strong&gt;上方。&lt;/p&gt;
+
+    &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;!--&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;引入&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toc&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;目录&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;% include &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;添加完之后，无需在markdown文件中使用toc标签，即可自动增加文章目录。&lt;/p&gt;</content><author><name>true</name></author><category term="技术" /><category term="解决博客问题" /><category term="博客插件" /><summary type="html"></summary></entry><entry><title type="html">为什么要写博客</title><link href="http://localhost:4000/2021/10/19/why-write-blog.html" rel="alternate" type="text/html" title="为什么要写博客" /><published>2021-10-19T00:00:00+09:00</published><updated>2021-10-19T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/19/why-write-blog</id><content type="html" xml:base="http://localhost:4000/2021/10/19/why-write-blog.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021-10-19-cat.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;契机1--怎么又是这个但就是想不起怎么解决&quot;&gt;契机（1）- 怎么又是这个，但就是想不起怎么解决。&lt;/h3&gt;
 
