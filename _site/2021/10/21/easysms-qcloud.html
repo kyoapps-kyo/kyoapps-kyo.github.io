@@ -1,0 +1,467 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="KYO" />
+<meta name="keywords" content="php laravel js mysql bootstrap vue.js weixin linux" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/profile.jpg" rel="shortcut icon" />
+<link href="/assets/profile.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>Laravel发送短信接口之easy-sms</title>
+<!-- 百度统计 -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?00eaba5de0a36c661fd413a3f8f1b936";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTJ8G9J19M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTJ8G9J19M');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(196,122,78) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(196,122,78);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Stay hungry, stay foolish.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">KYO</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>KYO</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Laravel发送短信接口之easy-sms</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">虽然easy-sms文档中已经告诉你怎么使用了，但是没有实际的例子的话，还是会遇到不少问题，下文用一个可执行的例子，演示如何使用easy sms通过腾讯云发送短信</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">虽然easy-sms文档中已经告诉你怎么使用了，但是没有实际的例子的话，还是会遇到不少问题，下文用一个可执行的例子，演示如何使用easy sms通过腾讯云发送短信</span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(196,122,78);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(196,122,78)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(196,122,78);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Laravel发送短信接口之easy-sms</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">虽然easy-sms文档中已经告诉你怎么使用了，但是没有实际的例子的话，还是会遇到不少问题，下文用一个可执行的例子，演示如何使用easy sms通过腾讯云发送短信</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">虽然easy-sms文档中已经告诉你怎么使用了，但是没有实际的例子的话，还是会遇到不少问题，下文用一个可执行的例子，演示如何使用easy sms通过腾讯云发送短信</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2021/10/20/start-blog.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(196,122,78)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(196,122,78);"><sapn class="main">博客使用的md插件之jekyll-toc</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(196,122,78);border-bottom: 2px solid rgb(196,122,78);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2021/10/20/start-blog.html" class="rightchange" style="border-left: 1px solid rgb(196,122,78);border-bottom: 2px solid rgb(196,122,78);"><span>下一篇<br><br>博客使用的md插件之jekyll-toc</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(196,122,78); border-right: 8px solid rgb(196,122,78)">
+        使用easy-sms通过腾讯云发送短信
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  
+  <!-- 引入toc目录 -->
+<ul><li><a href="#短信服务提供商">短信服务提供商</a><ul><li><a href="#腾讯云">腾讯云</a><ul><li><a href="#选择的理由">选择的理由</a></li><li><a href="#1短信服务申请流程已有腾讯云的账号并且有认证的公众号或者备案的网站或者可用的企业信息">1.短信服务申请流程（已有腾讯云的账号，并且有认证的公众号或者备案的网站或者可用的企业信息）</a></li><li><a href="#2服务端配置">2.服务端配置</a><ul><li><a href="#安装-easy-sms">安装 <a href="https://github.com/kyoapps-kyo/easy-sms">easy sms</a></a></li></ul></li></ul></li></ul></li></ul>
+  <p><img src="/assets/imgs/2021/10/21/iphone.webp" alt="cat" /></p>
+
+<h1 id="短信服务提供商">短信服务提供商</h1>
+
+<h2 id="腾讯云">腾讯云</h2>
+
+<h3 id="选择的理由">选择的理由</h3>
+
+<ul>
+  <li>在腾讯云里有已经认证的企业</li>
+  <li>本来打算使用阿里云的，但是阿里云的短信模版需要已经发布了的应用，还在开发环境下的程序审查不通过，腾讯这里没有这个问题。</li>
+</ul>
+
+<h3 id="1短信服务申请流程已有腾讯云的账号并且有认证的公众号或者备案的网站或者可用的企业信息">1.短信服务申请流程（已有腾讯云的账号，并且有认证的公众号或者备案的网站或者可用的企业信息）</h3>
+
+<p><strong>1.申请短信签名</strong></p>
+
+<p>创建签名
+<img src="/assets/imgs/2021/10/21/创建签名.png" alt="cat" />
+填写签名
+<img src="/assets/imgs/2021/10/21/填写签名.png" alt="cat" />
+签名审查通过
+<img src="/assets/imgs/2021/10/21/签名审查通过.png" alt="cat" /></p>
+
+<p><strong>2.申请短信模版</strong></p>
+
+<p>创建短信模版
+<img src="/assets/imgs/2021/10/21/创建短信模版.png" alt="cat" />
+填写模版
+<img src="/assets/imgs/2021/10/21/填写模版.png" alt="cat" />
+模版审查通过
+<img src="/assets/imgs/2021/10/21/模版审查通过.png" alt="cat" /></p>
+
+<p><strong>3.记下SDK-APP-ID和SDK-APP-KEY，之后会用到</strong></p>
+
+<p><img src="/assets/imgs/2021/10/21/应用sdkid.png" alt="cat" />
+<img src="/assets/imgs/2021/10/21/应用sdkkey.png" alt="cat" /></p>
+
+<h3 id="2服务端配置">2.服务端配置</h3>
+
+<h4 id="安装-easy-sms">安装 <a href="https://github.com/kyoapps-kyo/easy-sms">easy sms</a></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer require "overtrue/easy-sms"
+</code></pre></div></div>
+
+<p>封装该组件的Laravel 的 ServiceProvider</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ touch config/easysms.php
+</code></pre></div></div>
+
+<p><em>config/easysms.php</em></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">return</span> <span class="p">[</span>
+    <span class="c1">// HTTP 请求的超时时间（秒）</span>
+    <span class="s1">'timeout'</span> <span class="o">=&gt;</span> <span class="mf">10.0</span><span class="p">,</span>
+
+    <span class="c1">// 默认发送配置</span>
+    <span class="s1">'default'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="c1">// 网关调用策略，默认：顺序调用</span>
+        <span class="s1">'strategy'</span> <span class="o">=&gt;</span> <span class="err">\</span><span class="nc">Overtrue\EasySms\Strategies\OrderStrategy</span><span class="o">::</span><span class="n">class</span><span class="p">,</span>
+
+        <span class="c1">// 默认可用的发送网关</span>
+        <span class="s1">'gateways'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">'qcloud'</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">],</span>
+    <span class="c1">// 可用的网关配置</span>
+    <span class="s1">'gateways'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">'errorlog'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">'file'</span> <span class="o">=&gt;</span> <span class="s1">'/tmp/easy-sms.log'</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s1">'qcloud'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">'sdk_app_id'</span> <span class="o">=&gt;</span> <span class="nf">env</span><span class="p">(</span><span class="s1">'SMS_QCLOUD_SDK_APP_ID'</span><span class="p">),</span> <span class="c1">// SDK APP ID</span>
+            <span class="s1">'app_key'</span> <span class="o">=&gt;</span> <span class="nf">env</span><span class="p">(</span><span class="s1">'SMS_QCLOUD_APP_KEY'</span><span class="p">),</span> <span class="c1">// APP KEY</span>
+            <span class="s1">'sign_name'</span> <span class="o">=&gt;</span> <span class="s1">'申请的名字'</span><span class="p">,</span> <span class="c1">// 短信签名，如果使用默认签名，该字段可缺省（对应官方文档中的sign）</span>
+            <span class="s1">'templates'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">'register'</span> <span class="o">=&gt;</span> <span class="nf">env</span><span class="p">(</span><span class="s1">'SMS_QCLOUD_TEMPLATE_REGISTER'</span><span class="p">),</span><span class="c1">//短信模版ID</span>
+            <span class="p">],</span>
+        <span class="p">],</span>
+    <span class="p">],</span>
+<span class="p">];</span>
+
+</code></pre></div></div>
+
+<p>在 <code class="language-plaintext highlighter-rouge">.env</code>中配置 <code class="language-plaintext highlighter-rouge">SMS_QCLOUD_SDK_APP_ID</code>和<code class="language-plaintext highlighter-rouge">SMS_QCLOUD_APP_KEY</code>还有一个短信模版ID<code class="language-plaintext highlighter-rouge">SMS_QCLOUD_TEMPLATE_REGISTER</code>，注意下面需要替换为你自己的 <code class="language-plaintext highlighter-rouge">ID</code>和<code class="language-plaintext highlighter-rouge">KEY</code>：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+.
+.
+SMS_QCLOUD_SDK_APP_ID=160*************
+SMS_QCLOUD_APP_KEY=91275**************
+SMS_QCLOUD_TEMPLATE_REGISTER=11******
+</code></pre></div></div>
+<p>在 <code class="language-plaintext highlighter-rouge">.env.example</code> 中也加入配置示例，提交到版本库，方便以后部署</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+.
+.
+# QCloud SMS
+SMS_QCLOUD_SDK_APP_ID=
+SMS_QCLOUD_APP_KEY=
+SMS_QCLOUD_TEMPLATE_REGISTER=
+</code></pre></div></div>
+
+<p>然后创建一个 ServiceProvider</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ php artisan make:provider EasySmsServiceProvider
+</code></pre></div></div>
+
+<p>修改文件</p>
+
+<p><em>app/providers/EasySmsServiceProvider.php</em></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="kn">namespace</span> <span class="nn">App\Providers</span><span class="p">;</span>
+
+<span class="kn">use</span> <span class="nc">Overtrue\EasySms\EasySms</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">Illuminate\Support\ServiceProvider</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">EasySmsServiceProvider</span> <span class="kd">extends</span> <span class="nc">ServiceProvider</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">boot</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="n">register</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">app</span><span class="o">-&gt;</span><span class="nf">singleton</span><span class="p">(</span><span class="nc">EasySms</span><span class="o">::</span><span class="n">class</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$app</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nc">EasySms</span><span class="p">(</span><span class="nf">config</span><span class="p">(</span><span class="s1">'easysms'</span><span class="p">));</span>
+        <span class="p">});</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">app</span><span class="o">-&gt;</span><span class="nf">alias</span><span class="p">(</span><span class="nc">EasySms</span><span class="o">::</span><span class="n">class</span><span class="p">,</span> <span class="s1">'easysms'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>最后 打开 <code class="language-plaintext highlighter-rouge">config/app.php</code> 在 providers 中增加 <code class="language-plaintext highlighter-rouge">App\Providers\EasySmsServiceProvider::class,</code></p>
+
+<p><em>config/app.php</em></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">.</span>
+<span class="mf">.</span>
+<span class="mf">.</span>
+    <span class="s1">'providers'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+			<span class="mf">.</span>
+			<span class="mf">.</span>
+			<span class="mf">.</span>
+			<span class="nc">App\Providers\EventServiceProvider</span><span class="o">::</span><span class="n">class</span><span class="p">,</span>
+			<span class="nc">App\Providers\RouteServiceProvider</span><span class="o">::</span><span class="n">class</span><span class="p">,</span>
+
+			<span class="nc">App\Providers\EasySmsServiceProvider</span><span class="o">::</span><span class="n">class</span><span class="p">,</span>
+	<span class="p">],</span>
+<span class="mf">.</span>
+<span class="mf">.</span>
+<span class="mf">.</span>
+</code></pre></div></div>
+
+<p>打开 tinker</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php artisan tinker
+</code></pre></div></div>
+<p>输入如下代码，注意将 <code class="language-plaintext highlighter-rouge">13212345678</code> 替换为你自己的手机号</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sms</span> <span class="o">=</span> <span class="nf">app</span><span class="p">(</span><span class="s1">'easysms'</span><span class="p">);</span>
+<span class="k">try</span> <span class="p">{</span>
+	<span class="nv">$sms</span><span class="o">-&gt;</span><span class="nf">send</span><span class="p">(</span><span class="mi">13212345678</span><span class="p">,</span> <span class="p">[</span>
+                    <span class="s1">'template'</span> <span class="o">=&gt;</span> <span class="nf">config</span><span class="p">(</span><span class="s1">'easysms.gateways.qcloud.templates.register'</span><span class="p">),</span>
+                    <span class="s1">'data'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                        <span class="nv">$code</span><span class="p">,</span><span class="c1">//对应着短信模版里的{1}</span>
+                    <span class="p">],</span>
+                <span class="p">]);</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="err">\</span><span class="nc">Overtrue\EasySms\Exceptions\NoGatewayAvailableException</span> <span class="nv">$exception</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$exception</span><span class="o">-&gt;</span><span class="nf">getException</span><span class="p">(</span><span class="s1">'qloucd'</span><span class="p">)</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">();</span>
+	<span class="nf">dd</span><span class="p">(</span><span class="nv">$message</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>到这里，你的手机就可以收到验证码了，如果因为腾讯账户里没有短信余量而发不出短信，就得自己想办法啦。</p>
+
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81NDUxMi8zMDk4Mw=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>KYO ©
+  
+  
+  2021
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
