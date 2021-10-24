@@ -1,0 +1,16 @@
+常用指令
+mac设定定时关机/重启/睡眠，可以用终端命令来解决
+命令的主体主要是 Shutdown，h/r/s 分别代表关机/重启/睡眠，然后在后面加上执行时间(yymmddhhmm)即可。
+1. 设定2013年11月4日14:10分关机：sudo shutdown -h 1311041410 也可以 sudo shutdown -h 14:10
+2. 设定2013年11月4日14:10分重启：sudo shutdown -r 1311041410 也可以 sudo reboot 或者sudo shutdown -r now
+3. 设定2013年11月4日14:10分睡眠：sudo shutdown -s 1311041410
+如果想要立即关机/重启/睡眠，可以执行命令：
+sudo halt 或者 sudo shutdown -h now
+now也可以适用于重启和睡眠。
+
+
+MacBook怎么开启任何来源
+sudo spctl --master-disable
+
+Mac 移除下载镜像的Quarantine属性
+打开终端，输入sudo xattr -r -d com.apple.quarantine（后面有一个空格），再把dmg文件拖拽进去，回车，输入电脑密码，回车。
