@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-24T23:55:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">一次弄懂html的display属性</title><link href="http://localhost:4000/2021/10/24/html-display.html" rel="alternate" type="text/html" title="一次弄懂html的display属性" /><published>2021-10-24T00:00:00+09:00</published><updated>2021-10-24T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/24/html-display</id><content type="html" xml:base="http://localhost:4000/2021/10/24/html-display.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/24/cat.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-27T23:11:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Html常见属性</title><link href="http://localhost:4000/2021/10/27/html-base-1.html" rel="alternate" type="text/html" title="Html常见属性" /><published>2021-10-27T00:00:00+09:00</published><updated>2021-10-27T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/27/html-base-1</id><content type="html" xml:base="http://localhost:4000/2021/10/27/html-base-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/27/html.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;html属性--常见属性&quot;&gt;html属性 — 常见属性&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;基本属性&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;不拥有公共属性的元素：
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;html&amp;gt;&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;title&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;base&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;param&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;script&amp;gt;&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;style&amp;gt;&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;语言属性&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lang&lt;/code&gt;  定义元素的语言代码或编码&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dir&lt;/code&gt;   定义文本方向，ltr，rtl取值。&lt;/li&gt;
+      &lt;li&gt;不拥有语言语义属性的元素：
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;frameset&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;frame&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;br&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;hr&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;base&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;param&amp;gt;&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;键盘属性&lt;/strong&gt; - 定义键盘访问方法&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;accesskey&lt;/code&gt; 定义访问某元素的键盘快捷键&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tabindex&lt;/code&gt;  定义元素的tab键索引编号&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;内容属性&lt;/strong&gt; - 元素包含内容的附加信息&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alt&lt;/code&gt;   元素的替换文本&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt; 提示文本&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;longdesc&lt;/code&gt; 元素包含内容的大段描述信息&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cite&lt;/code&gt;  元素包含的引用信息&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;datetime&lt;/code&gt;  时间信息&lt;/li&gt;
+      &lt;li&gt;◇ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alt&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt;是两个完全不同的属性，当图像无法显示的时候，必须准备替换的文本来替换无法显示的图像，因此&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alt&lt;/code&gt;属性只能用在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;img&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;area&lt;/code&gt;、和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;元素中，在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;中用于替换按钮不能正确显示的图片。&lt;/li&gt;
+      &lt;li&gt;◆ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt;提示文本一般用于超链接上，特别是为图片按钮提供提示说明，可以让用户明白这些按钮的作用。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>true</name></author><category term="html" /><category term="属性" /><summary type="html"></summary></entry><entry><title type="html">一次弄懂html的display属性</title><link href="http://localhost:4000/2021/10/24/html-display.html" rel="alternate" type="text/html" title="一次弄懂html的display属性" /><published>2021-10-24T00:00:00+09:00</published><updated>2021-10-24T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/24/html-display</id><content type="html" xml:base="http://localhost:4000/2021/10/24/html-display.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/24/cat.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;display属性的作用&quot;&gt;Display属性的作用&lt;/h2&gt;
 

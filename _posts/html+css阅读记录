@@ -50,3 +50,198 @@ display:inline-block
 
 一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。
 -------------------------------
+
+html属性 --- 常见属性
+
+1. 基本属性
+    - class
+    - id
+    - style
+    - 不拥有公共属性的元素：
+        - html、head
+        - title
+        - base
+        - meta 
+        - param
+        - script、style
+
+2. 语言属性
+    - lang  定义元素的语言代码或编码
+    - dir   定义文本方向，ltr，rtl取值。
+    - 不拥有语言语义属性的元素：
+        - frameset frame iframe
+        - br
+        - hr
+        - base
+        - param
+        - script
+
+3. 键盘属性 - 定义键盘访问方法
+    - accesskey 定义访问某元素的键盘快捷键
+    - tabindex  定义元素的tab键索引编号
+
+4. 内容属性 - 元素包含内容的附加信息
+    - alt   元素的替换文本
+    - title 提示文本
+    - longdesc 元素包含内容的大段描述信息
+    - cite  元素包含的引用信息
+    - datetime  时间信息
+    * alt和title是两个完全不同的属性，当图像无法显示的时候，必须准备替换的文本来替换无法显示的图像，因此alt属性只能用在img、area、和input元素中，在input中用于替换按钮不能正确显示的图片。
+    * title提示文本一般用于超链接上，特别是为图片按钮提供提示说明，可以让用户明白这些按钮的作用。
+
+html5文档的最低要求
+即使文档中只有
+<!DOCTYPE html>
+在浏览器中也会被渲染为
+<!DOCTYPE html>
+    <html>
+        <head></head>
+        <body></body>
+    </html>
+
+html5中的元素
+1. 结构性元素
+    - section： 用于区域的章节表述
+    - header：  页面主体的头部
+    - footer：  页脚
+    - nav：     导航
+    - article： 文章的主题内容，文字集中显示的区域
+2. 级块性元素   
+web页面的区域划分，确保内容的有效分隔
+    - aside：   用以表达注记、贴士、侧栏、摘要、插入的引用等作为补充主体的内容，从页面效果来看，就是一个侧边栏。
+    - figure：  对多个元素进行组合并展示的元素，通常与figcaption联合使用。
+    - code：    表示一段代码块
+    - dialog：  表达人和人之间的对话。包含dt和dd这两个组合元素。
+        - dt表示说话者。
+        - dd表示说话者说的内容。
+3. 行内语义性元素
+页面的具体内容的引用和表述，是丰富内容展示的基础
+    - meter：   特定范围内的数值，工资、数量、百分比等
+    - time：    时间值
+    - progress: 进度条
+    - video：   视频元素
+    - audio：   音频元素
+4. 交互性元素
+功能性的内容表达，会有一定的内容和数据的关联，是各种事件的基础
+    - details：用来表示一段具体的内容，但内容默认可能不显示，通过某种手段与legend交互才会显示出来。
+    - datagrid：    用来控制客户端数据与显示，可以由动态脚本及时更新。
+    - menu：    主要用于交互菜单
+    - command： 用来处理命令按钮
+
+构建主体内容
+1. 标识文章 article
+    - 用来标识文档、页面中独立的、完整的、可以独自被外部引用的内容。
+    - 可以是博客或报刊中的文章、一篇论坛帖子、一段用户评论或者独立的插件等。
+    - 除了内容部分，通常还会有自己的标题，一般放在一个header元素里面，有时还会有自己的注脚。
+    - 支持html5全局属性。
+2. 给内容分段 section
+    - 对网站或应用程序中页面上的内容进行分区。
+    - 通常section元素由内容和标题组成。
+    - div元素也可以用来对页面进行分区，section并非一个普通的容器元素，当一个容器需要被直接定义样式或者通过脚本定义行为时，推荐使用div，而不是section。
+        - div元素关注结构的独立性。
+        - section关注内容的独立性，所包含的内容可以单独存储到数据库中或输出到word文档中。
+article和section都是html5中新增的元素，它们的功能与div相似，以下说明与div的区别：
+- article代表文档、页面或者应用程序中独立完整的可以被外部引用的内容。例如博客中的一篇文章，论坛中的一个帖子或者浏览者的评论等。因为是独立的一段内容，所以article通常包含头部（header）和底部（footer）。
+- section用于对网站或者应用程序中页面上的内容进行分块，一个section元素通常有内容以及标题组成。
+需要包含一个<hn>标题元素，一般不用包含头部（header）或者（footer）。通常用section元素为那些有标题的内容进行分段。
+section的作用是对页面上的内容分块处理，如果对文章分段等，相邻的section元素的内容，应当是相关的，而不是像article那样独立。
+- 使用section的注意点：
+    - 不要将section当作设置样式的页面容器，此类操作应该使用div元素实现。
+    - 如果article、aside、nav元素更符合使用条件，不要使用section元素。
+    - 不要为没有标题的内容区块使用section元素。
+
+3. 导航信息 nav
+    作为导航的链接组，其中的导航元素链接到其他页面或当前页面的其他部分。只需要将主要的、基本的链接组放进nav元素即可。
+    - 传统导航条、侧边栏导航、页内导航、翻页操作。
+    - menu元素主要用于web应用中，不能替代nav。
+
+4. 辅助信息 aside
+    表示当前页面或文章的附属信息部分。
+    - 作为主要内容的附属信息部分，包含在article中，其中的内容可以是与当前文章有关的参考资料、名词解释等。
+
+6. 添加发布日期 pubdate
+    pubdate是一个可选的布尔值属性，可用在article元素中的time元素上，意思是time元素代表了文章（article元素的内容）或整个网页的发布日期。
+
+添加语义模块
+
+1. 添加标题块   header
+    通常放置于页面或页面内一个内容区块的标题，但也可以包含其他内容，如表格数据、搜索表单或相关的logo图片，因此整个页面的标题应该放在页面的开头。
+    - hgroup 可以给hn分组
+
+HTML5表单
+1. input输入类型
+    - text      文本
+    - radio     单选按钮
+    - checkbox  复选框
+    - password  密码
+    - submit    提交
+    - button    可单击按钮
+    - image     图像按钮
+    - hidden    隐藏域
+    - reset     重置按钮
+    - file      文件
+    - <select><option>
+    - email
+    - url       url地址
+    - number
+    - date      日月年
+    - month     月年
+    - week      周和年
+    - time      小时和分钟
+    - datetime  日月年utc时间
+    - datetime-local    日月年本地时间
+        - 支持max、min、step（调整的时间间隔）、value默认值
+    - search    搜索关键字的文本框。
+    - tel       电活号码
+    - color     设置颜色的文本框。
+    - autocomplete  自动填充表单，默认情况下为on，反之是off，还有空值。搭配datalist标签以及list属性实现自动完成。 - - - - - 
+    - autofocus 自动获得光标焦点，数值为on
+    - form      可以让控件元素写在页面任意位置，只需要指定该元素的form属性的值为该表单的id。
+    - 表单重写属性
+        - formaction    重写表单的action属性。
+        - formenctype   enctype
+        - formmethod    method
+        - formnovalidate novalidate
+        - formtarget    target
+        * 只适用于submit和image输入类型
+    - height和width用于规定image类型的input标签的图像的高度和宽度，这两个属性只适用于image类型的input标签。
+    - list      datalist元素可以实现数据列表的下拉效果，用户可以从列表中选择，也可自行输入。list属性用国语制定输入框所绑定的datalist元素，其值是某个datalist的id。
+    - min、max、step    step步进，用于包含数字和日期的input标签，也适用于data、pickers、namber、和range标签。
+    - multiple  数值为multiple，多文件上传。同样也可以用于email类型的元素。
+    - pattern   验证输入框中用户输入的内容是否与自定义的正则表达式相匹配，patten属性允许用户自定义一个正则表达式，配合title属性给予输入错误的提示。（可能是我需要的功能）
+    - placeholder   为输入框提供提示，在输入框为空时，在输入框内显示举例的信息内容，适用于以下类型的input元素：text、search、url、telephone、email、password。
+    - required  填写内容不可以为空，否则不允许用户提交表单。
+2. form元素
+    - datalist元素  配合list属性，搭配option提供供选择的元素。每个option都需要设置value。
+    - keygen元素    暂是还没普及。
+    - output元素    显示计算结果或脚本输出，包含完整的开始喝结束标签。
+3. form属性
+    - novalidate属性    用于提交表单时取消整个表单的验证，即关闭对表单内所有元素的有效性检查。只是取消部分验证，则可以单独将novalidate用于这些元素中。
+
+-------------------------------
+HTML5画布
+canvas元素能够在网页中创建一块矩形区域，这块区域可以称之为画布，这其中可以绘制各种图形。
+默认情况下，Canvas创建的矩形区域大小为宽300px、高150px像素，可以用width和height自定义其宽高。默认情况下，画布是透明的。可以使用css边框属性来设置边框的外观。
+
+
+
+
+-------------------------------
+伪类
+伪类对元素进行分类是基于特征(characteristics)而不是它们的名字、属性或者内容；原则上特征是不可以从文档树上推断得到的。
+
+CSS伪类是用来添加一些选择器的特殊效果。
+
+解释：在感觉上伪类可以是动态的，当用户和文档进行交互的时候一个元素可以获取或者失去一个伪类。例外的是":first-child"能通过文档树推断出来，":lang"在一些情况下也在从文档树中推断出来。
+
+由此可以看出，它的功能和class有些类似，但它是基于文档之外的抽象，所以叫伪类。
+
+伪类有：:first-child ，:link:，vistited，:hover:，:active，:focus，:lang，:right，:left，:first
+
+何为伪类?就是css内置类css内部本身赋予它一些特性和功能，也就是你不用再class=...或id=...你就可以直接拿来使用，当然你也可以改变它的部分属性比如：a:link{color:#FF0000;}
+
+CSS很多的建议并没有得到浏览器的支持，但有四个可以安全用在超链接上的伪类。
+:link用在未访问的连接上。
+:visited用在已经访问过的连接上。
+:active用于获得焦点（比如，被点击）的连接上。
+:hover 用于鼠标光标置于其上的连接。
