@@ -1,0 +1,23 @@
+I"E<p><img src="/assets/imgs/2021/11/08/layout1.png" alt="cat" /></p>
+
+<h4 id="在线练习地址">在线练习地址</h4>
+
+<p><a href="https://play.tailwindcss.com/">tailwindcss 在线练习</a></p>
+
+<h4 id="布局要点">布局要点</h4>
+
+<p>在子元素上使用<code class="language-plaintext highlighter-rouge">top-1/2</code>和<code class="language-plaintext highlighter-rouge">left-1/2</code>时，发现只有只有元素的起始位置在中间点上，查阅文档，发现需要配合<code class="language-plaintext highlighter-rouge">translate</code> - 平移使用。</p>
+
+<p>在使用<code class="language-plaintext highlighter-rouge">translate</code>时需要添加<code class="language-plaintext highlighter-rouge">transform</code>功能类启动变换。</p>
+
+<p>测试代码如下</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"relative bg-green-300 h-96 w-96"</span><span class="nt">&gt;</span>
+  parant div
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"</span><span class="nt">&gt;</span>child 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"absolute top-0 left-0 border border-red-500 h-1/2 w-1/2"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p><img src="/assets/imgs/2021/11/08/layout2.png" alt="cat" /></p>
+:ET

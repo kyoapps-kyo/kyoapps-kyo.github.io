@@ -1,0 +1,7 @@
+边框圆角
+
+<div class="rounded-full py-3 px-6...">Pill Shape</div>
+<div class="rounded-full h-24 w-24 flex items-center justify-center...">Circle</div>
+
+圆圈需要定义等长等宽 h-x w-x
+左右圆边的话用py-y px-x来控制，不需要定义高宽

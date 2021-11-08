@@ -8,6 +8,17 @@ mac设定定时关机/重启/睡眠，可以用终端命令来解决
 sudo halt 或者 sudo shutdown -h now
 now也可以适用于重启和睡眠。
 
+参数说明：
+
+-h ：关机（halt）
+-r ：重启（reboot）
+-s ：休眠（sleep）
+time ：执行操作的时间
+yymmddhhmm ：指定年月日时分，如 17022318 表示2017年2月23日18时
+now ：现在
++n ：n分钟后
+hh:mm ：今天某时某分
+
 
 MacBook怎么开启任何来源
 sudo spctl --master-disable

@@ -1,0 +1,52 @@
+scrollReveal是一个兼容PC端和移动设备的滚动动画库。不同的是 WOW.js 的动画只播放一次，而 scrollReveal.js 的动画可以播放一次或无限次；
+特点：
+scrollReveal同时兼容PC端和移动端；
+0依赖（不依赖于jQuery，也不依赖于animate.css）;
+定制性高，使用简单方便快捷。
+使用
+1.github中搜索scrollReveal，下载
+2.导入动画库
+<script src="scrollreveal.js"></script>
+3.html中为需要动画效果的标签绑定一个类（自定义）
+<ul>
+    <li class="test">1</li>
+    <li class="test">2</li>
+    <li class="test">3</li>
+    <li class="test">4</li>
+</ul>
+4.javascript中写入固定格式
+//1.创建一个scrollReveal对象
+window.sr = ScrollReveal();
+//2.调用scrollReveal里的reveal方法将scrollReveal内部的动画和css中的标签关联起来
+sr.reveal('.test',config);
+//参数一：跟html标签关联的类名
+//参数二：动画配置
+5.设置动画配置信息
+
+var config = {
+        reset: true,   // 滚动鼠标时，动画开关(默认是false没有打开鼠标滚动的动画开关)
+        origin: 'right', // 动画开始的方向
+        duration: 500,   // 动画持续时间
+        delay: 0, // 延迟
+        rotate: {x:0, y:0, z:0},  // 过度到0的初始角度
+        opacity: 0.2, // 初始透明度  (0.2到1的效果)
+        scale:2,       //缩放
+        easing: 'ease-in-out', //动画效果// 缓动'ease', 'ease-in-out'，'linear'...
+        // 回调函数
+        //当动画开始之前会被触发
+        beforeReveal: function(domEl){
+            console.log('动画执行了');
+        },
+        //鼠标滚轮滚动之前会被触发
+        beforeReset: function(domEl){
+            console.log('滚轮开始---');
+        },
+        //动画开始之后会被触发
+        afterReveal: function(domEl){
+            console.log('动画结束了');
+        },
+        //滚轮滚动之后会被触发
+        afterReset: function(domEl){
+            console.log('滚轮结束了');
+        }
+    };

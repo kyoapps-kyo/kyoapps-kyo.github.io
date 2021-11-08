@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-27T23:11:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Html常见属性</title><link href="http://localhost:4000/2021/10/27/html-base-1.html" rel="alternate" type="text/html" title="Html常见属性" /><published>2021-10-27T00:00:00+09:00</published><updated>2021-10-27T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/27/html-base-1</id><content type="html" xml:base="http://localhost:4000/2021/10/27/html-base-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/27/html.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-09T00:12:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Tailwindcss学习(1)</title><link href="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html" rel="alternate" type="text/html" title="Tailwindcss学习(1)" /><published>2021-11-08T00:00:00+09:00</published><updated>2021-11-08T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/08/tailwindcss-layout-1</id><content type="html" xml:base="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;布局要点&quot;&gt;布局要点&lt;/h4&gt;
+
+&lt;p&gt;在子元素上使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top-1/2&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left-1/2&lt;/code&gt;时，发现只有只有元素的起始位置在中间点上，查阅文档，发现需要配合&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;translate&lt;/code&gt; - 平移使用。&lt;/p&gt;
+
+&lt;p&gt;在使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;translate&lt;/code&gt;时需要添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;transform&lt;/code&gt;功能类启动变换。&lt;/p&gt;
+
+&lt;p&gt;测试代码如下&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;relative bg-green-300 h-96 w-96&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  parant div
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;child 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;absolute top-0 left-0 border border-red-500 h-1/2 w-1/2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout2.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="居中" /><category term="Relative" /><category term="Absolute" /><category term="transform" /><category term="translate" /><summary type="html"></summary></entry><entry><title type="html">Html常见属性</title><link href="http://localhost:4000/2021/10/27/html-base-1.html" rel="alternate" type="text/html" title="Html常见属性" /><published>2021-10-27T00:00:00+09:00</published><updated>2021-10-27T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/27/html-base-1</id><content type="html" xml:base="http://localhost:4000/2021/10/27/html-base-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/27/html.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;html属性--常见属性&quot;&gt;html属性 — 常见属性&lt;/h3&gt;
 
