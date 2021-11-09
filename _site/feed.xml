@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-09T00:12:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Tailwindcss学习(1)</title><link href="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html" rel="alternate" type="text/html" title="Tailwindcss学习(1)" /><published>2021-11-08T00:00:00+09:00</published><updated>2021-11-08T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/08/tailwindcss-layout-1</id><content type="html" xml:base="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-09T22:34:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Tailwindcss学习(2)</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html" rel="alternate" type="text/html" title="Tailwindcss学习(2)" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-2</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;布局要点&quot;&gt;布局要点&lt;/h4&gt;
+
+&lt;p&gt;将fixed添加到navbar的class中后，发现样式改变了，查阅文档看到&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed&lt;/code&gt; 来定位一个元素相对于浏览器窗视口的位置。&lt;/p&gt;
+
+  &lt;p&gt;偏移量是相对于视口计算的，且该元素将作为绝对定位的子元素的位置参考。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;所以这时，需要添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top-0&lt;/code&gt;，将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;置顶。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;下面的内容会因为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;脱离了文档流，会自动向上移动，所以要添加对应的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mt&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;测试代码如下&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fixed bg-green-300 h-40 w-full top-0 flex justify-between flex-wrap content-center&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pl-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;navbar&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pr-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-red-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-yellow-500 mt-10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-blue-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/code1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="fixed" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(1)</title><link href="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html" rel="alternate" type="text/html" title="Tailwindcss学习(1)" /><published>2021-11-08T00:00:00+09:00</published><updated>2021-11-08T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/08/tailwindcss-layout-1</id><content type="html" xml:base="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
 
