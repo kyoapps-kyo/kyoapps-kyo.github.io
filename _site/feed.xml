@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-09T22:34:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Tailwindcss学习(2)</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html" rel="alternate" type="text/html" title="Tailwindcss学习(2)" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-2</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-10T02:43:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Tailwindcss学习(2)</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html" rel="alternate" type="text/html" title="Tailwindcss学习(2)" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-2</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
 
@@ -30,7 +30,310 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-blue-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/code1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="fixed" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(1)</title><link href="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html" rel="alternate" type="text/html" title="Tailwindcss学习(1)" /><published>2021-11-08T00:00:00+09:00</published><updated>2021-11-08T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/08/tailwindcss-layout-1</id><content type="html" xml:base="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/code1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="fixed" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(3)</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-3.html" rel="alternate" type="text/html" title="Tailwindcss学习(3)" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-3</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-3.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;flex在css如何定义&quot;&gt;Flex在css如何定义&lt;/h1&gt;
+
+&lt;h2 id=&quot;一flex布局是什么&quot;&gt;一、Flex布局是什么？&lt;/h2&gt;
+
+&lt;p&gt;在学习使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;之前，先看看文档是怎么解释&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;的。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;display&lt;/code&gt;中的一个属性，是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Flexible Box&lt;/code&gt;的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。&lt;/p&gt;
+
+  &lt;p&gt;任何一个容器都可以指定为Flex布局。&lt;/p&gt;
+
+  &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+
+  &lt;p&gt;行内元素也可以使用Flex布局。&lt;/p&gt;
+
+  &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+
+  &lt;p&gt;Webkit内核的浏览器，必须加上-webkit前缀。&lt;/p&gt;
+
+  &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;-webkit-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* Safari */&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;设为Flex布局以后，子元素的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clear&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vertical-align&lt;/code&gt;属性将失效。&lt;/p&gt;
+
+&lt;h2 id=&quot;二基本概念&quot;&gt;二、基本概念&lt;/h2&gt;
+
+&lt;p&gt;采用Flex布局的元素，称为Flex容器（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex container&lt;/code&gt;），简称”容器”。&lt;/p&gt;
+
+&lt;p&gt;它的所有子元素自动成为容器成员，称为Flex项目（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex item&lt;/code&gt;），简称”项目”。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;容器默认存在两根轴：水平的主轴（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main axis&lt;/code&gt;）和垂直的交叉轴（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross axis&lt;/code&gt;）。主轴的开始位置（与边框的交叉点）叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main start&lt;/code&gt;，结束位置叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main end&lt;/code&gt;；交叉轴的开始位置叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross start&lt;/code&gt;，结束位置叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross end&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;项目默认沿主轴排列。单个项目占据的主轴空间叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main size&lt;/code&gt;，占据的交叉轴空间叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross size&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;三容器的属性&quot;&gt;三、容器的属性&lt;/h2&gt;
+
+&lt;p&gt;以下6个属性设置在容器上。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-direction&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-wrap&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-flow&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;justify-content&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-items&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-content&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;31-flex-direction属性&quot;&gt;3.1 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-direction&lt;/code&gt;属性&lt;/h3&gt;
+
+&lt;p&gt;flex-direction属性决定主轴的方向（即项目的排列方向）。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row-reverse&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column-reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/direction.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;它可能有4个值。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row&lt;/code&gt;（默认值）：主轴为水平方向，起点在左端。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row-reverse&lt;/code&gt;：主轴为水平方向，起点在右端。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;column&lt;/code&gt;：主轴为垂直方向，起点在上沿。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;column-reverse&lt;/code&gt;：主轴为垂直方向，起点在下沿。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;32-flex-wrap属性&quot;&gt;3.2 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-wrap&lt;/code&gt;属性&lt;/h3&gt;
+
+&lt;p&gt;默认情况下，项目都排在一条线（又称”轴线”）上。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-wrap&lt;/code&gt;属性定义，如果一条轴线排不下，如何换行。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/wrap.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nowrap&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap-reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;它可能取三个值。&lt;/p&gt;
+
+&lt;p&gt;（1）&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nowrap&lt;/code&gt;（默认）：不换行。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/nowrap.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;（2）wrap：换行，第一行在上方。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/wrap2.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;（3）wrap-reverse：换行，第一行在下方。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/wrap-reverse.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;33-flex-flow&quot;&gt;3.3 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-flow&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-flow&lt;/code&gt;属性是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-direction&lt;/code&gt;属性和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-wrap&lt;/code&gt;属性的简写形式，默认值为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row nowrap&lt;/code&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-flow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flex-wrap&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;34-justify-content属性&quot;&gt;3.4 justify-content属性&lt;/h3&gt;
+
+&lt;p&gt;justify-content属性定义了项目在主轴上的对齐方式。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-between&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-around&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/justify-content.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;flex-start（默认值）：左对齐&lt;/li&gt;
+  &lt;li&gt;flex-end：右对齐&lt;/li&gt;
+  &lt;li&gt;center： 居中&lt;/li&gt;
+  &lt;li&gt;space-between：两端对齐，项目之间的间隔都相等。&lt;/li&gt;
+  &lt;li&gt;space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;35-align-items属性&quot;&gt;3.5 align-items属性&lt;/h3&gt;
+
+&lt;p&gt;align-items属性定义项目在交叉轴上如何对齐。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;baseline&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/align-items.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;flex-start：交叉轴的起点对齐。&lt;/li&gt;
+  &lt;li&gt;flex-end：交叉轴的终点对齐。&lt;/li&gt;
+  &lt;li&gt;center：交叉轴的中点对齐。&lt;/li&gt;
+  &lt;li&gt;baseline: 项目的第一行文字的基线对齐。&lt;/li&gt;
+  &lt;li&gt;stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;36-align-content属性&quot;&gt;3.6 align-content属性&lt;/h3&gt;
+
+&lt;p&gt;align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;align-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-between&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-around&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/align-content.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;该属性可能取6个值。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;flex-start：与交叉轴的起点对齐。&lt;/li&gt;
+  &lt;li&gt;flex-end：与交叉轴的终点对齐。&lt;/li&gt;
+  &lt;li&gt;center：与交叉轴的中点对齐。&lt;/li&gt;
+  &lt;li&gt;space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。&lt;/li&gt;
+  &lt;li&gt;space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。&lt;/li&gt;
+  &lt;li&gt;stretch（默认值）：轴线占满整个交叉轴。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;四项目的属性&quot;&gt;四、项目的属性&lt;/h3&gt;
+
+&lt;p&gt;以下6个属性设置在项目上。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;order&lt;/li&gt;
+  &lt;li&gt;flex-grow&lt;/li&gt;
+  &lt;li&gt;flex-shrink&lt;/li&gt;
+  &lt;li&gt;flex-basis&lt;/li&gt;
+  &lt;li&gt;flex&lt;/li&gt;
+  &lt;li&gt;align-self&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;41-order属性&quot;&gt;4.1 order属性&lt;/h3&gt;
+
+&lt;p&gt;order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integer&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/order.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;42-flex-grow属性&quot;&gt;4.2 flex-grow属性&lt;/h3&gt;
+
+&lt;p&gt;flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* default 0 */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex-grow.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。&lt;/p&gt;
+
+&lt;h3 id=&quot;43-flex-shrink属性&quot;&gt;4.3 flex-shrink属性&lt;/h3&gt;
+
+&lt;p&gt;flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* default 1 */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex-shrink.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。&lt;/p&gt;
+
+&lt;p&gt;负值对该属性无效。&lt;/p&gt;
+
+&lt;h3 id=&quot;44-flex-basis属性&quot;&gt;4.4 flex-basis属性&lt;/h3&gt;
+
+&lt;p&gt;flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-basis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* default auto */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。&lt;/p&gt;
+
+&lt;h3 id=&quot;45-flex属性&quot;&gt;4.5 flex属性&lt;/h3&gt;
+
+&lt;p&gt;flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&apos;flex-grow&apos;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&apos;flex-shrink&apos;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;?&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&apos;flex-basis&apos;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。&lt;/p&gt;
+
+&lt;p&gt;建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。&lt;/p&gt;
+
+&lt;h3 id=&quot;46-align-self属性&quot;&gt;4.6 align-self属性&lt;/h3&gt;
+
+&lt;p&gt;align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;align-self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;baseline&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/align-self.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;该属性可能取6个值，除了auto，其他都与align-items属性完全一致。&lt;/p&gt;
+
+&lt;h1 id=&quot;flex在tailwind中使用举例&quot;&gt;Flex在tailwind中使用举例&lt;/h1&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;两端对齐均匀分布：justify-between
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+垂直居中：flex-wrap content-center
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-300 h-20 w-full flex justify-between flex-wrap content-center&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-yellow-400 text-center px-4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-red-400 text-center px-4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;center&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-blue-400 text-center px-4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+使每个项目周围的距离相等，但不像使用 justify-around 时项目之间有双倍的距离：justify-evenly
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+顶端对齐：items-start
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-300 h-20 w-full flex justify-evenly items-start&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-yellow-400 text-center px-4 py-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-red-400 text-center px-4 py-5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;center&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-blue-400 text-center px-4 py-1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+使每个项目两侧的距离相等：justify-around
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+底端对齐：items-start
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-300 h-20 w-full flex justify-around items-end&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-yellow-400 text-center px-4 py-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-red-400 text-center px-4 py-5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;center&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-blue-400 text-center px-4 py-1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+x方向布局：&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+justify-start / justify-end / justify-center / justify-between / justify-around / justify-evenly
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+y方向布局：多行控制需要使用flex-wrap
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+在容器中行的位置：content-center / content-start / content-end / content-between / content-around
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+content-evenly
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex-1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="flex" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(1)</title><link href="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html" rel="alternate" type="text/html" title="Tailwindcss学习(1)" /><published>2021-11-08T00:00:00+09:00</published><updated>2021-11-08T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/08/tailwindcss-layout-1</id><content type="html" xml:base="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
 
