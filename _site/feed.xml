@@ -1,36 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-10T02:43:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Tailwindcss学习(2)</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html" rel="alternate" type="text/html" title="Tailwindcss学习(2)" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-2</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-11T01:12:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Tailwindcss学习(4) - 排版 - 垂直对齐</title><link href="http://localhost:4000/2021/11/10/tailwindcss-align.html" rel="alternate" type="text/html" title="Tailwindcss学习(4) - 排版 - 垂直对齐" /><published>2021-11-10T00:00:00+09:00</published><updated>2021-11-10T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/10/tailwindcss-align</id><content type="html" xml:base="http://localhost:4000/2021/11/10/tailwindcss-align.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/10/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;布局要点&quot;&gt;布局要点&lt;/h4&gt;
+&lt;h2 id=&quot;使用场合&quot;&gt;使用场合&lt;/h2&gt;
 
-&lt;p&gt;将fixed添加到navbar的class中后，发现样式改变了，查阅文档看到&lt;/p&gt;
+&lt;p&gt;在制作&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;navbar&lt;/code&gt;时候，发现左侧&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;内文字无法与右侧&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;内的文字底部对齐，阅读文档之后尝试采用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;来解决，发现不能很好解决不同&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;之间的文字对齐问题，最后改用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;的items-center居中元素，之后使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;padding&lt;/code&gt;调节文字的位置。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed&lt;/code&gt; 来定位一个元素相对于浏览器窗视口的位置。&lt;/p&gt;
+&lt;p&gt;所以个人感觉&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;一般用于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;内部行内元素的文字垂直对齐上。&lt;/p&gt;
 
-  &lt;p&gt;偏移量是相对于视口计算的，且该元素将作为绝对定位的子元素的位置参考。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;接下来尝试验证自己的想法。&lt;/p&gt;
 
-&lt;p&gt;所以这时，需要添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top-0&lt;/code&gt;，将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;置顶。&lt;/p&gt;
+&lt;h2 id=&quot;文档解读&quot;&gt;文档解读&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;下面的内容会因为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;脱离了文档流，会自动向上移动，所以要添加对应的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mt&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在tailwindcss中，可以通过下面5个类控制文字垂直对齐的位置：&lt;/p&gt;
 
-&lt;p&gt;测试代码如下&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;middle&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bottom&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-top&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-bottom&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fixed bg-green-300 h-40 w-full top-0 flex justify-between flex-wrap content-center&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pl-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;navbar&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pr-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-red-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-yellow-500 mt-10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-blue-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;p&gt;在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt;中的定义是：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.align-top&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.align-text-top&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;text-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/code1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="fixed" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(3)</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-3.html" rel="alternate" type="text/html" title="Tailwindcss学习(3)" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-3</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-3.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vertical-align&lt;/code&gt;属性：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;定义行内元素的基线相对于该元素所在行的基线的垂直对齐。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;！用于&lt;strong&gt;行内元素&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;尝试代码&quot;&gt;尝试代码&lt;/h2&gt;
+
+&lt;p&gt;块元素之间的文字对齐互不影响，同时也可以在父元素上用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;leading&lt;/code&gt;控制行高来控制文字的上下位置。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-red-500 w-full flex justify-between py-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-16 bg-yellow-300 ml-5 px-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-10 bg-green-300 inline-block&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;相对于此&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-top bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-middle bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;middle&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-bottom bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;bottom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-text-top bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;text-top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-text-bottom bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;text-bottom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-400 px-2 text-white&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-14 bg-blue-700 inline-block text-xl&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;相对于此&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-top bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-middle bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;middle&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-bottom bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;bottom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-text-top bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;text-top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-text-bottom bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;text-bottom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-16 bg-yellow-300 ml-5 px-2 leading-10 mr-4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-10 bg-green-400 inline-block&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;line-height&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-400&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/10/code1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;
+
+&lt;p&gt;在块元素内部，无法使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;统一各个子块元素内部的行内元素的对齐。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;只能使用于同一个块元素内部的文字对齐。&lt;/p&gt;
+
+&lt;p&gt;相互独立的块元素需要采用其他的布局方式来调整位置。&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="排版" /><category term="垂直对齐" /><category term="align" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(3) - flex详解</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-3.html" rel="alternate" type="text/html" title="Tailwindcss学习(3) - flex详解" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-3</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-3.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
 
@@ -333,7 +385,39 @@ content-evenly
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex-1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="flex" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(1)</title><link href="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html" rel="alternate" type="text/html" title="Tailwindcss学习(1)" /><published>2021-11-08T00:00:00+09:00</published><updated>2021-11-08T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/08/tailwindcss-layout-1</id><content type="html" xml:base="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex-1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="flex" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(2) - 用fixed固定navbar</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html" rel="alternate" type="text/html" title="Tailwindcss学习(2) - 用fixed固定navbar" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-2</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;布局要点&quot;&gt;布局要点&lt;/h4&gt;
+
+&lt;p&gt;将fixed添加到navbar的class中后，发现样式改变了，查阅文档看到&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed&lt;/code&gt; 来定位一个元素相对于浏览器窗视口的位置。&lt;/p&gt;
+
+  &lt;p&gt;偏移量是相对于视口计算的，且该元素将作为绝对定位的子元素的位置参考。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;所以这时，需要添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top-0&lt;/code&gt;，将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;置顶。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;下面的内容会因为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;脱离了文档流，会自动向上移动，所以要添加对应的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mt&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;测试代码如下&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fixed bg-green-300 h-40 w-full top-0 flex justify-between flex-wrap content-center&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pl-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;navbar&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pr-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-red-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-yellow-500 mt-10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-blue-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/code1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="fixed" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(1) - absolute居中</title><link href="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html" rel="alternate" type="text/html" title="Tailwindcss学习(1) - absolute居中" /><published>2021-11-08T00:00:00+09:00</published><updated>2021-11-08T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/08/tailwindcss-layout-1</id><content type="html" xml:base="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
 

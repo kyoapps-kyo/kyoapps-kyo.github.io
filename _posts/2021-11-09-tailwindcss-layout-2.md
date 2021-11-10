@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tailwindcss学习(2)"
+title:  "Tailwindcss学习(2) - 用fixed固定navbar"
 subtitle: 'fixed定位navbar置顶的用法'
 date:   2021-11-09
 tags: tailwindcss layout fixed

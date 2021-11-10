@@ -1,0 +1,21 @@
+I"�<p><img src="/assets/imgs/2021/11/10/tailwindcss-logotype.png" alt="cat" /></p>
+
+<p><a href="https://play.tailwindcss.com/">tailwindcss 在线练习</a></p>
+
+<h2 id="文档解读">文档解读</h2>
+
+<p>在tailwindcss中，可以通过类：</p>
+
+<ul>
+  <li>text-</li>
+  <li></li>
+</ul>
+
+<p>.align-top {
+  vertical-align: top;
+}</p>
+
+<p>.align-text-top {
+  vertical-align: text-top;
+}</p>
+:ET

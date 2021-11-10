@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tailwindcss学习(1)"
+title:  "Tailwindcss学习(1) - absolute居中"
 subtitle: '绝对布局里控制元素居中的方法'
 date:   2021-11-08
 tags: tailwindcss layout 居中 Relative Absolute transform translate

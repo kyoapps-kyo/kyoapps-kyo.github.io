@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tailwindcss学习(3)"
+title:  "Tailwindcss学习(3) - flex详解"
 subtitle: 'Flex用法详解以及如何在tailwindcss中使用'
 date:   2021-11-09
 tags: tailwindcss layout flex 

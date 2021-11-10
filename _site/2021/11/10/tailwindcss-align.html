@@ -1,0 +1,373 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="KYO" />
+<meta name="keywords" content="php laravel js mysql bootstrap vue.js weixin linux" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/profile.jpg" rel="shortcut icon" />
+<link href="/assets/profile.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>Tailwindcss学习(4) - 排版 - 垂直对齐</title>
+<!-- 百度统计 -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?00eaba5de0a36c661fd413a3f8f1b936";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTJ8G9J19M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTJ8G9J19M');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(111,110,110) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(111,110,110);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Stay hungry, stay foolish.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">KYO</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>KYO</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Tailwindcss学习(4) - 排版 - 垂直对齐</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">使用align时需要注意的坑</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">使用align时需要注意的坑</span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(111,110,110);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(111,110,110)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(111,110,110);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Tailwindcss学习(4) - 排版 - 垂直对齐</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">使用align时需要注意的坑</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">使用align时需要注意的坑</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2021/11/09/tailwindcss-layout-3.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(111,110,110)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(111,110,110);"><sapn class="main">Tailwindcss学习(3) - flex详解</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(111,110,110);border-bottom: 2px solid rgb(111,110,110);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2021/11/09/tailwindcss-layout-3.html" class="rightchange" style="border-left: 1px solid rgb(111,110,110);border-bottom: 2px solid rgb(111,110,110);"><span>下一篇<br><br>Tailwindcss学习(3) - flex详解</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(111,110,110); border-right: 8px solid rgb(111,110,110)">
+        文字垂直对齐 align解惑
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  
+  <!-- 引入toc目录 -->
+<ul><li><a href="#使用场合">使用场合</a></li><li><a href="#文档解读">文档解读</a></li><li><a href="#尝试代码">尝试代码</a></li><li><a href="#结论">结论</a></li></ul>
+  <p><img src="/assets/imgs/2021/11/10/tailwindcss-logotype.png" alt="cat" /></p>
+
+<p><a href="https://play.tailwindcss.com/">tailwindcss 在线练习</a></p>
+
+<h2 id="使用场合">使用场合</h2>
+
+<p>在制作<code class="language-plaintext highlighter-rouge">navbar</code>时候，发现左侧<code class="language-plaintext highlighter-rouge">div</code>内文字无法与右侧<code class="language-plaintext highlighter-rouge">div</code>内的文字底部对齐，阅读文档之后尝试采用<code class="language-plaintext highlighter-rouge">align</code>来解决，发现不能很好解决不同<code class="language-plaintext highlighter-rouge">div</code>之间的文字对齐问题，最后改用<code class="language-plaintext highlighter-rouge">flex</code>的items-center居中元素，之后使用<code class="language-plaintext highlighter-rouge">padding</code>调节文字的位置。</p>
+
+<p>所以个人感觉<code class="language-plaintext highlighter-rouge">align</code>一般用于<code class="language-plaintext highlighter-rouge">div</code>内部行内元素的文字垂直对齐上。</p>
+
+<p>接下来尝试验证自己的想法。</p>
+
+<h2 id="文档解读">文档解读</h2>
+
+<p>在tailwindcss中，可以通过下面5个类控制文字垂直对齐的位置：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">align-</code></li>
+  <li>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">top</code></li>
+      <li><code class="language-plaintext highlighter-rouge">middle</code></li>
+      <li><code class="language-plaintext highlighter-rouge">bottom</code></li>
+      <li><code class="language-plaintext highlighter-rouge">text-top</code></li>
+      <li><code class="language-plaintext highlighter-rouge">text-bottom</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>在<code class="language-plaintext highlighter-rouge">css</code>中的定义是：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.align-top</span> <span class="p">{</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">top</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.align-text-top</span> <span class="p">{</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">text-top</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">vertical-align</code>属性：</p>
+
+<blockquote>
+  <p>定义行内元素的基线相对于该元素所在行的基线的垂直对齐。</p>
+</blockquote>
+
+<p>！用于<strong>行内元素</strong></p>
+
+<h2 id="尝试代码">尝试代码</h2>
+
+<p>块元素之间的文字对齐互不影响，同时也可以在父元素上用<code class="language-plaintext highlighter-rouge">leading</code>控制行高来控制文字的上下位置。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-red-500 w-full flex justify-between py-2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"h-16 bg-yellow-300 ml-5 px-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"h-10 bg-green-300 inline-block"</span><span class="nt">&gt;</span>相对于此<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-top bg-green-200"</span><span class="nt">&gt;</span>top<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-middle bg-green-200"</span><span class="nt">&gt;</span>middle<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-bottom bg-green-200"</span><span class="nt">&gt;</span>bottom<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-text-top bg-green-200"</span><span class="nt">&gt;</span>text-top<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-text-bottom bg-green-200"</span><span class="nt">&gt;</span>text-bottom<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-green-400 px-2 text-white"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"h-14 bg-blue-700 inline-block text-xl"</span><span class="nt">&gt;</span>相对于此<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-top bg-blue-500"</span><span class="nt">&gt;</span>top<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-middle bg-blue-500"</span><span class="nt">&gt;</span>middle<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-bottom bg-blue-500"</span><span class="nt">&gt;</span>bottom<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-text-top bg-blue-500"</span><span class="nt">&gt;</span>text-top<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"align-text-bottom bg-blue-500"</span><span class="nt">&gt;</span>text-bottom<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"h-16 bg-yellow-300 ml-5 px-2 leading-10 mr-4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"h-10 bg-green-400 inline-block"</span><span class="nt">&gt;</span>line-height<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"bg-green-400"</span><span class="nt">&gt;</span>right<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div></div>
+<p><img src="/assets/imgs/2021/11/10/code1.png" alt="cat" /></p>
+
+<h2 id="结论">结论</h2>
+
+<p>在块元素内部，无法使用<code class="language-plaintext highlighter-rouge">align</code>统一各个子块元素内部的行内元素的对齐。</p>
+
+<p><code class="language-plaintext highlighter-rouge">align</code>只能使用于同一个块元素内部的文字对齐。</p>
+
+<p>相互独立的块元素需要采用其他的布局方式来调整位置。</p>
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81NDUxMi8zMDk4Mw=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>KYO ©
+  
+  
+  2021
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
