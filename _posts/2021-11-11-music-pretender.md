@@ -5,7 +5,7 @@ subtitle: 'Pretender 歌曲 + 歌词'
 date:   2021-11-11
 tags: jpop 听歌的心情
 description: 'Pretender 歌曲歌词'
-color: 'rgb(222,222,05)'
+color: 'rgb(47,16,92)'
 cover: '/assets/imgs/2021/11/11/Pretender.jpeg'
 ---
 ![cat](/assets/imgs/2021/11/11/Pretender.jpeg)
