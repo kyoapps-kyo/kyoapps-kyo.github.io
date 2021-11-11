@@ -6,7 +6,7 @@ date:   2021-11-10
 tags: tailwindcss 排版 垂直对齐 align 
 description: '使用align时需要注意的坑'
 color: 'rgb(111,110,110)'
-cover: '/assets/imgs/2021/11/09/tailwindcss-logotype.png'
+cover: '/assets/imgs/2021/11/10/tailwindcss-logotype.png'
 ---
 ![cat](/assets/imgs/2021/11/10/tailwindcss-logotype.png)
 

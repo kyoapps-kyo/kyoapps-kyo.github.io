@@ -17,7 +17,7 @@ author: true
 name: 'kyo'
 NickName: 'kyo'
 webtitle: 'Stay hungry, stay foolish.'
-bio: '暂无'
+bio: ''
 about: true
 aboutyou: '保持好奇，不断积累'
 portraits: '/assets/profile.jpg' # your portraits image file path
@@ -41,7 +41,7 @@ SNS-icon: #['Facebook', 'weibo', 'qq', 'github', 'Dribbble', 'Twitter', 'instagr
   # twitch: ''
 
 # 分页
-paginate: 2
+paginate: 10
 paginatepath: ['page:num']
 
 # since
