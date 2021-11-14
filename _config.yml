@@ -17,9 +17,12 @@ author: true
 name: 'kyo'
 NickName: 'kyo'
 webtitle: 'Stay hungry, stay foolish.'
-bio: ''
+bio: '保持好奇，不断积累'
 about: true
-aboutyou: '保持好奇，不断积累'
+aboutyou: '<p style="text-align:center">WEB应用全栈开发,已点技能:</p>
+<p style="text-align:center">HTML/CSS/TAILWINDCSS<br>
+JS/ALPINEJS/PHP/MYSQL/REDIS/VUE.JS/LARAVEL/NGINX/服务器部署/GIT/...</p>
+<p style="text-align:center">持续更新中。</p>'
 portraits: '/assets/profile.jpg' # your portraits image file path
 
 # SNS
