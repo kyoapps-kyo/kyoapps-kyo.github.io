@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-15T02:27:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">京都 - 美山 - 随拍</title><link href="http://localhost:4000/2021/11/15/miyama-photo.html" rel="alternate" type="text/html" title="京都 - 美山 - 随拍" /><published>2021-11-15T00:00:00+09:00</published><updated>2021-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/15/miyama-photo</id><content type="html" xml:base="http://localhost:4000/2021/11/15/miyama-photo.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-15T10:13:43+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">京都 - 美山 - 拍照</title><link href="http://localhost:4000/2021/11/15/miyama-photo.html" rel="alternate" type="text/html" title="京都 - 美山 - 拍照" /><published>2021-11-15T00:00:00+09:00</published><updated>2021-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/15/miyama-photo</id><content type="html" xml:base="http://localhost:4000/2021/11/15/miyama-photo.html">&lt;blockquote&gt;
   &lt;p&gt;又到了红叶季，趁着天气好，去美山放放风，暂时先把拍的风景图放上，给朋友拍的人像之后再更新。&lt;/p&gt;
 
   &lt;p&gt;图片没有点击放大功能，之后有时间再增加上吧。&lt;/p&gt;
@@ -9,6 +9,15 @@
 &lt;/blockquote&gt;
 
 &lt;div style=&quot;display: flex;flex-wrap:wrap&quot;&gt;
+    &lt;div style=&quot;width: 100%; padding:5px&quot;&gt;
+        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-12.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;width: 100%; padding:5px&quot;&gt;
+        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-19.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;width: 100%; padding:5px&quot;&gt;
+        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-31.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
     &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
         &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-1.jpg&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
@@ -98,15 +107,6 @@
     &lt;/div&gt;
     &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
         &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-33.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-12.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-19.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-31.jpg&quot; alt=&quot;&quot; /&gt;
     &lt;/div&gt;
 
 &lt;/div&gt;</content><author><name>true</name></author><category term="人像" /><category term="风景" /><summary type="html">又到了红叶季，趁着天气好，去美山放放风，暂时先把拍的风景图放上，给朋友拍的人像之后再更新。 图片没有点击放大功能，之后有时间再增加上吧。 地点：京都府南丹市美山町 器材：相机 - SONY A7R3 镜头 - GM85F1.4</summary></entry><entry><title type="html">Official髭男dism - Pretender</title><link href="http://localhost:4000/2021/11/11/music-pretender.html" rel="alternate" type="text/html" title="Official髭男dism - Pretender" /><published>2021-11-11T00:00:00+09:00</published><updated>2021-11-11T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/11/music-pretender</id><content type="html" xml:base="http://localhost:4000/2021/11/11/music-pretender.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/11/Pretender.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;

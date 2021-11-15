@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "京都 - 美山 - 随拍"
-subtitle: '美山随拍'
+title:  "京都 - 美山 - 拍照"
+subtitle: '美山拍照'
 date:   2021-11-15
 tags: 人像 风景
 description: '京都美山照片'
@@ -18,6 +18,15 @@ cover: '/assets/imgs/2021/11/15/miyama-31.jpg'
 > 器材：相机 - SONY A7R3 镜头 - GM85F1.4
 
 <div style="display: flex;flex-wrap:wrap">
+    <div style="width: 100%; padding:5px">
+        <img src="/assets/imgs/2021/11/15/miyama-12.jpg" alt="">
+    </div>
+    <div style="width: 100%; padding:5px">
+        <img src="/assets/imgs/2021/11/15/miyama-19.jpg" alt="">
+    </div>
+    <div style="width: 100%; padding:5px">
+        <img src="/assets/imgs/2021/11/15/miyama-31.jpg" alt="">
+    </div>
     <div style="width: 50%; padding:5px">
         <img src="/assets/imgs/2021/11/15/miyama-1.jpg" alt="">
     </div>
@@ -107,15 +116,6 @@ cover: '/assets/imgs/2021/11/15/miyama-31.jpg'
     </div>
     <div style="width: 50%; padding:5px">
         <img src="/assets/imgs/2021/11/15/miyama-33.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-12.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-19.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-31.jpg" alt="">
     </div>
 
 </div>
