@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "京都 - 美山 - 拍照"
-subtitle: '美山拍照'
+title:  "京都 - 美山"
+subtitle: '美山 映像'
 date:   2021-11-15
 tags: 人像 风景
-description: '京都美山照片'
+description: '京都美山'
 color: 'rgb(30,29,92)'
 cover: '/assets/imgs/2021/11/15/miyama-31.jpg'
 ---
