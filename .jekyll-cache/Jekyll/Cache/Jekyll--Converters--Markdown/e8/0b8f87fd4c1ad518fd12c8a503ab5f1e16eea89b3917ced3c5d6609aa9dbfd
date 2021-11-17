@@ -1,0 +1,17 @@
+I"$<h2 id="思路">思路</h2>
+
+<ol>
+  <li>
+    <p>fuction searchImgPath(imgDirPath)	return 路径数组</p>
+
+    <p>查找图片路径，返回图片路径数组</p>
+  </li>
+  <li>
+    <p>fuction setImgStyle(imgStyle)</p>
+
+    <p>设置图片的样式。</p>
+  </li>
+</ol>
+
+<p>等待更新</p>
+:ET

@@ -16,107 +16,265 @@ cover: '/assets/imgs/2021/11/15/miyama-31.jpg'
 > 地点：京都府南丹市美山町
 >
 > 器材：相机 - SONY A7R3 镜头 - GM85F1.4
+## 更新
+> 后续的照片，以及给网页上的照片添加了点击放大的功能
 
 <div style="display: flex;flex-wrap:wrap">
     <div style="width: 100%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-12.jpg" alt="">
-    </div>
-    <div style="width: 100%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-19.jpg" alt="">
-    </div>
-    <div style="width: 100%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-31.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-39.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-39.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-1.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-34.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-34.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-2.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-36.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-36.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-3.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-37.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-37.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-4.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-38.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-38.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-5.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-40.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-40.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-6.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-41.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-41.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-7.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-42.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-42.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-8.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-43.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-43.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-9.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-44.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-44.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-10.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-45.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-45.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-11.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-46.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-46.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-13.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-47.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-47.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-14.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-48.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-48.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-15.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-49.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-49.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-16.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-50.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-50.jpg" alt="">
+    </a>
     </div>
     <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-17.jpg" alt="">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-51.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-51.jpg" alt="">
+    </a>
     </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-18.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-20.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-21.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-22.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-23.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-24.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-25.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-26.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-27.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-28.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-29.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-30.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-32.jpg" alt="">
-    </div>
-    <div style="width: 50%; padding:5px">
-        <img src="/assets/imgs/2021/11/15/miyama-33.jpg" alt="">
-    </div>
-
 </div>
 
+## 第一部分的照片
+
+<div style="display: flex;flex-wrap:wrap">
+    <div style="width: 100%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-12.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-12.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 100%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-19.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-19.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 100%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-31.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-31.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-1.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-1.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-2.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-2.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-3.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-3.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-4.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-4.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-5.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-5.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-6.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-6.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-7.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-7.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-8.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-8.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-9.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-9.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-10.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-10.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-11.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-11.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-13.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-13.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-14.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-14.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-15.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-15.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-16.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-16.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-17.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-17.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-18.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-18.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-20.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-20.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-21.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-21.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-22.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-22.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-23.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-23.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-24.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-24.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-25.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-25.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-26.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-26.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-27.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-27.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-28.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-28.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-29.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-29.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-30.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-30.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-32.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-32.jpg" alt="">
+    </a>
+    </div>
+    <div style="width: 50%; padding:5px">
+    <a class="js_gallery_evaluate" href="/assets/imgs/2021/11/15/miyama-33.jpg" data-fancybox="gallery" >
+        <img src="/assets/imgs/2021/11/15/miyama-33.jpg" alt="">
+    </a>
+    </div>
+</div>
+
+<script src="/assets/js/fancybox.js"></script>
