@@ -1,0 +1,7 @@
+I"<p><img src="/assets/imgs/2021/11/18/Fancybox.jpeg" alt="cat" /></p>
+
+<h2 id="初始化">初始化</h2>
+<p>在本博客中使用的是CDN的方式引入fancybox的所需文件。</p>
+
+<p>在<code class="language-plaintext highlighter-rouge">Head</code>中</p>
+:ET

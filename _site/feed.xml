@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-17T21:36:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">JS查找图片文件的路径</title><link href="http://localhost:4000/2021/11/17/js-read-photo-url.html" rel="alternate" type="text/html" title="JS查找图片文件的路径" /><published>2021-11-17T00:00:00+09:00</published><updated>2021-11-17T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/17/js-read-photo-url</id><content type="html" xml:base="http://localhost:4000/2021/11/17/js-read-photo-url.html">&lt;h2 id=&quot;思路&quot;&gt;思路&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-18T00:38:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">在博客中使用fancybox展示图片</title><link href="http://localhost:4000/2021/11/18/fancybox.html" rel="alternate" type="text/html" title="在博客中使用fancybox展示图片" /><published>2021-11-18T00:00:00+09:00</published><updated>2021-11-18T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/18/fancybox</id><content type="html" xml:base="http://localhost:4000/2021/11/18/fancybox.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/18/Fancybox.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;初始化&quot;&gt;初始化&lt;/h2&gt;
+&lt;p&gt;在本博客中，使用引入CDN的方式，引入fancybox的所需文件。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Head&lt;/code&gt;中:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- fancybox --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;按需使用fancybox初始化，只在需要的文章下初始化fancybox。&lt;/p&gt;
+
+    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/fancybox.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;“/assets/js/fancybox.js”&lt;/p&gt;
+
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.js_gallery_evaluate&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fancybox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在文章中使用fancybox插件&lt;/p&gt;
+    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width: 50%; padding:5px&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;js_gallery_evaluate&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/imgs/2021/11/15/miyama-30.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-fancybox=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;gallery&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/imgs/2021/11/15/miyama-30.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js_gallery_evaluate&lt;/code&gt;是初始化插件的类， 同组图片的初始化都用同一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gallery&lt;/code&gt;创建相册，所以同一个相册的data-fancybox的名字需保持一致。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.kyoapps.com/2021/11/15/miyama-photo.html&quot;&gt;京都 - 美山&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="网页插件" /><category term="fancybox" /><summary type="html"></summary></entry><entry><title type="html">JS查找图片文件的路径</title><link href="http://localhost:4000/2021/11/17/js-read-photo-url.html" rel="alternate" type="text/html" title="JS查找图片文件的路径" /><published>2021-11-17T00:00:00+09:00</published><updated>2021-11-17T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/17/js-read-photo-url</id><content type="html" xml:base="http://localhost:4000/2021/11/17/js-read-photo-url.html">&lt;h2 id=&quot;思路&quot;&gt;思路&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -1041,181 +1086,4 @@ content-evenly
   &lt;li&gt;&lt;strong&gt;visibility:hidden&lt;/strong&gt; 元素的内容将不可见，但元素保持原来的位置和大小。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/24/none-hidden.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="html" /><category term="属性" /><summary type="html"></summary></entry><entry><title type="html">Laravel发送短信接口之easy-sms</title><link href="http://localhost:4000/2021/10/21/easysms-qcloud.html" rel="alternate" type="text/html" title="Laravel发送短信接口之easy-sms" /><published>2021-10-21T00:00:00+09:00</published><updated>2021-10-21T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/21/easysms-qcloud</id><content type="html" xml:base="http://localhost:4000/2021/10/21/easysms-qcloud.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/21/iphone.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;短信服务提供商&quot;&gt;短信服务提供商&lt;/h1&gt;
-
-&lt;h2 id=&quot;腾讯云&quot;&gt;腾讯云&lt;/h2&gt;
-
-&lt;h3 id=&quot;选择的理由&quot;&gt;选择的理由&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;在腾讯云里有已经认证的企业&lt;/li&gt;
-  &lt;li&gt;本来打算使用阿里云的，但是阿里云的短信模版需要已经发布了的应用，还在开发环境下的程序审查不通过，腾讯这里没有这个问题。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1短信服务申请流程已有腾讯云的账号并且有认证的公众号或者备案的网站或者可用的企业信息&quot;&gt;1.短信服务申请流程（已有腾讯云的账号，并且有认证的公众号或者备案的网站或者可用的企业信息）&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;1.申请短信签名&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;创建签名
-&lt;img src=&quot;/assets/imgs/2021/10/21/创建签名.png&quot; alt=&quot;cat&quot; /&gt;
-填写签名
-&lt;img src=&quot;/assets/imgs/2021/10/21/填写签名.png&quot; alt=&quot;cat&quot; /&gt;
-签名审查通过
-&lt;img src=&quot;/assets/imgs/2021/10/21/签名审查通过.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.申请短信模版&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;创建短信模版
-&lt;img src=&quot;/assets/imgs/2021/10/21/创建短信模版.png&quot; alt=&quot;cat&quot; /&gt;
-填写模版
-&lt;img src=&quot;/assets/imgs/2021/10/21/填写模版.png&quot; alt=&quot;cat&quot; /&gt;
-模版审查通过
-&lt;img src=&quot;/assets/imgs/2021/10/21/模版审查通过.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.记下SDK-APP-ID和SDK-APP-KEY，之后会用到&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/21/应用sdkid.png&quot; alt=&quot;cat&quot; /&gt;
-&lt;img src=&quot;/assets/imgs/2021/10/21/应用sdkkey.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2服务端配置&quot;&gt;2.服务端配置&lt;/h3&gt;
-
-&lt;h4 id=&quot;安装-easy-sms&quot;&gt;安装 &lt;a href=&quot;https://github.com/kyoapps-kyo/easy-sms&quot;&gt;easy sms&lt;/a&gt;&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer require &quot;overtrue/easy-sms&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;封装该组件的Laravel 的 ServiceProvider&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ touch config/easysms.php
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;config/easysms.php&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// HTTP 请求的超时时间（秒）&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;&apos;timeout&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// 默认发送配置&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;&apos;default&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 网关调用策略，默认：顺序调用&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&apos;strategy&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Overtrue\EasySms\Strategies\OrderStrategy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;// 默认可用的发送网关&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&apos;gateways&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-            &lt;span class=&quot;s1&quot;&gt;&apos;qcloud&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 可用的网关配置&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;&apos;gateways&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&apos;errorlog&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-            &lt;span class=&quot;s1&quot;&gt;&apos;file&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;/tmp/easy-sms.log&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&apos;qcloud&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-            &lt;span class=&quot;s1&quot;&gt;&apos;sdk_app_id&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;SMS_QCLOUD_SDK_APP_ID&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// SDK APP ID&lt;/span&gt;
-            &lt;span class=&quot;s1&quot;&gt;&apos;app_key&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;SMS_QCLOUD_APP_KEY&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// APP KEY&lt;/span&gt;
-            &lt;span class=&quot;s1&quot;&gt;&apos;sign_name&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;申请的名字&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 短信签名，如果使用默认签名，该字段可缺省（对应官方文档中的sign）&lt;/span&gt;
-            &lt;span class=&quot;s1&quot;&gt;&apos;templates&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-                &lt;span class=&quot;s1&quot;&gt;&apos;register&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;SMS_QCLOUD_TEMPLATE_REGISTER&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//短信模版ID&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.env&lt;/code&gt;中配置 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SMS_QCLOUD_SDK_APP_ID&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SMS_QCLOUD_APP_KEY&lt;/code&gt;还有一个短信模版ID&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SMS_QCLOUD_TEMPLATE_REGISTER&lt;/code&gt;，注意下面需要替换为你自己的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ID&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KEY&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
-.
-.
-SMS_QCLOUD_SDK_APP_ID=160*************
-SMS_QCLOUD_APP_KEY=91275**************
-SMS_QCLOUD_TEMPLATE_REGISTER=11******
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.env.example&lt;/code&gt; 中也加入配置示例，提交到版本库，方便以后部署&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
-.
-.
-# QCloud SMS
-SMS_QCLOUD_SDK_APP_ID=
-SMS_QCLOUD_APP_KEY=
-SMS_QCLOUD_TEMPLATE_REGISTER=
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后创建一个 ServiceProvider&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ php artisan make:provider EasySmsServiceProvider
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;修改文件&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;app/providers/EasySmsServiceProvider.php&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;App\Providers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Overtrue\EasySms\EasySms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Support\ServiceProvider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EasySmsServiceProvider&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ServiceProvider&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;singleton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;EasySms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EasySms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;easysms&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;EasySms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;easysms&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;最后 打开 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config/app.php&lt;/code&gt; 在 providers 中增加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App\Providers\EasySmsServiceProvider::class,&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;config/app.php&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;&apos;providers&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-			&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-			&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-			&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-			&lt;span class=&quot;nc&quot;&gt;App\Providers\EventServiceProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-			&lt;span class=&quot;nc&quot;&gt;App\Providers\RouteServiceProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-
-			&lt;span class=&quot;nc&quot;&gt;App\Providers\EasySmsServiceProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;打开 tinker&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php artisan tinker
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;输入如下代码，注意将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;13212345678&lt;/code&gt; 替换为你自己的手机号&lt;/p&gt;
-
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;easysms&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nv&quot;&gt;$sms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13212345678&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-                    &lt;span class=&quot;s1&quot;&gt;&apos;template&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;easysms.gateways.qcloud.templates.register&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-                    &lt;span class=&quot;s1&quot;&gt;&apos;data&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-                        &lt;span class=&quot;nv&quot;&gt;$code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//对应着短信模版里的{1}&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Overtrue\EasySms\Exceptions\NoGatewayAvailableException&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;$message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;qloucd&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-	&lt;span class=&quot;nf&quot;&gt;dd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;到这里，你的手机就可以收到验证码了，如果因为腾讯账户里没有短信余量而发不出短信，就得自己想办法啦。&lt;/p&gt;</content><author><name>true</name></author><category term="laravel" /><category term="发送短信" /><category term="easy-sms" /><category term="腾讯云短信" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/24/none-hidden.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="html" /><category term="属性" /><summary type="html"></summary></entry></feed>

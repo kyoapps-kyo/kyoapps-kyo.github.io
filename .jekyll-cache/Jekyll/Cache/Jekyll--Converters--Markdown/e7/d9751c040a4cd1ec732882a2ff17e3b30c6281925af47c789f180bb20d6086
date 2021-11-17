@@ -1,0 +1,25 @@
+I"<p><img src="/assets/imgs/2021/11/18/Fancybox.jpeg" alt="cat" /></p>
+
+<h2 id="初始化">初始化</h2>
+<p>在本博客中使用的是CDN的方式引入fancybox的所需文件。</p>
+
+<ol>
+  <li>在<code class="language-plaintext highlighter-rouge">Head</code>中:</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- fancybox --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span>
+  <span class="na">rel=</span><span class="s">"stylesheet"</span>
+  <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>按需使用fancybox初始化，只在需要的文章下初始化fancybox。
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/js/fancybox.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+:ET
