@@ -1,0 +1,117 @@
+I"�#<p><img src="/assets/imgs/2021/11/22/jQuery.png" alt="cat" /></p>
+
+<h2 id="说明">说明</h2>
+
+<p>日常碰到的问题，及解决办法，保持更新。</p>
+
+<h2 id="jqueryを使う方法">jQueryを使う方法</h2>
+
+<blockquote>
+  <p>使用laravel mix 引入jQuery文件</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install jquery --save
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">**webpack.mix.js**</code></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//autoload( {"jquery": [ '$', 'window.jQuery' ] } )を追加</span>
+
+<span class="n">mix</span><span class="mf">.</span><span class="nf">js</span><span class="p">(</span> <span class="s1">'resources/js/app.js'</span><span class="p">,</span> <span class="s1">'public/js'</span> <span class="p">)</span><span class="mf">.</span><span class="nf">autoload</span><span class="p">(</span> <span class="p">{</span>
+    <span class="s2">"jquery"</span><span class="o">:</span> <span class="p">[</span> <span class="s1">'$'</span><span class="p">,</span> <span class="s1">'window.jQuery'</span> <span class="p">],</span>
+<span class="p">}</span> <span class="p">)</span><span class="mf">.</span><span class="nf">postCss</span><span class="p">(</span> <span class="s1">'resources/css/app.css'</span><span class="p">,</span> <span class="s1">'public/css'</span><span class="p">,</span> <span class="p">[</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'postcss-import'</span> <span class="p">),</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'tailwindcss'</span> <span class="p">),</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'autoprefixer'</span> <span class="p">),</span>
+<span class="p">]</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<p>动作确认：</p>
+
+<p><code class="language-plaintext highlighter-rouge">**resources/js/sample.js**</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span> <span class="kd">function</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">run jquery</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">**webpack.mix.js**</code></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//.js( 'resources/js/sample.js', 'public/js' )を追加</span>
+
+<span class="n">mix</span><span class="mf">.</span><span class="nf">js</span><span class="p">(</span> <span class="s1">'resources/js/app.js'</span><span class="p">,</span> <span class="s1">'public/js'</span> <span class="p">)</span><span class="mf">.</span><span class="nf">js</span><span class="p">(</span> <span class="s1">'resources/js/sample.js'</span><span class="p">,</span> <span class="s1">'public/js'</span> <span class="p">)</span><span class="mf">.</span><span class="nf">autoload</span><span class="p">(</span> <span class="p">{</span>
+    <span class="s2">"jquery"</span><span class="o">:</span> <span class="p">[</span> <span class="s1">'$'</span><span class="p">,</span> <span class="s1">'window.jQuery'</span> <span class="p">],</span>
+<span class="p">}</span> <span class="p">)</span><span class="mf">.</span><span class="nf">postCss</span><span class="p">(</span> <span class="s1">'resources/css/app.css'</span><span class="p">,</span> <span class="s1">'public/css'</span><span class="p">,</span> <span class="p">[</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'postcss-import'</span> <span class="p">),</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'tailwindcss'</span> <span class="p">),</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'autoprefixer'</span> <span class="p">),</span>
+<span class="p">]</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// cd プロジェクト
+npm run dev
+</code></pre></div></div>
+
+<p>在浏览器的console中出现run jquery表示成功。</p>
+
+<h2 id="引入swiper插件">引入Swiper插件</h2>
+
+<p>npm的情况：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install swiper
+</code></pre></div></div>
+
+<p>新建<code class="language-plaintext highlighter-rouge">resources/js/swiper.js</code>文件，用于初始化插件：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// import Swiper JS</span>
+<span class="k">import</span> <span class="nx">Swiper</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Navigation</span><span class="p">,</span> <span class="nx">Pagination</span> <span class="p">,</span><span class="nx">Autoplay</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">swiper</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// import Swiper and modules styles</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">swiper/css</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">swiper/css/navigation</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">swiper/css/pagination</span><span class="dl">'</span><span class="p">;</span>
+
+ <span class="c1">// configure Swiper to use modules</span>
+<span class="nx">Swiper</span><span class="p">.</span><span class="nx">use</span><span class="p">([</span><span class="nx">Navigation</span><span class="p">,</span> <span class="nx">Pagination</span><span class="p">,</span> <span class="nx">Autoplay</span><span class="p">]);</span>
+
+ <span class="c1">// init Swiper:</span>
+<span class="kd">const</span> <span class="nx">swiper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swiper</span><span class="p">(</span><span class="dl">'</span><span class="s1">.swiper</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+<span class="c1">// Optional parameters</span>
+<span class="c1">// direction: 'vertical',</span>
+<span class="na">loop</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+ <span class="c1">// If we need pagination</span>
+<span class="na">pagination</span><span class="p">:</span> <span class="p">{</span>
+<span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.swiper-pagination</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">},</span>
+
+<span class="c1">// Navigation arrows</span>
+<span class="na">navigation</span><span class="p">:</span> <span class="p">{</span>
+<span class="na">nextEl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.swiper-button-next</span><span class="dl">'</span><span class="p">,</span>
+<span class="na">prevEl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.swiper-button-prev</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">},</span>
+
+<span class="c1">// And if we need scrollbar</span>
+<span class="na">scrollbar</span><span class="p">:</span> <span class="p">{</span>
+<span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.swiper-scrollbar</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>新建<code class="language-plaintext highlighter-rouge">resources/css/swiper.css</code>用于调整插件的样式：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.swiper</span> <span class="p">{</span>
+<span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>在app.cssで<strong>@import “swiper”;</strong> を追加</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s2">'swiper'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>在<code class="language-plaintext highlighter-rouge">**webpack.mix.js**</code>中：</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+:ET

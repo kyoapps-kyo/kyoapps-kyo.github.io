@@ -1,0 +1,444 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="KYO" />
+<meta name="keywords" content="php laravel js mysql bootstrap vue.js weixin linux" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+
+<!-- Favicon -->
+<link href="/assets/profile.jpg" rel="shortcut icon" />
+<link href="/assets/profile.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>Laravel 常见问题集</title>
+<!-- 百度统计 -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?00eaba5de0a36c661fd413a3f8f1b936";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTJ8G9J19M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTJ8G9J19M');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(93,12,34) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(93,12,34);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Stay hungry, stay foolish.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">KYO</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>KYO</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Laravel 常见问题集</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">Laravel 常见问题集</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">Laravel 常见问题集</span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(93,12,34);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(93,12,34)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(93,12,34);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Laravel 常见问题集</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">Laravel 常见问题集</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">Laravel 常见问题集</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2021/11/18/fancybox.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(93,12,34)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(93,12,34);"><sapn class="main">在博客中使用fancybox展示图片</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(93,12,34);border-bottom: 2px solid rgb(93,12,34);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2021/11/18/fancybox.html" class="rightchange" style="border-left: 1px solid rgb(93,12,34);border-bottom: 2px solid rgb(93,12,34);"><span>下一篇<br><br>在博客中使用fancybox展示图片</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(93,12,34); border-right: 8px solid rgb(93,12,34)">
+        Laravel 常见问题集
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  
+  <!-- 引入toc目录 -->
+<ul><li><a href="#说明">说明</a></li><li><a href="#jqueryを使う方法">jQueryを使う方法</a></li><li><a href="#引入swiper插件">引入Swiper插件</a></li></ul>
+  <p><img src="/assets/imgs/2021/11/22/jQuery.png" alt="cat" /></p>
+
+<h2 id="说明">说明</h2>
+
+<p>日常碰到的问题，及解决办法，保持更新。</p>
+
+<h2 id="jqueryを使う方法">jQueryを使う方法</h2>
+
+<blockquote>
+  <p>使用laravel mix 引入jQuery文件</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install jquery --save
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">**webpack.mix.js**</code></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//autoload( {"jquery": [ '$', 'window.jQuery' ] } )を追加</span>
+
+<span class="n">mix</span><span class="mf">.</span><span class="nf">js</span><span class="p">(</span> <span class="s1">'resources/js/app.js'</span><span class="p">,</span> <span class="s1">'public/js'</span> <span class="p">)</span><span class="mf">.</span><span class="nf">autoload</span><span class="p">(</span> <span class="p">{</span>
+    <span class="s2">"jquery"</span><span class="o">:</span> <span class="p">[</span> <span class="s1">'$'</span><span class="p">,</span> <span class="s1">'window.jQuery'</span> <span class="p">],</span>
+<span class="p">}</span> <span class="p">)</span><span class="mf">.</span><span class="nf">postCss</span><span class="p">(</span> <span class="s1">'resources/css/app.css'</span><span class="p">,</span> <span class="s1">'public/css'</span><span class="p">,</span> <span class="p">[</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'postcss-import'</span> <span class="p">),</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'tailwindcss'</span> <span class="p">),</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'autoprefixer'</span> <span class="p">),</span>
+<span class="p">]</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<p>动作确认：</p>
+
+<p><code class="language-plaintext highlighter-rouge">**resources/js/sample.js**</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span> <span class="kd">function</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">run jquery</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">**webpack.mix.js**</code></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//.js( 'resources/js/sample.js', 'public/js' )を追加</span>
+
+<span class="n">mix</span><span class="mf">.</span><span class="nf">js</span><span class="p">(</span> <span class="s1">'resources/js/app.js'</span><span class="p">,</span> <span class="s1">'public/js'</span> <span class="p">)</span><span class="mf">.</span><span class="nf">js</span><span class="p">(</span> <span class="s1">'resources/js/sample.js'</span><span class="p">,</span> <span class="s1">'public/js'</span> <span class="p">)</span><span class="mf">.</span><span class="nf">autoload</span><span class="p">(</span> <span class="p">{</span>
+    <span class="s2">"jquery"</span><span class="o">:</span> <span class="p">[</span> <span class="s1">'$'</span><span class="p">,</span> <span class="s1">'window.jQuery'</span> <span class="p">],</span>
+<span class="p">}</span> <span class="p">)</span><span class="mf">.</span><span class="nf">postCss</span><span class="p">(</span> <span class="s1">'resources/css/app.css'</span><span class="p">,</span> <span class="s1">'public/css'</span><span class="p">,</span> <span class="p">[</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'postcss-import'</span> <span class="p">),</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'tailwindcss'</span> <span class="p">),</span>
+    <span class="k">require</span><span class="p">(</span> <span class="s1">'autoprefixer'</span> <span class="p">),</span>
+<span class="p">]</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// cd プロジェクト
+npm run dev
+</code></pre></div></div>
+
+<p>在浏览器的console中出现run jquery表示成功。</p>
+
+<h2 id="引入swiper插件">引入Swiper插件</h2>
+
+<p>npm的情况：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install swiper
+</code></pre></div></div>
+
+<p>新建<code class="language-plaintext highlighter-rouge">resources/js/swiper.js</code>文件，用于初始化插件：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">// import Swiper JS</span>
+<span class="k">import</span> <span class="nx">Swiper</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Navigation</span><span class="p">,</span> <span class="nx">Pagination</span> <span class="p">,</span><span class="nx">Autoplay</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">swiper</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// import Swiper and modules styles</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">swiper/css</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">swiper/css/navigation</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">swiper/css/pagination</span><span class="dl">'</span><span class="p">;</span>
+
+ <span class="c1">// configure Swiper to use modules</span>
+<span class="nx">Swiper</span><span class="p">.</span><span class="nx">use</span><span class="p">([</span><span class="nx">Navigation</span><span class="p">,</span> <span class="nx">Pagination</span><span class="p">,</span> <span class="nx">Autoplay</span><span class="p">]);</span>
+
+ <span class="c1">// init Swiper:</span>
+<span class="kd">const</span> <span class="nx">swiper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swiper</span><span class="p">(</span><span class="dl">'</span><span class="s1">.swiper</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+<span class="c1">// Optional parameters</span>
+<span class="c1">// direction: 'vertical',</span>
+<span class="na">loop</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+ <span class="c1">// If we need pagination</span>
+<span class="na">pagination</span><span class="p">:</span> <span class="p">{</span>
+<span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.swiper-pagination</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">},</span>
+
+<span class="c1">// Navigation arrows</span>
+<span class="na">navigation</span><span class="p">:</span> <span class="p">{</span>
+<span class="na">nextEl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.swiper-button-next</span><span class="dl">'</span><span class="p">,</span>
+<span class="na">prevEl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.swiper-button-prev</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">},</span>
+
+<span class="c1">// And if we need scrollbar</span>
+<span class="na">scrollbar</span><span class="p">:</span> <span class="p">{</span>
+<span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.swiper-scrollbar</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>新建<code class="language-plaintext highlighter-rouge">resources/css/swiper.css</code>用于调整插件的样式：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.swiper</span> <span class="p">{</span>
+<span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>在app.cssで<strong>@import “swiper”;</strong> を追加</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s2">'swiper'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>在<code class="language-plaintext highlighter-rouge">**webpack.mix.js**</code>中：</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">.</span><span class="nf">js</span><span class="p">(</span><span class="s1">'resources/js/swiper.js'</span><span class="p">,</span> <span class="s1">'public/js'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run dev
+</code></pre></div></div>
+
+<p>在要使用的网页中引用<code class="language-plaintext highlighter-rouge">swiper.js</code>文件</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">""</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>在网页中的使用方法：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Slider main container --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Additional required wrapper --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-wrapper"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Slides --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span><span class="nt">&gt;</span>Slide 3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="c">&lt;!-- If we need pagination --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-pagination"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- If we need navigation buttons --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-button-prev"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-button-next"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- If we need scrollbar --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-scrollbar"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>参考文章：<a href="https://masa-engineer-blog.com/carousel-slide-display-with-swiperjs/#toc4">カルーセル表示を簡単にswiper.jsを利用して実装する方法</a></p>
+
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81NDUxMi8zMDk4Mw=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>KYO ©
+  
+  
+  2021
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
