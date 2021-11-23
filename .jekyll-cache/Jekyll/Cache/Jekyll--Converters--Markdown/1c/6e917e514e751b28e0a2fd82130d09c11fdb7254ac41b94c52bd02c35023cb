@@ -1,0 +1,182 @@
+I".)<p><img src="/assets/imgs/common/css.jpeg" alt="cat" /></p>
+
+<h2 id="说明">说明</h2>
+
+<p>最近在网上看到这个感觉很酷:</p>
+
+<p><img src="/assets/imgs/2021/11/23/tuki.png" alt="cat" />
+<img src="/assets/imgs/2021/11/23/tuki2.png" alt="cat" /></p>
+
+<h2 id="借鉴网上代码">借鉴网上代码</h2>
+<p>查看代码，采用的是before after，尝试自己做一下：</p>
+<style>
+#contents1 {
+  background: url(/assets/imgs/2021/11/22/heng/h1.jpg) no-repeat;
+  background-size: cover;
+  height:500px;
+}
+#contents-header {
+  background: url(/assets/imgs/2021/11/22/heng/h1.jpg) no-repeat;
+  background-size: cover;
+}
+
+#contents-header {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#contents-header::after {
+  content: "";
+  display: block;
+  width: 2500px;
+  height: 40px;
+  background: url(/assets/imgs/2021/11/23//contents_header_top.png) no-repeat;
+  background-size: 2500px auto;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+  left: calc((100vw - 2500px)/2);
+}
+
+#contents-header::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/imgs/2021/11/23/header_overlay.png) repeat;
+  background-size: 2px 2px;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+
+</style>
+
+<p>未加黑点：</p>
+<div id="contents1">
+
+</div>
+<p>加黑点：</p>
+<div id="contents-header">
+
+</div>
+<p>代码：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style&gt;</span>
+<span class="nf">#contents1</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(/assets/imgs/2021/11/22/heng/h1.jpg)</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="m">500px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#contents-header</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(/assets/imgs/2021/11/22/heng/h1.jpg)</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#contents-header</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">100px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#contents-header</span><span class="nd">::after</span> <span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">2500px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(/assets/imgs/2021/11/23//contents_header_top.png)</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="m">2500px</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+  <span class="nl">bottom</span><span class="p">:</span> <span class="m">-30px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="n">calc</span><span class="p">((</span><span class="m">100vw</span> <span class="n">-</span> <span class="m">2500px</span><span class="p">)/</span><span class="m">2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nf">#contents-header</span><span class="nd">::before</span> <span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(/assets/imgs/2021/11/23/header_overlay.png)</span> <span class="nb">repeat</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="m">2px</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="nt">&lt;/style&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"contents1"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"contents-header"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="使用css3-多重背景multiple-backgrounds--控制图片尝试不使用after和before来实现同样的效果">使用CSS3 多重背景(multiple backgrounds)  控制图片，尝试不使用after和before来实现同样的效果</h2>
+
+<h3 id="多重背景">多重背景</h3>
+<p>也就是CSS2里background的属性外加origin、clip和size组成的新background的多次叠加，缩写时为用逗号隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。</p>
+
+<p>语法缩写如下：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>background ： [background-color] | [background-image] | [background-position][/background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],...
+</code></pre></div></div>
+<p>可以把上面的缩写拆解成以下形式：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>background-image:url1,url2,...,urlN;
+background-repeat : repeat1,repeat2,...,repeatN;
+backround-position : position1,position2,...,positionN;
+background-size : size1,size2,...,sizeN;
+background-attachment : attachment1,attachment2,...,attachmentN;
+background-clip : clip1,clip2,...,clipN;
+background-origin : origin1,origin2,...,originN;
+background-color : color;
+</code></pre></div></div>
+<p><strong>注意：</strong></p>
+
+<ul>
+  <li>用逗号隔开每组 background 的缩写值；</li>
+  <li>如果有 size 值，需要紧跟 position 并且用 “/” 隔开；</li>
+  <li>如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。</li>
+  <li>background-color 只能设置一个。</li>
+</ul>
+
+<style>
+#contents2 {
+  background: url(/assets/imgs/2021/11/23//contents_header_top.png) left calc(100% + 60px) no-repeat,url(/assets/imgs/2021/11/23/header_overlay.png) left top/2px 2px repeat ,url(/assets/imgs/2021/11/22/heng/h1.jpg) left top/cover no-repeat;
+  height:500px;
+}
+</style>
+
+<div id="contents2">
+
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style&gt;</span>
+<span class="nf">#contents2</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(/assets/imgs/2021/11/23//contents_header_top.png)</span> <span class="nb">left</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="err">+</span> <span class="m">60px</span><span class="p">)</span> <span class="nb">no-repeat</span><span class="p">,</span><span class="sx">url(/assets/imgs/2021/11/23/header_overlay.png)</span> <span class="nb">left</span> <span class="nb">top</span><span class="p">/</span><span class="m">2px</span> <span class="m">2px</span> <span class="nb">repeat</span> <span class="p">,</span><span class="sx">url(/assets/imgs/2021/11/22/heng/h1.jpg)</span> <span class="nb">left</span> <span class="nb">top</span><span class="p">/</span><span class="n">cover</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="m">500px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"contents2"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+:ET

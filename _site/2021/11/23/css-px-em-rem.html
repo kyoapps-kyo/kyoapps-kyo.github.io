@@ -1,0 +1,352 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="KYO" />
+<meta name="keywords" content="php laravel js mysql bootstrap vue.js weixin linux" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+<!-- fancybox -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+
+<!-- Favicon -->
+<link href="/assets/profile.jpg" rel="shortcut icon" />
+<link href="/assets/profile.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>px、em、rem区别</title>
+<!-- 百度统计 -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?00eaba5de0a36c661fd413a3f8f1b936";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTJ8G9J19M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTJ8G9J19M');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(51,204,10) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(51,204,10);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Stay hungry, stay foolish.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">KYO</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>KYO</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">px、em、rem区别</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">什么情况使用px、em、rem时常分不清，一次搞懂。</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">什么情况使用px、em、rem时常分不清，一次搞懂。</span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(51,204,10);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/2021/11/23/css3-calc.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(51,204,10)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(51,204,10);"><sapn class="main">CSS3 calc()</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">px、em、rem区别</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">什么情况使用px、em、rem时常分不清，一次搞懂。</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">什么情况使用px、em、rem时常分不清，一次搞懂。</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2021/11/23/css-before-after.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(51,204,10)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(51,204,10);"><sapn class="main">CSS before、after和多重背景</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/2021/11/23/css3-calc.html" class="leftchange" style="border-right: 1px solid rgb(51,204,10);border-bottom: 2px solid rgb(51,204,10);"><span>上一篇<br><br>CSS3 calc()</span></a>
+    
+    
+      <a href="/2021/11/23/css-before-after.html" class="rightchange" style="border-left: 1px solid rgb(51,204,10);border-bottom: 2px solid rgb(51,204,10);"><span>下一篇<br><br>CSS before、after和多重背景</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(51,204,10); border-right: 8px solid rgb(51,204,10)">
+        详细说明和使用情况判定
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  
+  <!-- 引入toc目录 -->
+<ul><li><a href="#pxemrem区别">px、em、rem区别</a><ul><li><a href="#px">PX</a></li><li><a href="#em">EM</a></li></ul></li><li><a href="#rem">REM</a><ul><li><a href="#px-与-rem-的选择">px 与 rem 的选择？</a></li></ul></li></ul>
+  <p><img src="/assets/imgs/common/css.jpeg" alt="cat" /></p>
+
+<h2 id="pxemrem区别">px、em、rem区别</h2>
+
+<h3 id="px">PX</h3>
+
+<blockquote>
+  <p>px像素（Pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。</p>
+</blockquote>
+
+<p><strong>PX特点</strong></p>
+
+<ul>
+  <li>IE无法调整那些使用px作为单位的字体大小；</li>
+  <li>国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；</li>
+  <li>Firefox能够调整px和em，rem，但是96%以上的中国网民使用IE浏览器(或内核)。</li>
+</ul>
+
+<h3 id="em">EM</h3>
+
+<blockquote>
+  <p>em是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。</p>
+</blockquote>
+
+<p><strong>EM特点</strong></p>
+
+<ul>
+  <li>em的值并不是固定的；</li>
+  <li>em会继承父级元素的字体大小。</li>
+</ul>
+
+<p><strong>注意</strong>：任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。</p>
+
+<p>所以我们在写CSS的时候，需要注意三点：</p>
+
+<ul>
+  <li>body选择器中声明Font-size=62.5%；</li>
+  <li>将你的原来的px数值除以10，然后换上em作为单位；</li>
+  <li>重新计算那些被放大的字体的em数值。避免字体大小的重复声明。</li>
+</ul>
+
+<p>也就是避免1.2 * 1.2= 1.44的现象。比如说你在#content中声明了字体大小为1.2em，那么在声明p的字体大小时就只能是1em，而不是1.2em, 因为此em非彼em，它因继承#content的字体高而变为了1em=12px。</p>
+
+<h2 id="rem">REM</h2>
+
+<p>rem是CSS3新增的一个相对单位（root em，根em），这个单位引起了广泛关注。这个单位与em有什么区别呢？区别在于使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。目前，除了IE8及更早版本外，所有浏览器均已支持rem。对于不支持它的浏览器，应对方法也很简单，就是多写一个绝对单位的声明。这些浏览器会忽略用rem设定的字体大小。下面就是一个例子：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span><span class="nl">font-size</span><span class="p">:</span><span class="m">14px</span><span class="p">;</span> <span class="nl">font-size</span><span class="p">:</span><span class="m">.875rem</span><span class="p">;}</span>
+</code></pre></div></div>
+
+<p><strong>注意：</strong> <em>选择使用什么字体单位主要由你的项目来决定，如果你的用户群都使用最新版的浏览器，那推荐使用rem，如果要考虑兼容性，那就使用px,或者两者同时使用。</em></p>
+
+<h3 id="px-与-rem-的选择">px 与 rem 的选择？</h3>
+
+<p>对于只需要适配少部分手机设备，且分辨率对页面影响不大的，使用px即可 。</p>
+
+<p>对于需要适配各种移动设备，使用rem，例如只需要适配iPhone和iPad等分辨率差别比较挺大的设备。</p>
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81NDUxMi8zMDk4Mw=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>KYO ©
+  
+  
+  2021
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

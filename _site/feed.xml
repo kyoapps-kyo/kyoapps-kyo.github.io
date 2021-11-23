@@ -1,4 +1,332 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-22T20:03:43+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">Laravel 常见问题集</title><link href="http://localhost:4000/2021/11/22/jQuery-questions.html" rel="alternate" type="text/html" title="Laravel 常见问题集" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/jQuery-questions</id><content type="html" xml:base="http://localhost:4000/2021/11/22/jQuery-questions.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/22/jQuery.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-23T17:47:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">jQuery 常见问题集</title><link href="http://localhost:4000/2021/11/23/jquery-questions.html" rel="alternate" type="text/html" title="jQuery 常见问题集" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/jquery-questions</id><content type="html" xml:base="http://localhost:4000/2021/11/23/jquery-questions.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/jQuery.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jqueryjs-30报错-uncaught-typeerror-urlindexof-is-not-a-function&quot;&gt;jquery.js 3.0报错， Uncaught TypeError: url.indexOf is not a function&lt;/h2&gt;
+
+&lt;p&gt;jQuery升级到3.0.0后类型错误:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;jquery.js:9612 Uncaught TypeError: url.indexOf is not a function&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这个错误是由于调用了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;load&lt;/code&gt;函数导致的错误&lt;/p&gt;
+
+&lt;p&gt;把代码里调用load函数的方式&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;改为&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.load(), .unload(), and .error()&lt;/code&gt;从jQuery 1.8开始就被废弃了，换成使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.on()&lt;/code&gt;函数来注册.&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><summary type="html"></summary></entry><entry><title type="html">px、em、rem区别</title><link href="http://localhost:4000/2021/11/23/css-px-em-rem.html" rel="alternate" type="text/html" title="px、em、rem区别" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css-px-em-rem</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css-px-em-rem.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pxemrem区别&quot;&gt;px、em、rem区别&lt;/h2&gt;
+
+&lt;h3 id=&quot;px&quot;&gt;PX&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;px像素（Pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;PX特点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;IE无法调整那些使用px作为单位的字体大小；&lt;/li&gt;
+  &lt;li&gt;国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；&lt;/li&gt;
+  &lt;li&gt;Firefox能够调整px和em，rem，但是96%以上的中国网民使用IE浏览器(或内核)。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;em&quot;&gt;EM&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;em是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;EM特点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;em的值并不是固定的；&lt;/li&gt;
+  &lt;li&gt;em会继承父级元素的字体大小。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。&lt;/p&gt;
+
+&lt;p&gt;所以我们在写CSS的时候，需要注意三点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;body选择器中声明Font-size=62.5%；&lt;/li&gt;
+  &lt;li&gt;将你的原来的px数值除以10，然后换上em作为单位；&lt;/li&gt;
+  &lt;li&gt;重新计算那些被放大的字体的em数值。避免字体大小的重复声明。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;也就是避免1.2 * 1.2= 1.44的现象。比如说你在#content中声明了字体大小为1.2em，那么在声明p的字体大小时就只能是1em，而不是1.2em, 因为此em非彼em，它因继承#content的字体高而变为了1em=12px。&lt;/p&gt;
+
+&lt;h2 id=&quot;rem&quot;&gt;REM&lt;/h2&gt;
+
+&lt;p&gt;rem是CSS3新增的一个相对单位（root em，根em），这个单位引起了广泛关注。这个单位与em有什么区别呢？区别在于使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。目前，除了IE8及更早版本外，所有浏览器均已支持rem。对于不支持它的浏览器，应对方法也很简单，就是多写一个绝对单位的声明。这些浏览器会忽略用rem设定的字体大小。下面就是一个例子：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.875rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; &lt;em&gt;选择使用什么字体单位主要由你的项目来决定，如果你的用户群都使用最新版的浏览器，那推荐使用rem，如果要考虑兼容性，那就使用px,或者两者同时使用。&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;px-与-rem-的选择&quot;&gt;px 与 rem 的选择？&lt;/h3&gt;
+
+&lt;p&gt;对于只需要适配少部分手机设备，且分辨率对页面影响不大的，使用px即可 。&lt;/p&gt;
+
+&lt;p&gt;对于需要适配各种移动设备，使用rem，例如只需要适配iPhone和iPad等分辨率差别比较挺大的设备。&lt;/p&gt;</content><author><name>true</name></author><category term="css" /><summary type="html"></summary></entry><entry><title type="html">CSS before、after和多重背景</title><link href="http://localhost:4000/2021/11/23/css-before-after.html" rel="alternate" type="text/html" title="CSS before、after和多重背景" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css-before-after</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css-before-after.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;说明&quot;&gt;说明&lt;/h2&gt;
+
+&lt;p&gt;最近在网上看到这个感觉很酷:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/23/tuki.png&quot; alt=&quot;cat&quot; /&gt;
+&lt;img src=&quot;/assets/imgs/2021/11/23/tuki2.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;借鉴网上代码&quot;&gt;借鉴网上代码&lt;/h2&gt;
+&lt;p&gt;查看代码，采用的是before after，尝试自己做一下：&lt;/p&gt;
+&lt;style&gt;
+#contents1 {
+  background: url(/assets/imgs/2021/11/22/heng/h1.jpg) no-repeat;
+  background-size: cover;
+  height:500px;
+}
+#contents-header {
+  background: url(/assets/imgs/2021/11/22/heng/h1.jpg) no-repeat;
+  background-size: cover;
+}
+
+#contents-header {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#contents-header::after {
+  content: &quot;&quot;;
+  display: block;
+  width: 2500px;
+  height: 40px;
+  background: url(/assets/imgs/2021/11/23//contents_header_top.png) no-repeat;
+  background-size: 2500px auto;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+  left: calc((100vw - 2500px)/2);
+}
+
+#contents-header::before {
+  content: &quot;&quot;;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/imgs/2021/11/23/header_overlay.png) repeat;
+  background-size: 2px 2px;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+
+&lt;/style&gt;
+
+&lt;p&gt;未加黑点：&lt;/p&gt;
+&lt;div id=&quot;contents1&quot;&gt;
+
+&lt;/div&gt;
+&lt;p&gt;加黑点：&lt;/p&gt;
+&lt;div id=&quot;contents-header&quot;&gt;
+
+&lt;/div&gt;
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#contents1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(/assets/imgs/2021/11/22/heng/h1.jpg)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;no-repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cover&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#contents-header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(/assets/imgs/2021/11/22/heng/h1.jpg)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;no-repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cover&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;#contents-header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;#contents-header&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::after&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(/assets/imgs/2021/11/23//contents_header_top.png)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;no-repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2500px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100vw&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;#contents-header&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(/assets/imgs/2021/11/23/header_overlay.png)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;contents1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;contents-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;使用css3-多重背景multiple-backgrounds--控制图片尝试不使用after和before来实现同样的效果&quot;&gt;使用CSS3 多重背景(multiple backgrounds)  控制图片，尝试不使用after和before来实现同样的效果&lt;/h2&gt;
+
+&lt;h3 id=&quot;多重背景&quot;&gt;多重背景&lt;/h3&gt;
+&lt;p&gt;也就是CSS2里background的属性外加origin、clip和size组成的新background的多次叠加，缩写时为用逗号隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。&lt;/p&gt;
+
+&lt;p&gt;语法缩写如下：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;background ： [background-color] | [background-image] | [background-position][/background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;可以把上面的缩写拆解成以下形式：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;background-image:url1,url2,...,urlN;
+background-repeat : repeat1,repeat2,...,repeatN;
+backround-position : position1,position2,...,positionN;
+background-size : size1,size2,...,sizeN;
+background-attachment : attachment1,attachment2,...,attachmentN;
+background-clip : clip1,clip2,...,clipN;
+background-origin : origin1,origin2,...,originN;
+background-color : color;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用逗号隔开每组 background 的缩写值；&lt;/li&gt;
+  &lt;li&gt;如果有 size 值，需要紧跟 position 并且用 “/” 隔开；&lt;/li&gt;
+  &lt;li&gt;如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。&lt;/li&gt;
+  &lt;li&gt;background-color 只能设置一个。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;style&gt;
+#contents2 {
+  background: url(/assets/imgs/2021/11/23//contents_header_top.png) left calc(100% + 60px) no-repeat,url(/assets/imgs/2021/11/23/header_overlay.png) left top/2px 2px repeat ,url(/assets/imgs/2021/11/22/heng/h1.jpg) left top/cover no-repeat;
+  height:500px;
+}
+&lt;/style&gt;
+
+&lt;div id=&quot;contents2&quot;&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#contents2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(/assets/imgs/2021/11/23//contents_header_top.png)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;no-repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;url(/assets/imgs/2021/11/23/header_overlay.png)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;repeat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;url(/assets/imgs/2021/11/22/heng/h1.jpg)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cover&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;no-repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;contents2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><category term="html" /><category term="应用" /><summary type="html"></summary></entry><entry><title type="html">CSS3 calc()</title><link href="http://localhost:4000/2021/11/23/css3-calc.html" rel="alternate" type="text/html" title="CSS3 calc()" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css3-calc</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css3-calc.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;calc是什么&quot;&gt;calc()是什么？&lt;/h2&gt;
+
+&lt;p&gt;简单来说就是CSS3中新增的一个函数，calculate（计算）的缩写。用于动态计算宽/高，你可以使用calc()给元素的各个属性设置值【margin、border、padding、font-size】等&lt;/p&gt;
+
+&lt;h2 id=&quot;calc语法&quot;&gt;calc()语法&lt;/h2&gt;
+
+&lt;p&gt;calc的语法就是简单的四则运算：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;使用“+”、“-”、“*” 和 “/”四则运算；&lt;/li&gt;
+  &lt;li&gt;可以使用百分比、px、em、rem等单位；&lt;/li&gt;
+  &lt;li&gt;可以混合使用各种单位进行计算；&lt;/li&gt;
+  &lt;li&gt;表达式中有“+”和“-”时，其前后必须要有空格，如”width: calc(12%+5em)”这种没有空格的写法是错误的；&lt;/li&gt;
+  &lt;li&gt;表达式中有“*”和“/”时，其前后可以没有空格，但建议留有空格。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;calc的用途&quot;&gt;calc()的用途&lt;/h2&gt;
+
+&lt;p&gt;主要用于计算不确定值，例如一个外边距为10px,宽度为100%的元素，这种情况我们怎么设置呢？如果设置了：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以看出这个box已经溢出了，这时可以用calc函数动态计算出该用多宽：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;vw和vh是什么&quot;&gt;vw和vh是什么？&lt;/h2&gt;
+
+&lt;p&gt;vw、vh、vmin、vmax是一种视窗单位，也是相对单位。它相对的不是父节点或者页面的根节点。而是由视窗（Viewport）大小来决定的，单位 1，代表类似于 1%。
+视窗(Viewport)是你的浏览器实际显示内容的区域—，换句话说是你的不包括工具栏和按钮的网页浏览器。&lt;/p&gt;
+
+&lt;p&gt;具体描述如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;vw：视窗宽度的百分比（1vw 代表视窗的宽度为 1%）&lt;/li&gt;
+  &lt;li&gt;vh：视窗高度的百分比&lt;/li&gt;
+  &lt;li&gt;vmin：取当前Vw和Vh中较小的那一个值&lt;/li&gt;
+  &lt;li&gt;vmax：取当前Vw和Vh中较大的那一个值&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;vwvh-与--百分比的区别&quot;&gt;vw、vh 与 % 百分比的区别&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;% 是相对于父元素的大小设定的比率，vw、vh 是视窗大小决定的。&lt;/li&gt;
+  &lt;li&gt;vw、vh 优势在于能够直接获取高度，而用 % 在没有设置 body 高度的情况下，是无法正确获得可视区域的高度的，所以这是挺不错的优势。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;calc和vhvw结合使用&quot;&gt;calc和vh/vw结合使用&lt;/h2&gt;
+
+&lt;p&gt;上面我们使用%结合calc使用可以实现想要的效果，为什么要引入vw和vh呢？上面说%和vw,vh的区别中&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;% 在没有设置 body 高度的情况下，是无法正确获得可视区域的高度的&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;css3中使用calc设置宽度和高度&quot;&gt;CSS3中使用calc()设置宽度和高度&lt;/h2&gt;
+
+&lt;p&gt;设置宽度：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;vw&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;margin-x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;设置高度：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;vh&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;margin-y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><summary type="html"></summary></entry><entry><title type="html">Laravel 常见问题集</title><link href="http://localhost:4000/2021/11/22/Laravel-questions.html" rel="alternate" type="text/html" title="Laravel 常见问题集" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/Laravel-questions</id><content type="html" xml:base="http://localhost:4000/2021/11/22/Laravel-questions.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/laravel.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;说明&quot;&gt;说明&lt;/h2&gt;
 
@@ -120,7 +448,7 @@ npm run dev
 
 &lt;p&gt;在要使用的网页中引用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swiper.js&lt;/code&gt;文件&lt;/p&gt;
 
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;\{\{ mix(&apos;js/swiper.js&apos;) \}\}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;在网页中的使用方法：&lt;/p&gt;
@@ -146,7 +474,22 @@ npm run dev
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;参考文章：&lt;a href=&quot;https://masa-engineer-blog.com/carousel-slide-display-with-swiperjs/#toc4&quot;&gt;カルーセル表示を簡単にswiper.jsを利用して実装する方法&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><category term="laravel" /><summary type="html"></summary></entry><entry><title type="html">在博客中使用fancybox展示图片</title><link href="http://localhost:4000/2021/11/18/fancybox.html" rel="alternate" type="text/html" title="在博客中使用fancybox展示图片" /><published>2021-11-18T00:00:00+09:00</published><updated>2021-11-18T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/18/fancybox</id><content type="html" xml:base="http://localhost:4000/2021/11/18/fancybox.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/18/Fancybox.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;参考文章：&lt;a href=&quot;https://masa-engineer-blog.com/carousel-slide-display-with-swiperjs/#toc4&quot;&gt;カルーセル表示を簡単にswiper.jsを利用して実装する方法&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><category term="laravel" /><summary type="html"></summary></entry><entry><title type="html">京都 - 贵船红叶</title><link href="http://localhost:4000/2021/11/22/kifune.html" rel="alternate" type="text/html" title="京都 - 贵船红叶" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/kifune</id><content type="html" xml:base="http://localhost:4000/2021/11/22/kifune.html">&lt;blockquote&gt;
+  &lt;p&gt;周日去贵船神社，感觉到了宫崎骏的动画里，限于携带器材和我个人水平，不能展现当时一二，略有遗憾。&lt;/p&gt;
+
+  &lt;p&gt;上传未完&lt;/p&gt;
+
+  &lt;p&gt;地点：京都市贵船神社&lt;/p&gt;
+
+  &lt;p&gt;器材：相机 - SONY A7R3 镜头 - GM85F1.4 - FE35 2.8&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;img-box&quot; style=&quot;display: flex;flex-wrap:wrap&quot;&gt;
+    
+&lt;/div&gt;
+&lt;script src=&quot;/assets/js/jquery3-6.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/assets/js/img_print.js&quot;&gt;&lt;/script&gt;</content><author><name>true</name></author><category term="风景" /><category term="人像" /><category term="红叶" /><summary type="html">周日去贵船神社，感觉到了宫崎骏的动画里，限于携带器材和我个人水平，不能展现当时一二，略有遗憾。 上传未完 地点：京都市贵船神社 器材：相机 - SONY A7R3 镜头 - GM85F1.4 - FE35 2.8</summary></entry><entry><title type="html">在博客中使用fancybox展示图片</title><link href="http://localhost:4000/2021/11/18/fancybox.html" rel="alternate" type="text/html" title="在博客中使用fancybox展示图片" /><published>2021-11-18T00:00:00+09:00</published><updated>2021-11-18T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/18/fancybox</id><content type="html" xml:base="http://localhost:4000/2021/11/18/fancybox.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/18/Fancybox.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;初始化&quot;&gt;初始化&lt;/h2&gt;
 &lt;p&gt;在本博客中，使用引入CDN的方式，引入fancybox的所需文件。&lt;/p&gt;
@@ -650,507 +993,4 @@ npm run dev
 
 &lt;p&gt;永遠(えいえん)も約束(やくそく)もないけれど&lt;/p&gt;
 
-&lt;p&gt;「とても綺麗(きれい)だ」&lt;/p&gt;</content><author><name>true</name></author><category term="jpop" /><category term="听歌的心情" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(4) - 排版 - 垂直对齐</title><link href="http://localhost:4000/2021/11/10/tailwindcss-align.html" rel="alternate" type="text/html" title="Tailwindcss学习(4) - 排版 - 垂直对齐" /><published>2021-11-10T00:00:00+09:00</published><updated>2021-11-10T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/10/tailwindcss-align</id><content type="html" xml:base="http://localhost:4000/2021/11/10/tailwindcss-align.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/10/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;使用场合&quot;&gt;使用场合&lt;/h2&gt;
-
-&lt;p&gt;在制作&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;navbar&lt;/code&gt;时候，发现左侧&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;内文字无法与右侧&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;内的文字底部对齐，阅读文档之后尝试采用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;来解决，发现不能很好解决不同&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;之间的文字对齐问题，最后改用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;的items-center居中元素，之后使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;padding&lt;/code&gt;调节文字的位置。&lt;/p&gt;
-
-&lt;p&gt;所以个人感觉&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;一般用于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;内部行内元素的文字垂直对齐上。&lt;/p&gt;
-
-&lt;p&gt;接下来尝试验证自己的想法。&lt;/p&gt;
-
-&lt;h2 id=&quot;文档解读&quot;&gt;文档解读&lt;/h2&gt;
-
-&lt;p&gt;在tailwindcss中，可以通过下面5个类控制文字垂直对齐的位置：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;middle&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bottom&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-top&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-bottom&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt;中的定义是：&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.align-top&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;.align-text-top&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;text-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vertical-align&lt;/code&gt;属性：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;定义行内元素的基线相对于该元素所在行的基线的垂直对齐。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;！用于&lt;strong&gt;行内元素&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;尝试代码&quot;&gt;尝试代码&lt;/h2&gt;
-
-&lt;p&gt;块元素之间的文字对齐互不影响，同时也可以在父元素上用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;leading&lt;/code&gt;控制行高来控制文字的上下位置。&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-red-500 w-full flex justify-between py-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-16 bg-yellow-300 ml-5 px-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-10 bg-green-300 inline-block&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;相对于此&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-top bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-middle bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;middle&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-bottom bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;bottom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-text-top bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;text-top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-text-bottom bg-green-200&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;text-bottom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-400 px-2 text-white&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-14 bg-blue-700 inline-block text-xl&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;相对于此&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-top bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-middle bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;middle&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-bottom bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;bottom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-text-top bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;text-top&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;align-text-bottom bg-blue-500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;text-bottom&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-16 bg-yellow-300 ml-5 px-2 leading-10 mr-4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-10 bg-green-400 inline-block&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;line-height&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-400&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/10/code1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;结论&quot;&gt;结论&lt;/h2&gt;
-
-&lt;p&gt;在块元素内部，无法使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;统一各个子块元素内部的行内元素的对齐。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align&lt;/code&gt;只能使用于同一个块元素内部的文字对齐。&lt;/p&gt;
-
-&lt;p&gt;相互独立的块元素需要采用其他的布局方式来调整位置。&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="排版" /><category term="垂直对齐" /><category term="align" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(3) - flex详解</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-3.html" rel="alternate" type="text/html" title="Tailwindcss学习(3) - flex详解" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-3</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-3.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;flex在css如何定义&quot;&gt;Flex在css如何定义&lt;/h1&gt;
-
-&lt;h2 id=&quot;一flex布局是什么&quot;&gt;一、Flex布局是什么？&lt;/h2&gt;
-
-&lt;p&gt;在学习使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;之前，先看看文档是怎么解释&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;的。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex&lt;/code&gt;是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;display&lt;/code&gt;中的一个属性，是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Flexible Box&lt;/code&gt;的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。&lt;/p&gt;
-
-  &lt;p&gt;任何一个容器都可以指定为Flex布局。&lt;/p&gt;
-
-  &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-
-  &lt;p&gt;行内元素也可以使用Flex布局。&lt;/p&gt;
-
-  &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-
-  &lt;p&gt;Webkit内核的浏览器，必须加上-webkit前缀。&lt;/p&gt;
-
-  &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;-webkit-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* Safari */&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;设为Flex布局以后，子元素的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clear&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vertical-align&lt;/code&gt;属性将失效。&lt;/p&gt;
-
-&lt;h2 id=&quot;二基本概念&quot;&gt;二、基本概念&lt;/h2&gt;
-
-&lt;p&gt;采用Flex布局的元素，称为Flex容器（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex container&lt;/code&gt;），简称”容器”。&lt;/p&gt;
-
-&lt;p&gt;它的所有子元素自动成为容器成员，称为Flex项目（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex item&lt;/code&gt;），简称”项目”。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;容器默认存在两根轴：水平的主轴（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main axis&lt;/code&gt;）和垂直的交叉轴（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross axis&lt;/code&gt;）。主轴的开始位置（与边框的交叉点）叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main start&lt;/code&gt;，结束位置叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main end&lt;/code&gt;；交叉轴的开始位置叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross start&lt;/code&gt;，结束位置叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross end&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;项目默认沿主轴排列。单个项目占据的主轴空间叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main size&lt;/code&gt;，占据的交叉轴空间叫做&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross size&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h2 id=&quot;三容器的属性&quot;&gt;三、容器的属性&lt;/h2&gt;
-
-&lt;p&gt;以下6个属性设置在容器上。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-direction&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-wrap&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-flow&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;justify-content&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-items&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-content&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;31-flex-direction属性&quot;&gt;3.1 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-direction&lt;/code&gt;属性&lt;/h3&gt;
-
-&lt;p&gt;flex-direction属性决定主轴的方向（即项目的排列方向）。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row-reverse&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column-reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/direction.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;它可能有4个值。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row&lt;/code&gt;（默认值）：主轴为水平方向，起点在左端。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row-reverse&lt;/code&gt;：主轴为水平方向，起点在右端。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;column&lt;/code&gt;：主轴为垂直方向，起点在上沿。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;column-reverse&lt;/code&gt;：主轴为垂直方向，起点在下沿。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;32-flex-wrap属性&quot;&gt;3.2 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-wrap&lt;/code&gt;属性&lt;/h3&gt;
-
-&lt;p&gt;默认情况下，项目都排在一条线（又称”轴线”）上。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-wrap&lt;/code&gt;属性定义，如果一条轴线排不下，如何换行。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/wrap.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;flex-wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nowrap&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap-reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;它可能取三个值。&lt;/p&gt;
-
-&lt;p&gt;（1）&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nowrap&lt;/code&gt;（默认）：不换行。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/nowrap.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;（2）wrap：换行，第一行在上方。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/wrap2.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;（3）wrap-reverse：换行，第一行在下方。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/wrap-reverse.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;33-flex-flow&quot;&gt;3.3 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-flow&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-flow&lt;/code&gt;属性是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-direction&lt;/code&gt;属性和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-wrap&lt;/code&gt;属性的简写形式，默认值为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row nowrap&lt;/code&gt;。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;flex-flow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flex-wrap&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;34-justify-content属性&quot;&gt;3.4 justify-content属性&lt;/h3&gt;
-
-&lt;p&gt;justify-content属性定义了项目在主轴上的对齐方式。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-between&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-around&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/justify-content.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;flex-start（默认值）：左对齐&lt;/li&gt;
-  &lt;li&gt;flex-end：右对齐&lt;/li&gt;
-  &lt;li&gt;center： 居中&lt;/li&gt;
-  &lt;li&gt;space-between：两端对齐，项目之间的间隔都相等。&lt;/li&gt;
-  &lt;li&gt;space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;35-align-items属性&quot;&gt;3.5 align-items属性&lt;/h3&gt;
-
-&lt;p&gt;align-items属性定义项目在交叉轴上如何对齐。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;baseline&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/align-items.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;flex-start：交叉轴的起点对齐。&lt;/li&gt;
-  &lt;li&gt;flex-end：交叉轴的终点对齐。&lt;/li&gt;
-  &lt;li&gt;center：交叉轴的中点对齐。&lt;/li&gt;
-  &lt;li&gt;baseline: 项目的第一行文字的基线对齐。&lt;/li&gt;
-  &lt;li&gt;stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;36-align-content属性&quot;&gt;3.6 align-content属性&lt;/h3&gt;
-
-&lt;p&gt;align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;align-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-between&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-around&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/align-content.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;该属性可能取6个值。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;flex-start：与交叉轴的起点对齐。&lt;/li&gt;
-  &lt;li&gt;flex-end：与交叉轴的终点对齐。&lt;/li&gt;
-  &lt;li&gt;center：与交叉轴的中点对齐。&lt;/li&gt;
-  &lt;li&gt;space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。&lt;/li&gt;
-  &lt;li&gt;space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。&lt;/li&gt;
-  &lt;li&gt;stretch（默认值）：轴线占满整个交叉轴。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;四项目的属性&quot;&gt;四、项目的属性&lt;/h3&gt;
-
-&lt;p&gt;以下6个属性设置在项目上。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;order&lt;/li&gt;
-  &lt;li&gt;flex-grow&lt;/li&gt;
-  &lt;li&gt;flex-shrink&lt;/li&gt;
-  &lt;li&gt;flex-basis&lt;/li&gt;
-  &lt;li&gt;flex&lt;/li&gt;
-  &lt;li&gt;align-self&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;41-order属性&quot;&gt;4.1 order属性&lt;/h3&gt;
-
-&lt;p&gt;order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integer&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/order.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;42-flex-grow属性&quot;&gt;4.2 flex-grow属性&lt;/h3&gt;
-
-&lt;p&gt;flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* default 0 */&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex-grow.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。&lt;/p&gt;
-
-&lt;h3 id=&quot;43-flex-shrink属性&quot;&gt;4.3 flex-shrink属性&lt;/h3&gt;
-
-&lt;p&gt;flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;flex-shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* default 1 */&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex-shrink.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。&lt;/p&gt;
-
-&lt;p&gt;负值对该属性无效。&lt;/p&gt;
-
-&lt;h3 id=&quot;44-flex-basis属性&quot;&gt;4.4 flex-basis属性&lt;/h3&gt;
-
-&lt;p&gt;flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;flex-basis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* default auto */&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。&lt;/p&gt;
-
-&lt;h3 id=&quot;45-flex属性&quot;&gt;4.5 flex属性&lt;/h3&gt;
-
-&lt;p&gt;flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&apos;flex-grow&apos;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&apos;flex-shrink&apos;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;?&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&apos;flex-basis&apos;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。&lt;/p&gt;
-
-&lt;p&gt;建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。&lt;/p&gt;
-
-&lt;h3 id=&quot;46-align-self属性&quot;&gt;4.6 align-self属性&lt;/h3&gt;
-
-&lt;p&gt;align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;align-self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;baseline&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/align-self.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;该属性可能取6个值，除了auto，其他都与align-items属性完全一致。&lt;/p&gt;
-
-&lt;h1 id=&quot;flex在tailwind中使用举例&quot;&gt;Flex在tailwind中使用举例&lt;/h1&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;两端对齐均匀分布：justify-between
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-垂直居中：flex-wrap content-center
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-300 h-20 w-full flex justify-between flex-wrap content-center&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-yellow-400 text-center px-4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-red-400 text-center px-4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;center&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-blue-400 text-center px-4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-使每个项目周围的距离相等，但不像使用 justify-around 时项目之间有双倍的距离：justify-evenly
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-顶端对齐：items-start
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-300 h-20 w-full flex justify-evenly items-start&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-yellow-400 text-center px-4 py-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-red-400 text-center px-4 py-5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;center&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-blue-400 text-center px-4 py-1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-使每个项目两侧的距离相等：justify-around
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-底端对齐：items-start
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-green-300 h-20 w-full flex justify-around items-end&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-yellow-400 text-center px-4 py-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-red-400 text-center px-4 py-5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;center&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w-max bg-blue-400 text-center px-4 py-1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-x方向布局：&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-justify-start / justify-end / justify-center / justify-between / justify-around / justify-evenly
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-y方向布局：多行控制需要使用flex-wrap
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-在容器中行的位置：content-center / content-start / content-end / content-between / content-around
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-content-evenly
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/flex-1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="flex" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(2) - 用fixed固定navbar</title><link href="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html" rel="alternate" type="text/html" title="Tailwindcss学习(2) - 用fixed固定navbar" /><published>2021-11-09T00:00:00+09:00</published><updated>2021-11-09T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/09/tailwindcss-layout-2</id><content type="html" xml:base="http://localhost:4000/2021/11/09/tailwindcss-layout-2.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/tailwindcss-logotype.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;布局要点&quot;&gt;布局要点&lt;/h4&gt;
-
-&lt;p&gt;将fixed添加到navbar的class中后，发现样式改变了，查阅文档看到&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed&lt;/code&gt; 来定位一个元素相对于浏览器窗视口的位置。&lt;/p&gt;
-
-  &lt;p&gt;偏移量是相对于视口计算的，且该元素将作为绝对定位的子元素的位置参考。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;所以这时，需要添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top-0&lt;/code&gt;，将&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;置顶。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;下面的内容会因为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav&lt;/code&gt;脱离了文档流，会自动向上移动，所以要添加对应的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mt&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;测试代码如下&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fixed bg-green-300 h-40 w-full top-0 flex justify-between flex-wrap content-center&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pl-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;left&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;navbar&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pr-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;right&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-red-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-yellow-500 mt-10&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;h-96 w-full bg-blue-500 mt-44&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/09/code1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="fixed" /><summary type="html"></summary></entry><entry><title type="html">Tailwindcss学习(1) - absolute居中</title><link href="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html" rel="alternate" type="text/html" title="Tailwindcss学习(1) - absolute居中" /><published>2021-11-08T00:00:00+09:00</published><updated>2021-11-08T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/08/tailwindcss-layout-1</id><content type="html" xml:base="http://localhost:4000/2021/11/08/tailwindcss-layout-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout1.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;在线练习地址&quot;&gt;在线练习地址&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://play.tailwindcss.com/&quot;&gt;tailwindcss 在线练习&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;布局要点&quot;&gt;布局要点&lt;/h4&gt;
-
-&lt;p&gt;在子元素上使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top-1/2&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left-1/2&lt;/code&gt;时，发现只有只有元素的起始位置在中间点上，查阅文档，发现需要配合&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;translate&lt;/code&gt; - 平移使用。&lt;/p&gt;
-
-&lt;p&gt;在使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;translate&lt;/code&gt;时需要添加&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;transform&lt;/code&gt;功能类启动变换。&lt;/p&gt;
-
-&lt;p&gt;测试代码如下&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;relative bg-green-300 h-96 w-96&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  parant div
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;child 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;absolute top-0 left-0 border border-red-500 h-1/2 w-1/2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/08/layout2.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="tailwindcss" /><category term="layout" /><category term="居中" /><category term="Relative" /><category term="Absolute" /><category term="transform" /><category term="translate" /><summary type="html"></summary></entry><entry><title type="html">Html常见属性</title><link href="http://localhost:4000/2021/10/27/html-base-1.html" rel="alternate" type="text/html" title="Html常见属性" /><published>2021-10-27T00:00:00+09:00</published><updated>2021-10-27T00:00:00+09:00</updated><id>http://localhost:4000/2021/10/27/html-base-1</id><content type="html" xml:base="http://localhost:4000/2021/10/27/html-base-1.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/10/27/html.webp&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;html属性--常见属性&quot;&gt;html属性 — 常见属性&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;基本属性&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;不拥有公共属性的元素：
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;html&amp;gt;&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;title&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;base&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;param&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;script&amp;gt;&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;style&amp;gt;&lt;/code&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;语言属性&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lang&lt;/code&gt;  定义元素的语言代码或编码&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dir&lt;/code&gt;   定义文本方向，ltr，rtl取值。&lt;/li&gt;
-      &lt;li&gt;不拥有语言语义属性的元素：
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;frameset&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;frame&amp;gt;&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;br&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;hr&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;base&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;param&amp;gt;&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;键盘属性&lt;/strong&gt; - 定义键盘访问方法&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;accesskey&lt;/code&gt; 定义访问某元素的键盘快捷键&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tabindex&lt;/code&gt;  定义元素的tab键索引编号&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;内容属性&lt;/strong&gt; - 元素包含内容的附加信息&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alt&lt;/code&gt;   元素的替换文本&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt; 提示文本&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;longdesc&lt;/code&gt; 元素包含内容的大段描述信息&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cite&lt;/code&gt;  元素包含的引用信息&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;datetime&lt;/code&gt;  时间信息&lt;/li&gt;
-      &lt;li&gt;◇ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alt&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt;是两个完全不同的属性，当图像无法显示的时候，必须准备替换的文本来替换无法显示的图像，因此&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alt&lt;/code&gt;属性只能用在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;img&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;area&lt;/code&gt;、和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;元素中，在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt;中用于替换按钮不能正确显示的图片。&lt;/li&gt;
-      &lt;li&gt;◆ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt;提示文本一般用于超链接上，特别是为图片按钮提供提示说明，可以让用户明白这些按钮的作用。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>true</name></author><category term="html" /><category term="属性" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;「とても綺麗(きれい)だ」&lt;/p&gt;</content><author><name>true</name></author><category term="jpop" /><category term="听歌的心情" /><summary type="html"></summary></entry></feed>

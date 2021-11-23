@@ -1,0 +1,24 @@
+I"�<p><img src="/assets/imgs/common/jQuery.png" alt="cat" /></p>
+
+<h2 id="jqueryjs-30报错-uncaught-typeerror-urlindexof-is-not-a-function">jquery.js 3.0报错， Uncaught TypeError: url.indexOf is not a function</h2>
+
+<p>jQuery升级到3.0.0后类型错误:</p>
+
+<blockquote>
+  <p>jquery.js:9612 Uncaught TypeError: url.indexOf is not a function</p>
+</blockquote>
+
+<p>这个错误是由于调用了<code class="language-plaintext highlighter-rouge">load</code>函数导致的错误</p>
+
+<p>把代码里调用load函数的方式</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+</code></pre></div></div>
+
+<p>改为</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">load</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+</code></pre></div></div>
+
+<p><strong>注意</strong>：<code class="language-plaintext highlighter-rouge">.load(), .unload(), and .error()</code>从jQuery 1.8开始就被废弃了，换成使用<code class="language-plaintext highlighter-rouge">.on()</code>函数来注册.</p>
+:ET
