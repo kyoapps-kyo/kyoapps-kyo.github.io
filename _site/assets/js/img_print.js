@@ -4,8 +4,8 @@ function imgPrint(){
     let i = 0;
     let date = "2021/11/22";
     let hDirName = "/heng/h";
-    let sDirName = "/shu/p";
-    let bDirName = "/bigShu/p";
+    let sDirName = "/shu/P";
+    let bDirName = "/bigShu/P";
     let imgType = ".jpg";
     let hMax = 9;
     let sMax = 48;
