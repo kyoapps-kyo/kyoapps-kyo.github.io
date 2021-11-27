@@ -1,26 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-23T18:09:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">jQuery 常见问题集</title><link href="http://localhost:4000/2021/11/23/jquery-questions.html" rel="alternate" type="text/html" title="jQuery 常见问题集" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/jquery-questions</id><content type="html" xml:base="http://localhost:4000/2021/11/23/jquery-questions.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/jQuery.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-28T01:43:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">音乐收藏</title><link href="http://localhost:4000/2021/11/28/music.html" rel="alternate" type="text/html" title="音乐收藏" /><published>2021-11-28T00:00:00+09:00</published><updated>2021-11-28T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/28/music</id><content type="html" xml:base="http://localhost:4000/2021/11/28/music.html">&lt;style&gt;
+    .geciBtn {
+        float : right;
+    }
+    .clear {
+        clear: both;
+    }
+    .geCi {
+        text-align:center;
+        display : none;
+    }
+&lt;/style&gt;
 
-&lt;h2 id=&quot;jqueryjs-30报错-uncaught-typeerror-urlindexof-is-not-a-function&quot;&gt;jquery.js 3.0报错， Uncaught TypeError: url.indexOf is not a function&lt;/h2&gt;
+&lt;script&gt;
+    function display(){
+        if($(&quot;#qingTianGC&quot;).css(&apos;display&apos;) === &apos;none&apos;){
+            $(&quot;#qingTianGC&quot;).css(&apos;display&apos;,&apos;block&apos;);
+        }
+        else{
+            $(&quot;#qingTianGC&quot;).css(&apos;display&apos;,&apos;none&apos;);
+        }
+    }
+&lt;/script&gt;
 
-&lt;p&gt;jQuery升级到3.0.0后类型错误:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/music.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;jquery.js:9612 Uncaught TypeError: url.indexOf is not a function&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&quot;中文歌曲&quot;&gt;中文歌曲&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;晴天&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=55185686&amp;amp;bvid=BV1d4411N7zD&amp;amp;cid=317843818&amp;amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;false&quot; style=&quot;width:100%;height:100px;&quot;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;button id=&quot;qingTian&quot; onclick=&quot;display()&quot; class=&quot;geciBtn&quot;&gt;歌词展开⇣&lt;/button&gt;&lt;/p&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;geCi&quot; id=&quot;qingTianGC&quot;&gt;
+故事的小黄花&lt;br /&gt;
+从出生那年就飘着&lt;br /&gt;
+童年的荡秋千&lt;br /&gt;
+随记忆一直晃到现在&lt;br /&gt;
+Re So So Si Do Si La&lt;br /&gt;
+So La Si Si Si Si La Si La So&lt;br /&gt;
+吹着前奏 望着天空&lt;br /&gt;
+我想起花瓣试着掉落&lt;br /&gt;
+为你翘课的那一天&lt;br /&gt;
+花落的那一天&lt;br /&gt;
+教室的那一间&lt;br /&gt;
+我怎么看不见&lt;br /&gt;
+消失的下雨天&lt;br /&gt;
+我好想再淋一遍&lt;br /&gt;
+没想到 失去的勇气我还留着&lt;br /&gt;
+好想再问一遍&lt;br /&gt;
+你会等待还是离开&lt;br /&gt;
+刮风这天 我试过握着你手&lt;br /&gt;
+但偏偏 雨渐渐&lt;br /&gt;
+大到我看你不见&lt;br /&gt;
+还要多久 我才能在你身边&lt;br /&gt;
+等到放晴的那天&lt;br /&gt;
+也许我会比较好一点&lt;br /&gt;
+从前从前 有个人爱你很久&lt;br /&gt;
+但偏偏 风渐渐&lt;br /&gt;
+把距离吹得好远&lt;br /&gt;
+好不容易 又能再多爱一天&lt;br /&gt;
+但故事的最后&lt;br /&gt;
+你好像还是说了 拜拜&lt;br /&gt;
+&lt;/div&gt;
 
-&lt;p&gt;这个错误是由于调用了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;load&lt;/code&gt;函数导致的错误&lt;/p&gt;
+&lt;h2 id=&quot;外语歌曲&quot;&gt;外语歌曲&lt;/h2&gt;
+&lt;h3 id=&quot;日文&quot;&gt;日文&lt;/h3&gt;
 
-&lt;p&gt;把代码里调用load函数的方式&lt;/p&gt;
+&lt;h3 id=&quot;英语&quot;&gt;英语&lt;/h3&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;其他&quot;&gt;其他&lt;/h3&gt;
 
-&lt;p&gt;改为&lt;/p&gt;
+&lt;h2 id=&quot;纯音乐&quot;&gt;纯音乐&lt;/h2&gt;</content><author><name>true</name></author><category term="音乐集合" /><summary type="html"></summary></entry><entry><title type="html">swiper自动播放大图联动</title><link href="http://localhost:4000/2021/11/25/swiper-controll.html" rel="alternate" type="text/html" title="swiper自动播放大图联动" /><published>2021-11-25T00:00:00+09:00</published><updated>2021-11-25T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/25/swiper-controll</id><content type="html" xml:base="http://localhost:4000/2021/11/25/swiper-controll.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/swiper.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;script src=&quot;https://unpkg.com/swiper@7/swiper-bundle.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.load(), .unload(), and .error()&lt;/code&gt;从jQuery 1.8开始就被废弃了，换成使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.on()&lt;/code&gt;函数来注册.&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><summary type="html"></summary></entry><entry><title type="html">px、em、rem区别</title><link href="http://localhost:4000/2021/11/23/css-px-em-rem.html" rel="alternate" type="text/html" title="px、em、rem区别" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css-px-em-rem</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css-px-em-rem.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;script&gt;
+//オプションの定義（初期化の式より先に記述）
+let options = {
+  loop: true,
+  pagination: {
+    el: &apos;.swiper-pagination&apos;,
+    type: &apos;bullets&apos;,
+    clickable: true,
+  },
+  navigation: {
+    nextEl: &apos;.swiper-button-next&apos;,
+    prevEl: &apos;.swiper-button-prev&apos;,
+    hideOnClick: true,
+  },
+  scrollbar: {
+    el: &apos;.swiper-scrollbar&apos;,
+  },
+};
+ 
+//上記オプションを使って初期化
+let mySwiper = new Swiper (&apos;.swiper&apos;, options);
+&lt;/script&gt;
+
+&lt;style&gt;
+.swiper {
+  max-width: 500px;
+  margin: 30px 0;
+}
+ 
+:root {
+  --swiper-navigation-color: #ffffff;
+  --swiper-pagination-color: #ffffff;
+}
+&lt;/style&gt;
+
+&lt;!-- スライダーのメインコンテナの div 要素（必須） --&gt;
+&lt;div class=&quot;swiper&quot;&gt;
+  &lt;!-- スライドを囲む div 要素（必須） --&gt;
+  &lt;div class=&quot;swiper-wrapper&quot;&gt;
+    &lt;!-- それぞれのスライドの div 要素（必須） --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- ページネーションの div 要素（省略可能） --&gt;
+  &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+ 
+  &lt;!-- ナビゲーションボタンの div 要素（省略可能） --&gt;
+  &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+ 
+  &lt;!-- スクロールバーの div 要素（省略可能） --&gt;
+  &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</content><author><name>true</name></author><category term="swiper" /><summary type="html"></summary></entry><entry><title type="html">px、em、rem区别</title><link href="http://localhost:4000/2021/11/23/css-px-em-rem.html" rel="alternate" type="text/html" title="px、em、rem区别" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css-px-em-rem</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css-px-em-rem.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;pxemrem区别&quot;&gt;px、em、rem区别&lt;/h2&gt;
 
@@ -256,7 +363,29 @@ background-color : color;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;contents2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><category term="html" /><category term="应用" /><summary type="html"></summary></entry><entry><title type="html">CSS3 calc()</title><link href="http://localhost:4000/2021/11/23/css3-calc.html" rel="alternate" type="text/html" title="CSS3 calc()" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css3-calc</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css3-calc.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><category term="html" /><category term="应用" /><summary type="html"></summary></entry><entry><title type="html">jQuery 常见问题集</title><link href="http://localhost:4000/2021/11/23/jquery-questions.html" rel="alternate" type="text/html" title="jQuery 常见问题集" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/jquery-questions</id><content type="html" xml:base="http://localhost:4000/2021/11/23/jquery-questions.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/jQuery.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jqueryjs-30报错-uncaught-typeerror-urlindexof-is-not-a-function&quot;&gt;jquery.js 3.0报错， Uncaught TypeError: url.indexOf is not a function&lt;/h2&gt;
+
+&lt;p&gt;jQuery升级到3.0.0后类型错误:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;jquery.js:9612 Uncaught TypeError: url.indexOf is not a function&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这个错误是由于调用了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;load&lt;/code&gt;函数导致的错误&lt;/p&gt;
+
+&lt;p&gt;把代码里调用load函数的方式&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;改为&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.load(), .unload(), and .error()&lt;/code&gt;从jQuery 1.8开始就被废弃了，换成使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.on()&lt;/code&gt;函数来注册.&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><summary type="html"></summary></entry><entry><title type="html">CSS3 calc()</title><link href="http://localhost:4000/2021/11/23/css3-calc.html" rel="alternate" type="text/html" title="CSS3 calc()" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css3-calc</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css3-calc.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;calc是什么&quot;&gt;calc()是什么？&lt;/h2&gt;
 
@@ -326,7 +455,22 @@ background-color : color;
 &lt;p&gt;设置高度：&lt;/p&gt;
 
 &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;vh&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;margin-y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><summary type="html"></summary></entry><entry><title type="html">Laravel 常见问题集</title><link href="http://localhost:4000/2021/11/22/Laravel-questions.html" rel="alternate" type="text/html" title="Laravel 常见问题集" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/Laravel-questions</id><content type="html" xml:base="http://localhost:4000/2021/11/22/Laravel-questions.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/laravel.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><summary type="html"></summary></entry><entry><title type="html">京都 - 贵船红叶</title><link href="http://localhost:4000/2021/11/22/kifune.html" rel="alternate" type="text/html" title="京都 - 贵船红叶" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/kifune</id><content type="html" xml:base="http://localhost:4000/2021/11/22/kifune.html">&lt;blockquote&gt;
+  &lt;p&gt;周日去贵船神社，感觉到了宫崎骏的动画里，限于携带器材和我个人水平，不能展现当时一二，略有遗憾。&lt;/p&gt;
+
+  &lt;p&gt;上传未完&lt;/p&gt;
+
+  &lt;p&gt;地点：京都市贵船神社&lt;/p&gt;
+
+  &lt;p&gt;器材：相机 - SONY A7R3 镜头 - GM85F1.4 - FE35 2.8&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;img-box&quot; style=&quot;display: flex;flex-wrap:wrap&quot;&gt;
+    
+&lt;/div&gt;
+&lt;script src=&quot;/assets/js/jquery3-6.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/assets/js/img_print.js&quot;&gt;&lt;/script&gt;</content><author><name>true</name></author><category term="风景" /><category term="人像" /><category term="红叶" /><summary type="html">周日去贵船神社，感觉到了宫崎骏的动画里，限于携带器材和我个人水平，不能展现当时一二，略有遗憾。 上传未完 地点：京都市贵船神社 器材：相机 - SONY A7R3 镜头 - GM85F1.4 - FE35 2.8</summary></entry><entry><title type="html">Laravel 常见问题集</title><link href="http://localhost:4000/2021/11/22/Laravel-questions.html" rel="alternate" type="text/html" title="Laravel 常见问题集" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/Laravel-questions</id><content type="html" xml:base="http://localhost:4000/2021/11/22/Laravel-questions.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/laravel.png&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;说明&quot;&gt;说明&lt;/h2&gt;
 
@@ -474,22 +618,7 @@ npm run dev
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;参考文章：&lt;a href=&quot;https://masa-engineer-blog.com/carousel-slide-display-with-swiperjs/#toc4&quot;&gt;カルーセル表示を簡単にswiper.jsを利用して実装する方法&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><category term="laravel" /><summary type="html"></summary></entry><entry><title type="html">京都 - 贵船红叶</title><link href="http://localhost:4000/2021/11/22/kifune.html" rel="alternate" type="text/html" title="京都 - 贵船红叶" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/kifune</id><content type="html" xml:base="http://localhost:4000/2021/11/22/kifune.html">&lt;blockquote&gt;
-  &lt;p&gt;周日去贵船神社，感觉到了宫崎骏的动画里，限于携带器材和我个人水平，不能展现当时一二，略有遗憾。&lt;/p&gt;
-
-  &lt;p&gt;上传未完&lt;/p&gt;
-
-  &lt;p&gt;地点：京都市贵船神社&lt;/p&gt;
-
-  &lt;p&gt;器材：相机 - SONY A7R3 镜头 - GM85F1.4 - FE35 2.8&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div id=&quot;img-box&quot; style=&quot;display: flex;flex-wrap:wrap&quot;&gt;
-    
-&lt;/div&gt;
-&lt;script src=&quot;/assets/js/jquery3-6.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/assets/js/img_print.js&quot;&gt;&lt;/script&gt;</content><author><name>true</name></author><category term="风景" /><category term="人像" /><category term="红叶" /><summary type="html">周日去贵船神社，感觉到了宫崎骏的动画里，限于携带器材和我个人水平，不能展现当时一二，略有遗憾。 上传未完 地点：京都市贵船神社 器材：相机 - SONY A7R3 镜头 - GM85F1.4 - FE35 2.8</summary></entry><entry><title type="html">在博客中使用fancybox展示图片</title><link href="http://localhost:4000/2021/11/18/fancybox.html" rel="alternate" type="text/html" title="在博客中使用fancybox展示图片" /><published>2021-11-18T00:00:00+09:00</published><updated>2021-11-18T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/18/fancybox</id><content type="html" xml:base="http://localhost:4000/2021/11/18/fancybox.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/18/Fancybox.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;参考文章：&lt;a href=&quot;https://masa-engineer-blog.com/carousel-slide-display-with-swiperjs/#toc4&quot;&gt;カルーセル表示を簡単にswiper.jsを利用して実装する方法&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><category term="laravel" /><summary type="html"></summary></entry><entry><title type="html">在博客中使用fancybox展示图片</title><link href="http://localhost:4000/2021/11/18/fancybox.html" rel="alternate" type="text/html" title="在博客中使用fancybox展示图片" /><published>2021-11-18T00:00:00+09:00</published><updated>2021-11-18T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/18/fancybox</id><content type="html" xml:base="http://localhost:4000/2021/11/18/fancybox.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/18/Fancybox.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;初始化&quot;&gt;初始化&lt;/h2&gt;
 &lt;p&gt;在本博客中，使用引入CDN的方式，引入fancybox的所需文件。&lt;/p&gt;
@@ -549,448 +678,4 @@ npm run dev
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;等待更新&lt;/p&gt;</content><author><name>true</name></author><category term="练习" /><category term="图片路径" /><category term="JS" /><summary type="html">思路</summary></entry><entry><title type="html">京都 - 美山</title><link href="http://localhost:4000/2021/11/15/miyama-photo.html" rel="alternate" type="text/html" title="京都 - 美山" /><published>2021-11-15T00:00:00+09:00</published><updated>2021-11-15T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/15/miyama-photo</id><content type="html" xml:base="http://localhost:4000/2021/11/15/miyama-photo.html">&lt;blockquote&gt;
-  &lt;p&gt;又到了红叶季，趁着天气好，去美山放放风，暂时先把拍的风景图放上，给朋友拍的人像之后再更新。&lt;/p&gt;
-
-  &lt;p&gt;图片没有点击放大功能，之后有时间再增加上吧。&lt;/p&gt;
-
-  &lt;p&gt;地点：京都府南丹市美山町&lt;/p&gt;
-
-  &lt;p&gt;器材：相机 - SONY A7R3 镜头 - GM85F1.4&lt;/p&gt;
-  &lt;h2 id=&quot;更新&quot;&gt;更新&lt;/h2&gt;
-  &lt;p&gt;后续的照片，以及给网页上的照片添加了点击放大的功能&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div style=&quot;display: flex;flex-wrap:wrap&quot;&gt;
-    &lt;div style=&quot;width: 100%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-39.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-39.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-34.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-34.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-36.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-36.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-37.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-37.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-38.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-38.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-40.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-40.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-41.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-41.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-42.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-42.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-43.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-43.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-44.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-44.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-45.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-45.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-46.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-46.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-47.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-47.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-48.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-48.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-49.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-49.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-50.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-50.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-51.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-51.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;第一部分的照片&quot;&gt;第一部分的照片&lt;/h2&gt;
-
-&lt;div style=&quot;display: flex;flex-wrap:wrap&quot;&gt;
-    &lt;div style=&quot;width: 100%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-12.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-12.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 100%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-19.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-19.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 100%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-31.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-31.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-1.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-1.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-2.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-2.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-3.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-3.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-4.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-4.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-5.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-5.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-6.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-6.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-7.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-7.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-8.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-8.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-9.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-9.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-10.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-10.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-11.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-11.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-13.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-13.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-14.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-14.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-15.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-15.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-16.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-16.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-17.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-17.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-18.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-18.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-20.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-20.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-21.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-21.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-22.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-22.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-23.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-23.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-24.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-24.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-25.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-25.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-26.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-26.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-27.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-27.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-28.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-28.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-29.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-29.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-30.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-30.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-32.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-32.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;width: 50%; padding:5px&quot;&gt;
-    &lt;a class=&quot;js_gallery_evaluate&quot; href=&quot;/assets/imgs/2021/11/15/miyama-33.jpg&quot; data-fancybox=&quot;gallery&quot;&gt;
-        &lt;img src=&quot;/assets/imgs/2021/11/15/miyama-33.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script src=&quot;/assets/js/fancybox.js&quot;&gt;&lt;/script&gt;</content><author><name>true</name></author><category term="人像" /><category term="风景" /><summary type="html">又到了红叶季，趁着天气好，去美山放放风，暂时先把拍的风景图放上，给朋友拍的人像之后再更新。 图片没有点击放大功能，之后有时间再增加上吧。 地点：京都府南丹市美山町 器材：相机 - SONY A7R3 镜头 - GM85F1.4 更新 后续的照片，以及给网页上的照片添加了点击放大的功能</summary></entry><entry><title type="html">Official髭男dism - Pretender</title><link href="http://localhost:4000/2021/11/11/music-pretender.html" rel="alternate" type="text/html" title="Official髭男dism - Pretender" /><published>2021-11-11T00:00:00+09:00</published><updated>2021-11-11T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/11/music-pretender</id><content type="html" xml:base="http://localhost:4000/2021/11/11/music-pretender.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/11/Pretender.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=55227480&amp;amp;bvid=BV1M4411K7xk&amp;amp;cid=96570601&amp;amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; style=&quot;width:100%;height:500px;&quot;&gt; &lt;/iframe&gt;
-
-&lt;div style=&quot;margin-top:40px&quot;&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;曾以为喜欢一个无法在一起的人，会开心自己找到了爱情，嘴上说着安慰人的话，但背地的辛苦只有你我才会知道。&lt;/p&gt;
-
-  &lt;p&gt;浮现起交谈的点滴，曾经有多甜蜜如今就有多么痛苦。&lt;/p&gt;
-
-  &lt;p&gt;只能期待时间是一味良药，和解自己，淡去回忆。&lt;/p&gt;
-
-  &lt;p&gt;用此曲纪念你我曾经的努力。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;official髭男dism---pretender&quot;&gt;Official髭男dism - Pretender&lt;/h2&gt;
-
-&lt;p&gt;作词：藤原聡&lt;/p&gt;
-
-&lt;p&gt;作曲：藤原聡&lt;/p&gt;
-
-&lt;p&gt;编曲：Official髭男dism&lt;/p&gt;
-
-&lt;p&gt;君(きみ)とのラブストーリー&lt;/p&gt;
-
-&lt;p&gt;それは予想(よそう)通(どお)り&lt;/p&gt;
-
-&lt;p&gt;いざ始(はじ)まればひとり芝居(しばい)だ&lt;/p&gt;
-
-&lt;p&gt;ずっとそばにいたって&lt;/p&gt;
-
-&lt;p&gt;結局(けっきょく)ただの観客(かんきゃく)だ&lt;/p&gt;
-
-&lt;p&gt;感情(かんじょう)のないアイムソーリー&lt;/p&gt;
-
-&lt;p&gt;それはいつも通(とお)り&lt;/p&gt;
-
-&lt;p&gt;慣(な)れてしまえば&lt;/p&gt;
-
-&lt;p&gt;悪(わる)くはないけど&lt;/p&gt;
-
-&lt;p&gt;君(きみ)とのロマンスは人生柄(じんせいがら)&lt;/p&gt;
-
-&lt;p&gt;続(つづ)きはしないことを知(し)った&lt;/p&gt;
-
-&lt;p&gt;もっと違(ちが)う設定(せってい)で&lt;/p&gt;
-
-&lt;p&gt;もっと違(ちが)う関係(かんけい)で&lt;/p&gt;
-
-&lt;p&gt;出会(であ)える世界線(せかいせん)&lt;/p&gt;
-
-&lt;p&gt;選(えら)べたらよかった&lt;/p&gt;
-
-&lt;p&gt;もっと違(ちが)う性格(せいかく)で&lt;/p&gt;
-
-&lt;p&gt;もっと違(ちが)う価値観(かちかん)で&lt;/p&gt;
-
-&lt;p&gt;愛(あい)を伝(つた)えられたらいいな&lt;/p&gt;
-
-&lt;p&gt;そう願(ねが)っても無駄(むだ)だから&lt;/p&gt;
-
-&lt;p&gt;グッバイ&lt;/p&gt;
-
-&lt;p&gt;君(きみ)の運命(うんめい)の&lt;/p&gt;
-
-&lt;p&gt;ヒトは僕(ぼく)じゃない&lt;/p&gt;
-
-&lt;p&gt;辛(つら)いけど否(いな)めない&lt;/p&gt;
-
-&lt;p&gt;でも離(はな)れ難(がた)いのさ&lt;/p&gt;
-
-&lt;p&gt;その髪(かみ)に触(ふ)れただけで&lt;/p&gt;
-
-&lt;p&gt;痛(いた)いやいやでも&lt;/p&gt;
-
-&lt;p&gt;甘(あま)いないやいや&lt;/p&gt;
-
-&lt;p&gt;グッバイ&lt;/p&gt;
-
-&lt;p&gt;それじゃ僕(ぼく)にとって君(きみ)は何(なに)&lt;/p&gt;
-
-&lt;p&gt;答(こた)えは分(わ)からない&lt;/p&gt;
-
-&lt;p&gt;分(わ)かりたくもないのさ&lt;/p&gt;
-
-&lt;p&gt;たったひとつ確(たし)かなことが&lt;/p&gt;
-
-&lt;p&gt;あるとするのならば&lt;/p&gt;
-
-&lt;p&gt;「君(きみ)は綺麗(きれい)だ」&lt;/p&gt;
-
-&lt;p&gt;誰(だれ)かが偉(えら)そうに&lt;/p&gt;
-
-&lt;p&gt;語(かた)る恋愛(れんあい)の論理(ろんり)&lt;/p&gt;
-
-&lt;p&gt;何(なに)ひとつとしてピンとこなくて&lt;/p&gt;
-
-&lt;p&gt;飛行機(ひこうき)の窓(まど)から見下(みお)ろした&lt;/p&gt;
-
-&lt;p&gt;知(し)らない街(まち)の夜景(やけい)みたいだ&lt;/p&gt;
-
-&lt;p&gt;もっと違(ちが)う設定(せってい)で&lt;/p&gt;
-
-&lt;p&gt;もっと違(ちが)う関係(かんけい)で&lt;/p&gt;
-
-&lt;p&gt;出会(であ)える世界線(せかいせん)&lt;/p&gt;
-
-&lt;p&gt;選(えら)べたらよかった&lt;/p&gt;
-
-&lt;p&gt;いたって純(じゅん)な心(こころ)で&lt;/p&gt;
-
-&lt;p&gt;叶(かな)った恋(こい)を抱(だ)きしめて&lt;/p&gt;
-
-&lt;p&gt;「好(す)きだ」とか無責任(むせきにん)に&lt;/p&gt;
-
-&lt;p&gt;言(い)えたらいいな&lt;/p&gt;
-
-&lt;p&gt;そう願(ねが)っても虚(むな)しいのさ&lt;/p&gt;
-
-&lt;p&gt;グッバイ&lt;/p&gt;
-
-&lt;p&gt;繋(つな)いだ手(て)の向(む)こうにエンドライン&lt;/p&gt;
-
-&lt;p&gt;引(ひ)き伸(の)ばすたびに&lt;/p&gt;
-
-&lt;p&gt;疼(うず)きだす未来(みらい)には&lt;/p&gt;
-
-&lt;p&gt;君(きみ)はいない&lt;/p&gt;
-
-&lt;p&gt;その事実(じじつ)にCry&lt;/p&gt;
-
-&lt;p&gt;そりゃ苦(くる)しいよな&lt;/p&gt;
-
-&lt;p&gt;グッバイ&lt;/p&gt;
-
-&lt;p&gt;君(きみ)の運命(うんめい)の&lt;/p&gt;
-
-&lt;p&gt;ヒトは僕(ぼく)じゃない&lt;/p&gt;
-
-&lt;p&gt;辛(つら)いけど否(いな)めない&lt;/p&gt;
-
-&lt;p&gt;でも離(はな)れ難(がた)いのさ&lt;/p&gt;
-
-&lt;p&gt;その髪(かみ)に触(ふ)れただけで&lt;/p&gt;
-
-&lt;p&gt;痛(いた)いやいやでも&lt;/p&gt;
-
-&lt;p&gt;甘(あま)いないやいや&lt;/p&gt;
-
-&lt;p&gt;グッバイ&lt;/p&gt;
-
-&lt;p&gt;それじゃ僕(ぼく)にとって君(きみ)は何(なに)&lt;/p&gt;
-
-&lt;p&gt;答(こた)えは分(わ)からない&lt;/p&gt;
-
-&lt;p&gt;分(わ)かりたくもないのさ&lt;/p&gt;
-
-&lt;p&gt;たったひとつ&lt;/p&gt;
-
-&lt;p&gt;確(たし)かなことが&lt;/p&gt;
-
-&lt;p&gt;あるとするのならば&lt;/p&gt;
-
-&lt;p&gt;「君(きみ)は綺麗(きれい)だ」&lt;/p&gt;
-
-&lt;p&gt;それもこれも&lt;/p&gt;
-
-&lt;p&gt;ロマンスの定(さだ)めなら&lt;/p&gt;
-
-&lt;p&gt;悪(わる)くないよな&lt;/p&gt;
-
-&lt;p&gt;永遠(えいえん)も約束(やくそく)もないけれど&lt;/p&gt;
-
-&lt;p&gt;「とても綺麗(きれい)だ」&lt;/p&gt;</content><author><name>true</name></author><category term="jpop" /><category term="听歌的心情" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;等待更新&lt;/p&gt;</content><author><name>true</name></author><category term="练习" /><category term="图片路径" /><category term="JS" /><summary type="html">思路</summary></entry></feed>

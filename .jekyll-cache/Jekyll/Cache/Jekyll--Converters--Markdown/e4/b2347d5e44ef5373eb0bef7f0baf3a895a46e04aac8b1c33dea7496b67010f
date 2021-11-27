@@ -1,0 +1,11 @@
+I"¢<style>
+    .geciBtn {
+        float : right;
+    }
+    .clear {
+        both:clear;
+    }
+</style>
+
+<p><img src="/assets/imgs/common/music.png" alt="cat" /></p>
+:ET

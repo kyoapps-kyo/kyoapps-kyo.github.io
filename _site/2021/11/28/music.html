@@ -1,0 +1,371 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="KYO" />
+<meta name="keywords" content="php laravel js mysql bootstrap vue.js weixin linux" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+<!-- fancybox -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+
+<!-- swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+<!-- Favicon -->
+<link href="/assets/profile.jpg" rel="shortcut icon" />
+<link href="/assets/profile.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>音乐收藏</title>
+<!-- 百度统计 -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?00eaba5de0a36c661fd413a3f8f1b936";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTJ8G9J19M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTJ8G9J19M');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(160,51,255) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(160,51,255);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Stay hungry, stay foolish.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">KYO</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>KYO</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">音乐收藏</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">个人喜欢的音乐集合</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">个人喜欢的音乐集合</span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(160,51,255);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(160,51,255)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(160,51,255);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">音乐收藏</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">个人喜欢的音乐集合</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">个人喜欢的音乐集合</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2021/11/25/swiper-controll.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(160,51,255)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(160,51,255);"><sapn class="main">swiper自动播放大图联动</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(160,51,255);border-bottom: 2px solid rgb(160,51,255);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2021/11/25/swiper-controll.html" class="rightchange" style="border-left: 1px solid rgb(160,51,255);border-bottom: 2px solid rgb(160,51,255);"><span>下一篇<br><br>swiper自动播放大图联动</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(160,51,255); border-right: 8px solid rgb(160,51,255)">
+        个人喜欢的音乐集合
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  
+  <!-- 引入toc目录 -->
+<ul><li><a href="#中文歌曲">中文歌曲</a></li><li><a href="#外语歌曲">外语歌曲</a><ul><li><a href="#日文">日文</a></li><li><a href="#英语">英语</a></li><li><a href="#其他">其他</a></li></ul></li><li><a href="#纯音乐">纯音乐</a></li></ul>
+  <style>
+    .geciBtn {
+        float : right;
+    }
+    .clear {
+        clear: both;
+    }
+    .geCi {
+        text-align:center;
+        display : none;
+    }
+</style>
+
+<script>
+    function display(){
+        if($("#qingTianGC").css('display') === 'none'){
+            $("#qingTianGC").css('display','block');
+        }
+        else{
+            $("#qingTianGC").css('display','none');
+        }
+    }
+</script>
+
+<p><img src="/assets/imgs/common/music.png" alt="cat" /></p>
+
+<h2 id="中文歌曲">中文歌曲</h2>
+<ol>
+  <li>晴天</li>
+</ol>
+<iframe src="//player.bilibili.com/player.html?aid=55185686&amp;bvid=BV1d4411N7zD&amp;cid=317843818&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false" style="width:100%;height:100px;"> </iframe>
+<p><button id="qingTian" onclick="display()" class="geciBtn">歌词展开⇣</button></p>
+<div class="clear"></div>
+<div class="geCi" id="qingTianGC">
+故事的小黄花<br />
+从出生那年就飘着<br />
+童年的荡秋千<br />
+随记忆一直晃到现在<br />
+Re So So Si Do Si La<br />
+So La Si Si Si Si La Si La So<br />
+吹着前奏 望着天空<br />
+我想起花瓣试着掉落<br />
+为你翘课的那一天<br />
+花落的那一天<br />
+教室的那一间<br />
+我怎么看不见<br />
+消失的下雨天<br />
+我好想再淋一遍<br />
+没想到 失去的勇气我还留着<br />
+好想再问一遍<br />
+你会等待还是离开<br />
+刮风这天 我试过握着你手<br />
+但偏偏 雨渐渐<br />
+大到我看你不见<br />
+还要多久 我才能在你身边<br />
+等到放晴的那天<br />
+也许我会比较好一点<br />
+从前从前 有个人爱你很久<br />
+但偏偏 风渐渐<br />
+把距离吹得好远<br />
+好不容易 又能再多爱一天<br />
+但故事的最后<br />
+你好像还是说了 拜拜<br />
+</div>
+
+<h2 id="外语歌曲">外语歌曲</h2>
+<h3 id="日文">日文</h3>
+
+<h3 id="英语">英语</h3>
+
+<h3 id="其他">其他</h3>
+
+<h2 id="纯音乐">纯音乐</h2>
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81NDUxMi8zMDk4Mw=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>KYO ©
+  
+  
+  2021
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

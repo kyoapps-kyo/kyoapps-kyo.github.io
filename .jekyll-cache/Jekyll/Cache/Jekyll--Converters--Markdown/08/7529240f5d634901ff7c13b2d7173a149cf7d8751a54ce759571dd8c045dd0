@@ -1,0 +1,21 @@
+I":<style>
+    .geciBtn {
+        float : right;
+    }
+    .clear {
+        clear: both;
+    }
+    .geCi {
+        text-align:center;
+        display : none;
+    }
+</style>
+
+<script>
+    function display(){
+        $("#qingTianGC").value;
+    }
+</script>
+
+<p><img src="/assets/imgs/common/music.png" alt="cat" /></p>
+:ET
