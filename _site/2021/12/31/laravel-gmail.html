@@ -1,0 +1,429 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="KYO" />
+<meta name="keywords" content="php laravel js mysql bootstrap vue.js weixin linux" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+<!-- fancybox -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+
+<!-- swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+<!-- Favicon -->
+<link href="/assets/profile.jpg" rel="shortcut icon" />
+<link href="/assets/profile.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>在laravel中使用gmail发送邮件</title>
+<!-- 百度统计 -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?00eaba5de0a36c661fd413a3f8f1b936";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTJ8G9J19M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTJ8G9J19M');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(160,51,255) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(160,51,255);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Stay hungry, stay foolish.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">KYO</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>KYO</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">在laravel中使用gmail发送邮件</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">laravel中通过gmail发送邮件给目标收件箱</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s">laravel中通过gmail发送邮件给目标收件箱</span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(160,51,255);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(160,51,255)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(160,51,255);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">在laravel中使用gmail发送邮件</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">laravel中通过gmail发送邮件给目标收件箱</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s">laravel中通过gmail发送邮件给目标收件箱</span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2021/11/28/music.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(160,51,255)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(160,51,255);"><sapn class="main">音乐收藏</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(160,51,255);border-bottom: 2px solid rgb(160,51,255);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2021/11/28/music.html" class="rightchange" style="border-left: 1px solid rgb(160,51,255);border-bottom: 2px solid rgb(160,51,255);"><span>下一篇<br><br>音乐收藏</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(160,51,255); border-right: 8px solid rgb(160,51,255)">
+        个人喜欢的音乐集合
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  
+  <!-- 引入toc目录 -->
+<ul><li><a href="#前提准备">前提准备</a></li><li><a href="#laravel-中的操作">laravel 中的操作</a></li></ul>
+  <blockquote>
+  <p>给web应用编写一个邮件咨询功能，将提交的表单内容发送给目标邮箱，在laravel中需要怎么做呢？</p>
+</blockquote>
+
+<h2 id="前提准备">前提准备</h2>
+
+<ol>
+  <li>拥有一个 google 账号，并且给账号设置二段验证。</li>
+  <li>在账号的安全性中，为 laravel 生成应用专用密码。</li>
+  <li>保存应用专用密码待用。</li>
+</ol>
+
+<h2 id="laravel-中的操作">laravel 中的操作</h2>
+
+<ol>
+  <li>
+    <p>生成 mailables 类</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> php artisan make:mail SendMail
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>编写 Mailables 类</p>
+
+    <p><code class="language-plaintext highlighter-rouge">app/Mail/SendMail.php</code></p>
+
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?php</span>
+
+ <span class="kn">namespace</span> <span class="nn">App\Mail</span><span class="p">;</span>
+
+ <span class="kn">use</span> <span class="nc">Illuminate\Bus\Queueable</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Contracts\Queue\ShouldQueue</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Mail\Mailable</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Queue\SerializesModels</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Http\Request</span><span class="p">;</span>
+
+ <span class="kd">class</span> <span class="nc">SendMail</span> <span class="kd">extends</span> <span class="nc">Mailable</span>
+ <span class="p">{</span>
+     <span class="kn">use</span> <span class="nc">Queueable</span><span class="p">,</span> <span class="nc">SerializesModels</span><span class="p">;</span>
+     <span class="k">public</span> <span class="nv">$info</span><span class="p">;</span>
+
+     <span class="k">public</span> <span class="k">function</span> <span class="n">__construct</span><span class="p">(</span><span class="kt">Request</span> <span class="nv">$request</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="nv">$request</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="n">build</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">from</span><span class="p">(</span><span class="s1">'app@app.com'</span><span class="p">)</span>
+         <span class="o">-&gt;</span><span class="nf">view</span><span class="p">(</span><span class="s1">'mail'</span><span class="p">);</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>生成一个邮件控制器</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> php artisan make:controller MailsController
+</code></pre></div>    </div>
+
+    <p><code class="language-plaintext highlighter-rouge">app/Controllers/MailsController.php</code></p>
+
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?php</span>
+
+ <span class="kn">namespace</span> <span class="nn">App\Http\Controllers</span><span class="p">;</span>
+
+ <span class="kn">use</span> <span class="nc">Illuminate\Http\Request</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Support\Facades\Mail</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">App\Mail\SendMail</span><span class="p">;</span>
+
+ <span class="kd">class</span> <span class="nc">MailsController</span> <span class="kd">extends</span> <span class="nc">Controller</span>
+ <span class="p">{</span>
+     <span class="c1">//</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="n">store</span><span class="p">(</span><span class="kt">Request</span> <span class="nv">$request</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">validate</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="p">[</span>
+             <span class="s1">'captcha'</span> <span class="o">=&gt;</span> <span class="s1">'required|captcha'</span><span class="p">,</span>
+             <span class="s1">'mail_category'</span> <span class="o">=&gt;</span> <span class="s1">'required'</span><span class="p">,</span>
+             <span class="s1">'mail'</span> <span class="o">=&gt;</span> <span class="s1">'email|required'</span><span class="p">,</span>
+             <span class="s1">'mail_name'</span> <span class="o">=&gt;</span> <span class="s1">'required'</span><span class="p">,</span>
+             <span class="s1">'mail_content'</span> <span class="o">=&gt;</span> <span class="s1">'required'</span><span class="p">,</span>
+         <span class="p">]);</span>
+         <span class="nv">$mailAddr</span> <span class="o">=</span> <span class="s1">'接受邮件的电子邮箱'</span> <span class="p">;</span>
+         <span class="nc">Mail</span><span class="o">::</span><span class="nf">to</span><span class="p">(</span><span class="nv">$mailAddr</span><span class="p">)</span><span class="o">-&gt;</span><span class="nf">send</span><span class="p">(</span><span class="k">new</span> <span class="nc">SendMail</span><span class="p">(</span><span class="nv">$request</span><span class="p">));</span>
+         <span class="k">return</span> <span class="nf">redirect</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">route</span><span class="p">(</span><span class="s1">'pages.about'</span><span class="p">)</span><span class="o">-&gt;</span><span class="nf">with</span><span class="p">(</span><span class="s1">'success'</span><span class="p">,</span> <span class="s1">'邮件发送成功！'</span><span class="p">);</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>新建一个邮件模版资源</p>
+
+    <p><code class="language-plaintext highlighter-rouge">resources/views/mail.blade.php</code></p>
+
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">" container mx-auto lg:px-40 lg:pb-20"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">" text-center text-4xl p-2"</span><span class="nt">&gt;</span>HOME PAGE<span class="nt">&lt;/h1&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>CATEGORY: { { $info-&gt;mail_category } }<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>NAME: { { $info-&gt;mail_name } }<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>NAME KATAKANA: { { $info-&gt;mail_name_katakana } }<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>MAIL ADDR: { { $info-&gt;mail } }<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>CONTENT: { { $info-&gt;mail_content } }<span class="nt">&lt;/p&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>配置<code class="language-plaintext highlighter-rouge">.env</code>文件:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> MAIL_MAILER=smtp
+
+ MAIL_HOST="smtp.gmail.com"
+
+ MAIL_PORT=587
+
+ MAIL_USERNAME="youremail@gmail.com"
+
+ MAIL_PASSWORD="应用专用密码"
+
+ MAIL_ENCRYPTION=tls
+
+ MAIL_FROM_ADDRESS="app@app.com"
+
+ MAIL_FROM_NAME="${APP_NAME}"
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>至此邮件发送功能编写完毕，可以提交表单尝试下是否发送成功。</p>
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81NDUxMi8zMDk4Mw=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>KYO ©
+  
+  
+    2021
+    -
+  
+  2022
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

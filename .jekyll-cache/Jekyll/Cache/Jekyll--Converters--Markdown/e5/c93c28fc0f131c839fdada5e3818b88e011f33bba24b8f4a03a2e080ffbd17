@@ -1,0 +1,129 @@
+I"�!<blockquote>
+  <p>给web应用编写一个邮件咨询功能，将提交的表单内容发送给目标邮箱，在laravel中需要怎么做呢？</p>
+</blockquote>
+
+<h2 id="前提准备">前提准备</h2>
+
+<ol>
+  <li>拥有一个 google 账号，并且给账号设置二段验证。</li>
+  <li>在账号的安全性中，为 laravel 生成应用专用密码。</li>
+  <li>保存应用专用密码待用。</li>
+</ol>
+
+<h2 id="laravel-中的操作">laravel 中的操作</h2>
+
+<ol>
+  <li>
+    <p>生成 mailables 类</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> php artisan make:mail SendMail
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>编写 Mailables 类</p>
+
+    <p><code class="language-plaintext highlighter-rouge">app/Mail/SendMail.php</code></p>
+
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?php</span>
+
+ <span class="kn">namespace</span> <span class="nn">App\Mail</span><span class="p">;</span>
+
+ <span class="kn">use</span> <span class="nc">Illuminate\Bus\Queueable</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Contracts\Queue\ShouldQueue</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Mail\Mailable</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Queue\SerializesModels</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Http\Request</span><span class="p">;</span>
+
+ <span class="kd">class</span> <span class="nc">SendMail</span> <span class="kd">extends</span> <span class="nc">Mailable</span>
+ <span class="p">{</span>
+     <span class="kn">use</span> <span class="nc">Queueable</span><span class="p">,</span> <span class="nc">SerializesModels</span><span class="p">;</span>
+     <span class="k">public</span> <span class="nv">$info</span><span class="p">;</span>
+
+     <span class="k">public</span> <span class="k">function</span> <span class="n">__construct</span><span class="p">(</span><span class="kt">Request</span> <span class="nv">$request</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">info</span> <span class="o">=</span> <span class="nv">$request</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="n">build</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">from</span><span class="p">(</span><span class="s1">'app@app.com'</span><span class="p">)</span>
+         <span class="o">-&gt;</span><span class="nf">view</span><span class="p">(</span><span class="s1">'mail'</span><span class="p">);</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>生成一个邮件控制器</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> php artisan make:controller MailsController
+</code></pre></div>    </div>
+
+    <p><code class="language-plaintext highlighter-rouge">app/Controllers/MailsController.php</code></p>
+
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?php</span>
+
+ <span class="kn">namespace</span> <span class="nn">App\Http\Controllers</span><span class="p">;</span>
+
+ <span class="kn">use</span> <span class="nc">Illuminate\Http\Request</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">Illuminate\Support\Facades\Mail</span><span class="p">;</span>
+ <span class="kn">use</span> <span class="nc">App\Mail\SendMail</span><span class="p">;</span>
+
+ <span class="kd">class</span> <span class="nc">MailsController</span> <span class="kd">extends</span> <span class="nc">Controller</span>
+ <span class="p">{</span>
+     <span class="c1">//</span>
+     <span class="k">public</span> <span class="k">function</span> <span class="n">store</span><span class="p">(</span><span class="kt">Request</span> <span class="nv">$request</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">validate</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="p">[</span>
+             <span class="s1">'captcha'</span> <span class="o">=&gt;</span> <span class="s1">'required|captcha'</span><span class="p">,</span>
+             <span class="s1">'mail_category'</span> <span class="o">=&gt;</span> <span class="s1">'required'</span><span class="p">,</span>
+             <span class="s1">'mail'</span> <span class="o">=&gt;</span> <span class="s1">'email|required'</span><span class="p">,</span>
+             <span class="s1">'mail_name'</span> <span class="o">=&gt;</span> <span class="s1">'required'</span><span class="p">,</span>
+             <span class="s1">'mail_content'</span> <span class="o">=&gt;</span> <span class="s1">'required'</span><span class="p">,</span>
+         <span class="p">]);</span>
+         <span class="nv">$mailAddr</span> <span class="o">=</span> <span class="s1">'接受邮件的电子邮箱'</span> <span class="p">;</span>
+         <span class="nc">Mail</span><span class="o">::</span><span class="nf">to</span><span class="p">(</span><span class="nv">$mailAddr</span><span class="p">)</span><span class="o">-&gt;</span><span class="nf">send</span><span class="p">(</span><span class="k">new</span> <span class="nc">SendMail</span><span class="p">(</span><span class="nv">$request</span><span class="p">));</span>
+         <span class="k">return</span> <span class="nf">redirect</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">route</span><span class="p">(</span><span class="s1">'pages.about'</span><span class="p">)</span><span class="o">-&gt;</span><span class="nf">with</span><span class="p">(</span><span class="s1">'success'</span><span class="p">,</span> <span class="s1">'邮件发送成功！'</span><span class="p">);</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>新建一个邮件模版资源</p>
+
+    <p><code class="language-plaintext highlighter-rouge">resources/views/mail.blade.php</code></p>
+
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">" container mx-auto lg:px-40 lg:pb-20"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">" text-center text-4xl p-2"</span><span class="nt">&gt;</span>仁通HOME PAGE<span class="nt">&lt;/h1&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>CATEGORY: { { $info-&gt;mail_category } }<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>NAME: { { $info-&gt;mail_name } }<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>NAME KATAKANA: { { $info-&gt;mail_name_katakana } }<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>MAIL ADDR: { { $info-&gt;mail } }<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">" text-xl p-2"</span><span class="nt">&gt;</span>CONTENT: { { $info-&gt;mail_content } }<span class="nt">&lt;/p&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>配置<code class="language-plaintext highlighter-rouge">.env</code>文件:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> MAIL_MAILER=smtp
+
+ MAIL_HOST="smtp.gmail.com"
+
+ MAIL_PORT=587
+
+ MAIL_USERNAME="youremail@gmail.com"
+
+ MAIL_PASSWORD="应用专用密码"
+
+ MAIL_ENCRYPTION=tls
+
+ MAIL_FROM_ADDRESS="app@app.com"
+
+ MAIL_FROM_NAME="${APP_NAME}"
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>至此邮件发送功能编写完毕，可以提交表单尝试下是否发送成功。</p>
+:ET

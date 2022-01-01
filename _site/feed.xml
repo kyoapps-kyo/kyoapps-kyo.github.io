@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-28T01:43:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">音乐收藏</title><link href="http://localhost:4000/2021/11/28/music.html" rel="alternate" type="text/html" title="音乐收藏" /><published>2021-11-28T00:00:00+09:00</published><updated>2021-11-28T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/28/music</id><content type="html" xml:base="http://localhost:4000/2021/11/28/music.html">&lt;style&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-01T18:36:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">在laravel中使用gmail发送邮件</title><link href="http://localhost:4000/2021/12/31/laravel-gmail.html" rel="alternate" type="text/html" title="在laravel中使用gmail发送邮件" /><published>2021-12-31T00:00:00+09:00</published><updated>2021-12-31T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/31/laravel-gmail</id><content type="html" xml:base="http://localhost:4000/2021/12/31/laravel-gmail.html">&lt;blockquote&gt;
+  &lt;p&gt;给web应用编写一个邮件咨询功能，将提交的表单内容发送给目标邮箱，在laravel中需要怎么做呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;前提准备&quot;&gt;前提准备&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;拥有一个 google 账号，并且给账号设置二段验证。&lt;/li&gt;
+  &lt;li&gt;在账号的安全性中，为 laravel 生成应用专用密码。&lt;/li&gt;
+  &lt;li&gt;保存应用专用密码待用。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;laravel-中的操作&quot;&gt;laravel 中的操作&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;生成 mailables 类&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; php artisan make:mail SendMail
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;编写 Mailables 类&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app/Mail/SendMail.php&lt;/code&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+ &lt;span class=&quot;kn&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;App\Mail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Bus\Queueable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Contracts\Queue\ShouldQueue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Mail\Mailable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Queue\SerializesModels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Http\Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SendMail&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Mailable&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Queueable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SerializesModels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+     &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;info&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;app@app.com&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;mail&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;生成一个邮件控制器&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; php artisan make:controller MailsController
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app/Controllers/MailsController.php&lt;/code&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+ &lt;span class=&quot;kn&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;App\Http\Controllers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Http\Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Support\Facades\Mail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;App\Mail\SendMail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+ &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MailsController&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Controller&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+             &lt;span class=&quot;s1&quot;&gt;&apos;captcha&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;required|captcha&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s1&quot;&gt;&apos;mail_category&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;required&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s1&quot;&gt;&apos;mail&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;email|required&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s1&quot;&gt;&apos;mail_name&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;required&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             &lt;span class=&quot;s1&quot;&gt;&apos;mail_content&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;required&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+         &lt;span class=&quot;nv&quot;&gt;$mailAddr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;接受邮件的电子邮箱&apos;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;nc&quot;&gt;Mail&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$mailAddr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SendMail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;redirect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;pages.about&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;success&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;邮件发送成功！&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;新建一个邮件模版资源&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resources/views/mail.blade.php&lt;/code&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; container mx-auto lg:px-40 lg:pb-20&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; text-center text-4xl p-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;HOME PAGE&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; text-xl p-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;CATEGORY: { { $info-&amp;gt;mail_category } }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; text-xl p-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;NAME: { { $info-&amp;gt;mail_name } }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; text-xl p-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;NAME KATAKANA: { { $info-&amp;gt;mail_name_katakana } }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; text-xl p-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;MAIL ADDR: { { $info-&amp;gt;mail } }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; text-xl p-2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;CONTENT: { { $info-&amp;gt;mail_content } }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;配置&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.env&lt;/code&gt;文件:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; MAIL_MAILER=smtp
+
+ MAIL_HOST=&quot;smtp.gmail.com&quot;
+
+ MAIL_PORT=587
+
+ MAIL_USERNAME=&quot;youremail@gmail.com&quot;
+
+ MAIL_PASSWORD=&quot;应用专用密码&quot;
+
+ MAIL_ENCRYPTION=tls
+
+ MAIL_FROM_ADDRESS=&quot;app@app.com&quot;
+
+ MAIL_FROM_NAME=&quot;${APP_NAME}&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;至此邮件发送功能编写完毕，可以提交表单尝试下是否发送成功。&lt;/p&gt;</content><author><name>true</name></author><category term="laravel" /><category term="email" /><summary type="html">给web应用编写一个邮件咨询功能，将提交的表单内容发送给目标邮箱，在laravel中需要怎么做呢？</summary></entry><entry><title type="html">音乐收藏</title><link href="http://localhost:4000/2021/11/28/music.html" rel="alternate" type="text/html" title="音乐收藏" /><published>2021-11-28T00:00:00+09:00</published><updated>2021-11-28T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/28/music</id><content type="html" xml:base="http://localhost:4000/2021/11/28/music.html">&lt;style&gt;
     .geciBtn {
         float : right;
     }
@@ -127,7 +254,77 @@ let mySwiper = new Swiper (&apos;.swiper&apos;, options);
  
   &lt;!-- スクロールバーの div 要素（省略可能） --&gt;
   &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</content><author><name>true</name></author><category term="swiper" /><summary type="html"></summary></entry><entry><title type="html">px、em、rem区别</title><link href="http://localhost:4000/2021/11/23/css-px-em-rem.html" rel="alternate" type="text/html" title="px、em、rem区别" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css-px-em-rem</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css-px-em-rem.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>true</name></author><category term="swiper" /><summary type="html"></summary></entry><entry><title type="html">CSS3 calc()</title><link href="http://localhost:4000/2021/11/23/css3-calc.html" rel="alternate" type="text/html" title="CSS3 calc()" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css3-calc</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css3-calc.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;calc是什么&quot;&gt;calc()是什么？&lt;/h2&gt;
+
+&lt;p&gt;简单来说就是CSS3中新增的一个函数，calculate（计算）的缩写。用于动态计算宽/高，你可以使用calc()给元素的各个属性设置值【margin、border、padding、font-size】等&lt;/p&gt;
+
+&lt;h2 id=&quot;calc语法&quot;&gt;calc()语法&lt;/h2&gt;
+
+&lt;p&gt;calc的语法就是简单的四则运算：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;使用“+”、“-”、“*” 和 “/”四则运算；&lt;/li&gt;
+  &lt;li&gt;可以使用百分比、px、em、rem等单位；&lt;/li&gt;
+  &lt;li&gt;可以混合使用各种单位进行计算；&lt;/li&gt;
+  &lt;li&gt;表达式中有“+”和“-”时，其前后必须要有空格，如”width: calc(12%+5em)”这种没有空格的写法是错误的；&lt;/li&gt;
+  &lt;li&gt;表达式中有“*”和“/”时，其前后可以没有空格，但建议留有空格。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;calc的用途&quot;&gt;calc()的用途&lt;/h2&gt;
+
+&lt;p&gt;主要用于计算不确定值，例如一个外边距为10px,宽度为100%的元素，这种情况我们怎么设置呢？如果设置了：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以看出这个box已经溢出了，这时可以用calc函数动态计算出该用多宽：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;vw和vh是什么&quot;&gt;vw和vh是什么？&lt;/h2&gt;
+
+&lt;p&gt;vw、vh、vmin、vmax是一种视窗单位，也是相对单位。它相对的不是父节点或者页面的根节点。而是由视窗（Viewport）大小来决定的，单位 1，代表类似于 1%。
+视窗(Viewport)是你的浏览器实际显示内容的区域—，换句话说是你的不包括工具栏和按钮的网页浏览器。&lt;/p&gt;
+
+&lt;p&gt;具体描述如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;vw：视窗宽度的百分比（1vw 代表视窗的宽度为 1%）&lt;/li&gt;
+  &lt;li&gt;vh：视窗高度的百分比&lt;/li&gt;
+  &lt;li&gt;vmin：取当前Vw和Vh中较小的那一个值&lt;/li&gt;
+  &lt;li&gt;vmax：取当前Vw和Vh中较大的那一个值&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;vwvh-与--百分比的区别&quot;&gt;vw、vh 与 % 百分比的区别&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;% 是相对于父元素的大小设定的比率，vw、vh 是视窗大小决定的。&lt;/li&gt;
+  &lt;li&gt;vw、vh 优势在于能够直接获取高度，而用 % 在没有设置 body 高度的情况下，是无法正确获得可视区域的高度的，所以这是挺不错的优势。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;calc和vhvw结合使用&quot;&gt;calc和vh/vw结合使用&lt;/h2&gt;
+
+&lt;p&gt;上面我们使用%结合calc使用可以实现想要的效果，为什么要引入vw和vh呢？上面说%和vw,vh的区别中&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;% 在没有设置 body 高度的情况下，是无法正确获得可视区域的高度的&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;css3中使用calc设置宽度和高度&quot;&gt;CSS3中使用calc()设置宽度和高度&lt;/h2&gt;
+
+&lt;p&gt;设置宽度：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;vw&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;margin-x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;设置高度：&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;vh&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;margin-y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><summary type="html"></summary></entry><entry><title type="html">px、em、rem区别</title><link href="http://localhost:4000/2021/11/23/css-px-em-rem.html" rel="alternate" type="text/html" title="px、em、rem区别" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css-px-em-rem</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css-px-em-rem.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;pxemrem区别&quot;&gt;px、em、rem区别&lt;/h2&gt;
 
@@ -385,77 +582,7 @@ background-color : color;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.load(), .unload(), and .error()&lt;/code&gt;从jQuery 1.8开始就被废弃了，换成使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.on()&lt;/code&gt;函数来注册.&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><summary type="html"></summary></entry><entry><title type="html">CSS3 calc()</title><link href="http://localhost:4000/2021/11/23/css3-calc.html" rel="alternate" type="text/html" title="CSS3 calc()" /><published>2021-11-23T00:00:00+09:00</published><updated>2021-11-23T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/23/css3-calc</id><content type="html" xml:base="http://localhost:4000/2021/11/23/css3-calc.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;calc是什么&quot;&gt;calc()是什么？&lt;/h2&gt;
-
-&lt;p&gt;简单来说就是CSS3中新增的一个函数，calculate（计算）的缩写。用于动态计算宽/高，你可以使用calc()给元素的各个属性设置值【margin、border、padding、font-size】等&lt;/p&gt;
-
-&lt;h2 id=&quot;calc语法&quot;&gt;calc()语法&lt;/h2&gt;
-
-&lt;p&gt;calc的语法就是简单的四则运算：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;使用“+”、“-”、“*” 和 “/”四则运算；&lt;/li&gt;
-  &lt;li&gt;可以使用百分比、px、em、rem等单位；&lt;/li&gt;
-  &lt;li&gt;可以混合使用各种单位进行计算；&lt;/li&gt;
-  &lt;li&gt;表达式中有“+”和“-”时，其前后必须要有空格，如”width: calc(12%+5em)”这种没有空格的写法是错误的；&lt;/li&gt;
-  &lt;li&gt;表达式中有“*”和“/”时，其前后可以没有空格，但建议留有空格。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;calc的用途&quot;&gt;calc()的用途&lt;/h2&gt;
-
-&lt;p&gt;主要用于计算不确定值，例如一个外边距为10px,宽度为100%的元素，这种情况我们怎么设置呢？如果设置了：&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;可以看出这个box已经溢出了，这时可以用calc函数动态计算出该用多宽：&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;vw和vh是什么&quot;&gt;vw和vh是什么？&lt;/h2&gt;
-
-&lt;p&gt;vw、vh、vmin、vmax是一种视窗单位，也是相对单位。它相对的不是父节点或者页面的根节点。而是由视窗（Viewport）大小来决定的，单位 1，代表类似于 1%。
-视窗(Viewport)是你的浏览器实际显示内容的区域—，换句话说是你的不包括工具栏和按钮的网页浏览器。&lt;/p&gt;
-
-&lt;p&gt;具体描述如下：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;vw：视窗宽度的百分比（1vw 代表视窗的宽度为 1%）&lt;/li&gt;
-  &lt;li&gt;vh：视窗高度的百分比&lt;/li&gt;
-  &lt;li&gt;vmin：取当前Vw和Vh中较小的那一个值&lt;/li&gt;
-  &lt;li&gt;vmax：取当前Vw和Vh中较大的那一个值&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;vwvh-与--百分比的区别&quot;&gt;vw、vh 与 % 百分比的区别&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;% 是相对于父元素的大小设定的比率，vw、vh 是视窗大小决定的。&lt;/li&gt;
-  &lt;li&gt;vw、vh 优势在于能够直接获取高度，而用 % 在没有设置 body 高度的情况下，是无法正确获得可视区域的高度的，所以这是挺不错的优势。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;calc和vhvw结合使用&quot;&gt;calc和vh/vw结合使用&lt;/h2&gt;
-
-&lt;p&gt;上面我们使用%结合calc使用可以实现想要的效果，为什么要引入vw和vh呢？上面说%和vw,vh的区别中&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;% 在没有设置 body 高度的情况下，是无法正确获得可视区域的高度的&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;h2 id=&quot;css3中使用calc设置宽度和高度&quot;&gt;CSS3中使用calc()设置宽度和高度&lt;/h2&gt;
-
-&lt;p&gt;设置宽度：&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;vw&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;margin-x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;设置高度：&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;vh&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;margin-y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><summary type="html"></summary></entry><entry><title type="html">京都 - 贵船红叶</title><link href="http://localhost:4000/2021/11/22/kifune.html" rel="alternate" type="text/html" title="京都 - 贵船红叶" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/kifune</id><content type="html" xml:base="http://localhost:4000/2021/11/22/kifune.html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.load(), .unload(), and .error()&lt;/code&gt;从jQuery 1.8开始就被废弃了，换成使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.on()&lt;/code&gt;函数来注册.&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><summary type="html"></summary></entry><entry><title type="html">京都 - 贵船红叶</title><link href="http://localhost:4000/2021/11/22/kifune.html" rel="alternate" type="text/html" title="京都 - 贵船红叶" /><published>2021-11-22T00:00:00+09:00</published><updated>2021-11-22T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/22/kifune</id><content type="html" xml:base="http://localhost:4000/2021/11/22/kifune.html">&lt;blockquote&gt;
   &lt;p&gt;周日去贵船神社，感觉到了宫崎骏的动画里，限于携带器材和我个人水平，不能展现当时一二，略有遗憾。&lt;/p&gt;
 
   &lt;p&gt;上传未完&lt;/p&gt;
@@ -663,19 +790,4 @@ npm run dev
 
 &lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://blog.kyoapps.com/2021/11/15/miyama-photo.html&quot;&gt;京都 - 美山&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="网页插件" /><category term="fancybox" /><summary type="html"></summary></entry><entry><title type="html">JS查找图片文件的路径</title><link href="http://localhost:4000/2021/11/17/js-read-photo-url.html" rel="alternate" type="text/html" title="JS查找图片文件的路径" /><published>2021-11-17T00:00:00+09:00</published><updated>2021-11-17T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/17/js-read-photo-url</id><content type="html" xml:base="http://localhost:4000/2021/11/17/js-read-photo-url.html">&lt;h2 id=&quot;思路&quot;&gt;思路&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;fuction searchImgPath(imgDirPath)	return 路径数组&lt;/p&gt;
-
-    &lt;p&gt;查找图片路径，返回图片路径数组&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;fuction setImgStyle(imgStyle)&lt;/p&gt;
-
-    &lt;p&gt;设置图片的样式。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;等待更新&lt;/p&gt;</content><author><name>true</name></author><category term="练习" /><category term="图片路径" /><category term="JS" /><summary type="html">思路</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://blog.kyoapps.com/2021/11/15/miyama-photo.html&quot;&gt;京都 - 美山&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="网页插件" /><category term="fancybox" /><summary type="html"></summary></entry></feed>
