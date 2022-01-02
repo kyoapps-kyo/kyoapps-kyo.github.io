@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-01T18:36:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">在laravel中使用gmail发送邮件</title><link href="http://localhost:4000/2021/12/31/laravel-gmail.html" rel="alternate" type="text/html" title="在laravel中使用gmail发送邮件" /><published>2021-12-31T00:00:00+09:00</published><updated>2021-12-31T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/31/laravel-gmail</id><content type="html" xml:base="http://localhost:4000/2021/12/31/laravel-gmail.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-02T20:23:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">KYO</title><subtitle>KYO</subtitle><author><name>true</name></author><entry><title type="html">CSS background中的渐变</title><link href="http://localhost:4000/2021/12/31/css-linear-gradient.html" rel="alternate" type="text/html" title="CSS background中的渐变" /><published>2021-12-31T00:00:00+09:00</published><updated>2021-12-31T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/31/css-linear-gradient</id><content type="html" xml:base="http://localhost:4000/2021/12/31/css-linear-gradient.html">&lt;style&gt;
+.div90deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(90deg,#02a0ff,red);
+}
+.div135deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg,#02a0ff,red);
+}
+.div180deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(180deg,#02a0ff 20%,red 80%);
+}
+.div180deg2 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(180deg,#02a0ff 60%,red 20%);
+}
+.box {
+    position: relative;
+    width: 500px;
+}
+.box img{
+    display: block;
+}
+.linear_box{
+    width: 280px;
+    height: 100%;
+    position:absolute;
+    right:0;
+    top:0;
+    background: linear-gradient(135deg,transparent 50%,red 50%);
+}
+&lt;/style&gt;
+
+&lt;p&gt;linear-gradient() 函数用于创建一个线性渐变的 “图像”&lt;/p&gt;
+
+&lt;p&gt;它的语法是&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;color-stop1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;color-stop2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;direction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;用角度值指定渐变的方向&lt;/p&gt;
+
+&lt;p&gt;方向值：常用的是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to top&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to bottom&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to left&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to right&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to right top&lt;/code&gt; 等等&lt;/p&gt;
+
+&lt;p&gt;角度值：常用的是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0deg&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;180deg&lt;/code&gt; 等等&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;color-stop1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;color&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;使用关键字 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;red&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rgba&lt;/code&gt; 等颜色值（透明也可以设置）&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stop&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;是这个颜色块终止位置，换句话说就是这块颜色占的区域&lt;/p&gt;
+
+&lt;p&gt;ps：颜色值至少两个&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;角度值&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;先来看看文档的图画&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/2022/01/deg.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;0deg 不是按我们数学的角度向右定义的，默认方向是向上的，是从方向北开始的，所以北才是 0deg&lt;/p&gt;
+
+&lt;p&gt;当为 90deg 时，渐变线的方向相当于 to right，从左指向右&lt;/p&gt;
+
+&lt;div class=&quot;div90deg&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.div0deg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;90deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#02a0ff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div90deg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;当为 135deg 时，渐变线的方向相当于 to right bottom，从左上指向右下，相反为-135 时，就从右上指向左下&lt;/p&gt;
+
+&lt;div class=&quot;div135deg&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.div135deg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;135deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#02a0ff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div135deg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;颜色-终止位置&lt;/strong&gt;
+该值由一个&lt;color&gt;值组成，后跟一个可选的停止位置&lt;/color&gt;&lt;/p&gt;
+
+&lt;p&gt;以上两种情形是颜色渐变，占的区域非常均匀，相当于 background: linear-gradient(-135deg,#02a0ff 0%,red 100%)，都是从 0-100%的比例结束的&lt;/p&gt;
+
+&lt;p&gt;所以这个区域是可以修改的&lt;/p&gt;
+
+&lt;div class=&quot;div180deg&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;如上图，修改了参数&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;.div180deg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;180deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#02a0ff&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div180deg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;20%相当于第一个颜色的区域，顶部的 20%和底部的 20%并没有渐变，所以我们可以理解颜色 1 的 20%为开始位置，颜色 2 的 80%为结束位置。&lt;/p&gt;
+
+&lt;p&gt;我们将颜色 1 的值改成大于后面颜色的值，得到以下结果&lt;/p&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;deg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#02&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a0ff&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;div180deg2&quot;&gt;&lt;/div&gt;
+&lt;p&gt;颜色1和颜色2直接就没有产生阴影了，所以阴影产生是在区间里面的&lt;/p&gt;
+
+&lt;p&gt;做一个三角形覆盖图片&lt;/p&gt;
+
+&lt;div class=&quot;box&quot;&gt;
+&lt;div class=&quot;linear_box&quot;&gt;
+&lt;/div&gt;
+&lt;img src=&quot;/assets/imgs/common/css.jpeg&quot; /&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.box&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.linear_box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;280px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;135deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;transparent&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;box&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;linear_box&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/imgs/common/css.jpeg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="css" /><summary type="html"></summary></entry><entry><title type="html">在laravel中使用gmail发送邮件</title><link href="http://localhost:4000/2021/12/31/laravel-gmail.html" rel="alternate" type="text/html" title="在laravel中使用gmail发送邮件" /><published>2021-12-31T00:00:00+09:00</published><updated>2021-12-31T00:00:00+09:00</updated><id>http://localhost:4000/2021/12/31/laravel-gmail</id><content type="html" xml:base="http://localhost:4000/2021/12/31/laravel-gmail.html">&lt;blockquote&gt;
   &lt;p&gt;给web应用编写一个邮件咨询功能，将提交的表单内容发送给目标邮箱，在laravel中需要怎么做呢？&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -745,49 +903,4 @@ npm run dev
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;参考文章：&lt;a href=&quot;https://masa-engineer-blog.com/carousel-slide-display-with-swiperjs/#toc4&quot;&gt;カルーセル表示を簡単にswiper.jsを利用して実装する方法&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><category term="laravel" /><summary type="html"></summary></entry><entry><title type="html">在博客中使用fancybox展示图片</title><link href="http://localhost:4000/2021/11/18/fancybox.html" rel="alternate" type="text/html" title="在博客中使用fancybox展示图片" /><published>2021-11-18T00:00:00+09:00</published><updated>2021-11-18T00:00:00+09:00</updated><id>http://localhost:4000/2021/11/18/fancybox</id><content type="html" xml:base="http://localhost:4000/2021/11/18/fancybox.html">&lt;p&gt;&lt;img src=&quot;/assets/imgs/2021/11/18/Fancybox.jpeg&quot; alt=&quot;cat&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;初始化&quot;&gt;初始化&lt;/h2&gt;
-&lt;p&gt;在本博客中，使用引入CDN的方式，引入fancybox的所需文件。&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Head&lt;/code&gt;中:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- fancybox --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css&quot;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;按需使用fancybox初始化，只在需要的文章下初始化fancybox。&lt;/p&gt;
-
-    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/fancybox.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;“/assets/js/fancybox.js”&lt;/p&gt;
-
-    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.js_gallery_evaluate&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fancybox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;在文章中使用fancybox插件&lt;/p&gt;
-    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width: 50%; padding:5px&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;js_gallery_evaluate&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/imgs/2021/11/15/miyama-30.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-fancybox=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;gallery&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-     &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/imgs/2021/11/15/miyama-30.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js_gallery_evaluate&lt;/code&gt;是初始化插件的类， 同组图片的初始化都用同一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gallery&lt;/code&gt;创建相册，所以同一个相册的data-fancybox的名字需保持一致。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;效果展示&quot;&gt;效果展示&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.kyoapps.com/2021/11/15/miyama-photo.html&quot;&gt;京都 - 美山&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="网页插件" /><category term="fancybox" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;参考文章：&lt;a href=&quot;https://masa-engineer-blog.com/carousel-slide-display-with-swiperjs/#toc4&quot;&gt;カルーセル表示を簡単にswiper.jsを利用して実装する方法&lt;/a&gt;&lt;/p&gt;</content><author><name>true</name></author><category term="jQuery" /><category term="问题" /><category term="laravel" /><summary type="html"></summary></entry></feed>

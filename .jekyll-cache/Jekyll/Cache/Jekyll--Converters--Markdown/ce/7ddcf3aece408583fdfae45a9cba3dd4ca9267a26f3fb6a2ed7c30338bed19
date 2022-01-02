@@ -1,0 +1,36 @@
+I"H<style>
+.div90deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(90deg,#02a0ff,red);
+}
+.div135deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg,#02a0ff,red);
+}
+.div180deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(180deg,#02a0ff 20%,red 80%);
+}
+.div180deg2 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(180deg,#02a0ff 60%,red 20%);
+}
+.box {
+    position: relative;
+}
+.box img{
+    display: block;
+}
+.linear_box{
+    position:absolute;
+    left:0;
+    top:0;
+    
+}
+</style>
+
+:ET

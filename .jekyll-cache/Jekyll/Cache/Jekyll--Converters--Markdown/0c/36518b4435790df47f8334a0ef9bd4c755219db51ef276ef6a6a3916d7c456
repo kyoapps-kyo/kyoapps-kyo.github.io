@@ -1,0 +1,27 @@
+I"�<p>linear-gradient() 函数用于创建一个线性渐变的 “图像”</p>
+
+<p>它的语法是</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">background</span><span class="o">:</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">direction</span><span class="o">,</span> <span class="nt">color-stop1</span><span class="o">,</span> <span class="nt">color-stop2</span><span class="o">,</span> <span class="o">...);</span>
+</code></pre></div></div>
+
+<p>** direction **</p>
+
+<p>用角度值指定渐变的方向</p>
+
+<p>方向值：常用的是 to top，to bottom，to left，to right,to right top 等等</p>
+
+<p>角度值：常用的是 0deg、180deg 等等</p>
+
+<p>color-stop1</p>
+
+<p>color</p>
+
+<p>使用关键字 red、rgba 等颜色值（透明也可以设置）</p>
+
+<p>stop</p>
+
+<p>是这个颜色块终止位置，换句话说就是这块颜色占的区域</p>
+
+<p>ps：颜色值至少两个</p>
+:ET

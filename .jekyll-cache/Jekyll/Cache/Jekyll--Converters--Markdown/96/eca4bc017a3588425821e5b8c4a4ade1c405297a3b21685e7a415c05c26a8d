@@ -1,0 +1,6 @@
+I")<p>linear-gradient() 函数用于创建一个线性渐变的 “图像”</p>
+
+<p>它的语法是</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">background</span><span class="o">:</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">direction</span><span class="o">,</span> <span class="nt">color-stop1</span><span class="o">,</span> <span class="nt">color-stop2</span><span class="o">,</span> <span class="o">...);</span>
+</code></pre></div></div>
+:ET

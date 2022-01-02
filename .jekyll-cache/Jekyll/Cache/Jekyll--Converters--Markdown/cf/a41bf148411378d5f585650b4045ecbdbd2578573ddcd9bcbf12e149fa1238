@@ -1,0 +1,86 @@
+I"�<style>
+.div90deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(90deg,#02a0ff,red);
+}
+.div135deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg,#02a0ff,red);
+}
+.div180deg {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(180deg,#02a0ff,red);
+}
+</style>
+
+<p>linear-gradient() 函数用于创建一个线性渐变的 “图像”</p>
+
+<p>它的语法是</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">background</span><span class="o">:</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">direction</span><span class="o">,</span> <span class="nt">color-stop1</span><span class="o">,</span> <span class="nt">color-stop2</span><span class="o">,</span> <span class="o">...);</span>
+</code></pre></div></div>
+
+<p><strong>direction</strong></p>
+
+<p>用角度值指定渐变的方向</p>
+
+<p>方向值：常用的是 <code class="language-plaintext highlighter-rouge">to top</code>，<code class="language-plaintext highlighter-rouge">to bottom</code>，<code class="language-plaintext highlighter-rouge">to left</code>，<code class="language-plaintext highlighter-rouge">to right</code>，<code class="language-plaintext highlighter-rouge">to right top</code> 等等</p>
+
+<p>角度值：常用的是 <code class="language-plaintext highlighter-rouge">0deg</code>、<code class="language-plaintext highlighter-rouge">180deg</code> 等等</p>
+
+<p><code class="language-plaintext highlighter-rouge">color-stop1</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">color</code></p>
+
+<p>使用关键字 <code class="language-plaintext highlighter-rouge">red</code>、<code class="language-plaintext highlighter-rouge">rgba</code> 等颜色值（透明也可以设置）</p>
+
+<p><code class="language-plaintext highlighter-rouge">stop</code></p>
+
+<p>是这个颜色块终止位置，换句话说就是这块颜色占的区域</p>
+
+<p>ps：颜色值至少两个</p>
+
+<p><strong>角度值</strong></p>
+
+<p>先来看看文档的图画</p>
+
+<p><img src="/assets/imgs/2022/01/deg.png" /></p>
+
+<p>0deg 不是按我们数学的角度向右定义的，默认方向是向上的，是从方向北开始的，所以北才是 0deg</p>
+
+<p>当为 90deg 时，渐变线的方向相当于 to right，从左指向右</p>
+
+<div class="div90deg"></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style&gt;</span>
+<span class="nc">.div0deg</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">90deg</span><span class="p">,</span><span class="m">#02a0ff</span><span class="p">,</span><span class="no">red</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"div90deg"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>当为 135deg 时，渐变线的方向相当于 to right bottom，从左上指向右下，相反为-135 时，就从右上指向左下</p>
+
+<div class="div135deg"></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style&gt;</span>
+<span class="nc">.div135deg</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">135deg</span><span class="p">,</span><span class="m">#02a0ff</span><span class="p">,</span><span class="no">red</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"div135deg"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p><strong>颜色-终止位置</strong>
+该值由一个<color>值组成，后跟一个可选的停止位置</color></p>
+
+<p>以上两种情形是颜色渐变，占的区域非常均匀，相当于 background: linear-gradient(-135deg,#02a0ff 0%,red 100%)，都是从 0-100%的比例结束的</p>
+
+<p>所以这个区域是可以修改的</p>
+:ET
